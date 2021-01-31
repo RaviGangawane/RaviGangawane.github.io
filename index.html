@@ -27,6 +27,11 @@
             color: #788489;
         }
         
+        .footer_social.home-screen a {
+            padding: 10px 20px 0px;
+            color: #ffffff;
+        }
+        
         .footer_social a i {
             font-size: 24px;
         }
@@ -122,6 +127,125 @@
         .percentage .progress .progress-bar.color-6 {
             background-color: #007bff;
         }
+        
+        .home-banner-01 {
+            position: relative;
+        }
+        
+        .dark-bg {
+            /* background-color: #3a3973; */
+        }
+        
+        .home-banner-01 .bottom-ani path {
+            fill: #ffffff;
+        }
+        
+        .home-banner-01 .bottom-ani {
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            right: 0;
+        }
+        
+        .white-color {
+            color: #ffffff;
+        }
+        
+        .dark-bg {
+            background-color: #3a3973;
+        }
+        
+        article,
+        aside,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        main,
+        nav,
+        section {
+            display: block;
+        }
+        
+        .home-banner-01 .ht-img {
+            position: relative;
+            top: 60px;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        .home-banner-01 .ht-text {
+            color: #ffffff !important;
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        
+        .header_area {
+            position: absolute;
+            width: 100%;
+            z-index: 9999;
+            background: transparent;
+        }
+        
+        .home-banner-01 .ht-text h1 {
+            font-weight: 500;
+            font-size: 70px;
+            margin-bottom: 15px;
+        }
+        
+        .home-banner-01 .ht-text .btn-bar {
+            padding-top: 30px;
+        }
+        
+        .px-btn.white-t:hover {
+            background: #ffffff;
+            color: #3a3973;
+        }
+        
+        .px-btn span {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .px-btn.white-t {
+            background: transparent;
+            border: 2px solid #ffffff;
+            color: #ffffff;
+        }
+        
+        .px-btn {
+            padding: 0 20px;
+            line-height: 42px;
+            border: 2px solid transparent;
+            position: relative;
+            display: inline-block;
+            background: none;
+            border: none;
+            -moz-transition: ease all 0.35s;
+            -o-transition: ease all 0.35s;
+            -webkit-transition: ease all 0.35s;
+            transition: ease all 0.35s;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
+        .home-banner-01 .ht-text {
+            color: #ffffff;
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        
+        x-model {
+            animation: 5s spin linear infinite;
+        }
+        
+        @keyframes spin {
+            to {
+                transform: rotateY(1turn);
+            }
+        }
     </style>
 
 
@@ -183,11 +307,59 @@
             </nav>
         </div>
     </header>
+
+
+
+    <x-model src="https://keithclark.co.uk/articles/3d-models-in-html-documents/cesium-milk-truck.glb"></x-model>
+    <!-- Home Banner -->
+    <section id="home" class="home-banner-01 dark-bg">
+        <div class="container">
+            <div class="row ht-row align-items-center">
+                <div class="col-lg-6">
+                    <div class="ht-text">
+                        <h6 style="color: #ffffff;">Hello</h6>
+                        <h1 style="color: #ffffff;">I'm Ravi Gangawane</h1>
+                        <h2 style="color: #ffffff;">I'm <span id="type-it"></span></h2>
+                        <br>
+                        <br>
+
+                        <div class="footer_social home-screen">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-skype"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                        <div class="btn-bar">
+                            <a class="px-btn white-t" href="#"><span>Contact Me</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ht-img">
+                        <img src="https://www.pxdraft.com/wrap/kory/kory/static/img/about-me.png" title="" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-ani svg-color white-color">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 40" preserveAspectRatio="none">
+                <path d="">
+                    <animate attributeName="d" begin="0s" dur="5s" repeatCount="indefinite" values="
+                  M0,0 C200,7.11236625e-15 200,40 400,40 C600,40 800,0 1000,0 L1000,50 L0,50 L0,0 Z;
+                  M0,40 C200,40 400,0 600,0 C800,0 800,40 1000,40 L1000,50 L0,50 L0,40 Z;
+                  M0,30 C200,30 200,0 400,0 C600,0 800,40 1000,40 L1000,50 L0,50 L0,30 Z;
+                  M0,0 C200,7.11236625e-15 200,40 400,40 C600,40 800,0 1000,0 L1000,50 L0,50 L0,0 Z;"></animate>
+                </path>
+            </svg>
+        </div>
+    </section>
+
     <div class="container-xxl">
 
 
 
-        <section class="home_banner_area">
+        <section class="home_banner_area d-none">
             <div class="banner_inner">
                 <div class="container-xl">
                     <div class="row">
@@ -223,7 +395,9 @@
                         </div>
                     </div>
                 </div>
+
             </div>
+
         </section>
 
 
@@ -267,7 +441,7 @@
                                         <ul class="list ">
                                             <li><span>Birthday</span>: 07 June 1994</li>
                                             <li><span>Phone</span>: +91 9130451715</li>
-                                            <li><span>Email</span>: ravigangawane04@gmail.com</li>
+                                            <li><span>Email</span>: ravi.d.gangawane@gmail.com</li>
 
                                             <li><span>Age</span>: 27</li>
 
@@ -275,7 +449,7 @@
                                         <ul class="list pl-2 ">
 
                                             <li><span>Degree</span>: Bachelor</li>
-                                            <li><span>Website</span>: www.example.com</li>
+                                            <li><span>Website</span>: https://ravigangawane.github.io</li>
                                             <li><span>City</span>: Pune, Maharashtra, India</li>
                                             <li><span>Freelance</span>: Available</li>
                                         </ul>
@@ -464,62 +638,264 @@
                 </div>
 
                 <div class="row feature_inner ">
-                    <div class="col-lg-6 col-md-6 ">
-                        <span class="skill ">Ionic, Nativescript <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+
+
+
+                    <div class="col-md-3">
+
+                        <div>
+                            <span class="skill ">HTML/CSS <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                            <div class="percentage ">
+                                <div class="progress ">
+                                    <div class="progress-bar color-1 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="skill ">JAVASCRIPT <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                            <div class="percentage ">
+                                <div class="progress ">
+                                    <div class="progress-bar color-2 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="skill ">jQuery <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                            <div class="percentage ">
+                                <div class="progress ">
+                                    <div class="progress-bar color-3 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="skill ">CSS PREPROCESSING <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                            <div class="percentage ">
+                                <div class="progress ">
+                                    <div class="progress-bar color-4 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="skill ">VERSION CONTROL/GIT<i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                            <div class="percentage ">
+                                <div class="progress ">
+                                    <div class="progress-bar color-5 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="skill ">RESPONSIVE DESIGN <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                            <div class="percentage ">
+                                <div class="progress ">
+                                    <div class="progress-bar color-6 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="skill ">BROWSER DEVELOPER TOOLS <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                            <div class="percentage ">
+                                <div class="progress ">
+                                    <div class="progress-bar color-7 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="skill ">WEB PERFORMANCE <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                            <div class="percentage ">
+                                <div class="progress ">
+                                    <div class="progress-bar color-8 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+
+                        <div>
+                            <span class="skill ">CSS FRAMEWORKS <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                            <div class="percentage ">
+                                <div class="progress ">
+                                    <div class="progress-bar color-2 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                </div>
+                            </div>
+                            <div class="pl-3">
+                                <span class="skill ">Bootstrap 3,4,5 <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                                <div class="percentage ">
+                                    <div class="progress ">
+                                        <div class="progress-bar color-1 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pl-3">
+                                <span class="skill ">Foundation <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                                <div class="percentage ">
+                                    <div class="progress ">
+                                        <div class="progress-bar color-1 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pl-3">
+                                <span class="skill ">Material Design for Bootstrap 5 & 4<i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                                <div class="percentage ">
+                                    <div class="progress ">
+                                        <div class="progress-bar color-1 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pl-3">
+                                <span class="skill ">Angular powered Bootstrap<i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                                <div class="percentage ">
+                                    <div class="progress ">
+                                        <div class="progress-bar color-1 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pl-3">
+                                <span class="skill ">Materialize<i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                                <div class="percentage ">
+                                    <div class="progress ">
+                                        <div class="progress-bar color-1 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pl-3">
+                                <span class="skill ">Angular Material<i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                                <div class="percentage ">
+                                    <div class="progress ">
+                                        <div class="progress-bar color-1 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="col-md-3">
+                        <div>
+                            <span class="skill ">JAVASCRIPT FRAMEWORKS <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                            <div class="percentage ">
+                                <div class="progress ">
+                                    <div class="progress-bar color-3 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                </div>
+                            </div>
+                            <!-- <div class="pl-3">
+                                <span class="skill ">React <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                                <div class="percentage ">
+                                    <div class="progress ">
+                                        <div class="progress-bar color-1 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <!-- <div class="pl-3">
+                                <span class="skill ">Vue.JS <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                                <div class="percentage ">
+                                    <div class="progress ">
+                                        <div class="progress-bar color-1 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pl-3">
+                                <span class="skill ">Node.JS<i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                                <div class="percentage ">
+                                    <div class="progress ">
+                                        <div class="progress-bar color-1 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pl-3">
+                                <span class="skill ">Backbone.JS<i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                                <div class="percentage ">
+                                    <div class="progress ">
+                                        <div class="progress-bar color-1 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div>
+                                <span class="skill ">Angular 5,7,8,10<i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                                <div class="percentage ">
+                                    <div class="progress ">
+                                        <div class="progress-bar color-4 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="skill ">Ionic <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                                <div class="percentage ">
+                                    <div class="progress ">
+                                        <div class="progress-bar color-5 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div>
+                                <span class="skill "> Nativescript <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                                <div class="percentage ">
+                                    <div class="progress ">
+                                        <div class="progress-bar color-3 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+
+
+
+
+                        <span class="skill ">TEAM MANAGEMENT <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
                         <div class="percentage ">
                             <div class="progress ">
                                 <div class="progress-bar color-1 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 ">
 
-                    </div>
 
-                    <div class="col-lg-6 col-md-6 ">
-                        <span class="skill ">ANGULAR, REACTJS, HTML5 CSS3 JAVASCRIPT,VieJS<i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                        <span class="skill ">CONSULTATION & TRAINING <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
                         <div class="percentage ">
                             <div class="progress ">
                                 <div class="progress-bar color-2 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-lg-6 col-md-6 ">
-                        <span class="skill ">TEAM MANAGEMENT <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                        <span class="skill ">COMMUNICATION <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
                         <div class="percentage ">
                             <div class="progress ">
                                 <div class="progress-bar color-3 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 ">
-                        <span class="skill ">NODEJS, EXPRESS, SQL, NOSQL <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+
+                        <span class="skill ">TEAMWORK <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
                         <div class="percentage ">
                             <div class="progress ">
                                 <div class="progress-bar color-4 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 ">
-                        <span class="skill ">CONSULTATION & TRAINING <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+
+                        <span class="skill ">CREATIVITY & WILLINGNESS TO LEARN <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
                         <div class="percentage ">
                             <div class="progress ">
                                 <div class="progress-bar color-5 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 "></div>
-                    <div class="col-lg-6 col-md-6 ">
-                        <span class="skill ">COMMUNICATION100 <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+
+                        <span class="skill ">PROBLEM-SOLVEING  <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
                         <div class="percentage ">
                             <div class="progress ">
                                 <div class="progress-bar color-6 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
                             </div>
                         </div>
+
+
+
+
                     </div>
-
-
 
 
 
@@ -773,7 +1149,7 @@
                             </div>
                             <div class="info_item ">
                                 <i class="fa fa-envelope " aria-hidden="true "></i>
-                                <h6><a href="# ">ravigangawane04@gmail.com</a></h6>
+                                <h6><a href="# ">ravi.d.gangawane@gmail.com</a></h6>
                                 <p>Send us your query anytime!</p>
                             </div>
                         </div>
@@ -846,6 +1222,24 @@
 
 
     </div>
+
+
+    <!-- The script itself, loaded AFTER your root element. -->
+    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+    <script>
+        new TypeIt('#type-it', {
+
+            speed: 200,
+            loop: true,
+            strings: [
+                'a Angular Developer',
+                'a UI/UX Designer',
+                'a Professional IT Trainer'
+            ],
+            breakLines: false,
+            waitUntilVisible: true,
+        }).go();
+    </script>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
