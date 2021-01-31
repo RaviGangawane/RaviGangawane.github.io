@@ -1,0 +1,1415 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+
+    <link rel="stylesheet" href="https://preview.colorlib.com/theme/satner/css/bootstrap.css">
+    <link rel="stylesheet" href="https://preview.colorlib.com/theme/satner/vendors/linericon/style.css">
+    <!-- <link rel="stylesheet" href="https://preview.colorlib.com/theme/satner/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://preview.colorlib.com/theme/satner/vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://preview.colorlib.com/theme/satner/css/magnific-popup.css">
+    <link rel="stylesheet" href="https://preview.colorlib.com/theme/satner/vendors/nice-select/css/nice-select.css">
+    <link rel="stylesheet" href="https://preview.colorlib.com/theme/satner/css/style.css">
+    <!-- <link rel="stylesheet" href="/style.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        .footer_social a {
+            padding: 10px 20px 0px;
+            color: #788489;
+        }
+        
+        .footer_social.home-screen a {
+            padding: 10px 20px 0px;
+            color: #ffffff;
+        }
+        
+        .footer_social a i {
+            font-size: 24px;
+        }
+        
+        .social-links a {
+            font-size: 18px;
+            display: inline-block;
+            background: #0563bb;
+            color: #fff;
+            line-height: 1;
+            padding: 8px 0;
+            margin-right: 4px;
+            border-radius: 50%;
+            text-align: center;
+            width: 36px;
+            height: 36px;
+            transition: 0.3s;
+        }
+        
+        a {
+            color: #0563bb;
+        }
+        
+        a {
+            color: #007bff;
+            text-decoration: none;
+            background-color: transparent;
+        }
+        
+        .percentage .progress {
+            width: 80%;
+            border-radius: 0px;
+            background: transparent;
+            margin: 10px 0px;
+        }
+        
+        .progress {
+            display: -ms-flexbox;
+            display: flex;
+            height: 1rem;
+            overflow: hidden;
+            font-size: .75rem;
+            background-color: #e9ecef;
+            border-radius: .25rem;
+        }
+        
+        .percentage .progress .progress-bar.color-1 {
+            background-color: #6382e6;
+        }
+        
+        .percentage .progress .progress-bar {
+            height: 5px;
+            line-height: 5px;
+        }
+        
+        .progress-bar {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -ms-flex-pack: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            white-space: nowrap;
+            background-color: #007bff;
+            transition: width .6s ease;
+        }
+        
+        .percentage .progress .progress-bar.color-1 {
+            background-color: #6382e6;
+        }
+        
+        .percentage .progress .progress-bar.color-2 {
+            background-color: #e66686;
+        }
+        
+        .percentage .progress .progress-bar.color-3 {
+            background-color: #f09359;
+        }
+        
+        .percentage .progress .progress-bar.color-4 {
+            background-color: #a367e7;
+        }
+        
+        .percentage .progress .progress-bar.color-5 {
+            background-color: #73fbaf;
+        }
+        
+        .percentage .progress .progress-bar.color-6 {
+            background-color: #007bff;
+        }
+        
+        .home-banner-01 {
+            position: relative;
+        }
+        
+        .dark-bg {
+            /* background-color: #3a3973; */
+        }
+        
+        .home-banner-01 .bottom-ani path {
+            fill: #ffffff;
+        }
+        
+        .home-banner-01 .bottom-ani {
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            right: 0;
+        }
+        
+        .white-color {
+            color: #ffffff;
+        }
+        
+        .dark-bg {
+            background-color: #3a3973;
+        }
+        
+        article,
+        aside,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        main,
+        nav,
+        section {
+            display: block;
+        }
+        
+        .home-banner-01 .ht-img {
+            position: relative;
+            top: 60px;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        .home-banner-01 .ht-text {
+            color: #ffffff !important;
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        
+        .header_area {
+            position: absolute;
+            width: 100%;
+            z-index: 9999;
+            background: transparent;
+        }
+        
+        .home-banner-01 .ht-text h1 {
+            font-weight: 500;
+            font-size: 70px;
+            margin-bottom: 15px;
+        }
+        
+        .home-banner-01 .ht-text .btn-bar {
+            padding-top: 30px;
+        }
+        
+        .px-btn.white-t:hover {
+            background: #ffffff;
+            color: #3a3973;
+        }
+        
+        .px-btn span {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .px-btn.white-t {
+            background: transparent;
+            border: 2px solid #ffffff;
+            color: #ffffff;
+        }
+        
+        .px-btn {
+            padding: 0 20px;
+            line-height: 42px;
+            border: 2px solid transparent;
+            position: relative;
+            display: inline-block;
+            background: none;
+            border: none;
+            -moz-transition: ease all 0.35s;
+            -o-transition: ease all 0.35s;
+            -webkit-transition: ease all 0.35s;
+            transition: ease all 0.35s;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
+        .home-banner-01 .ht-text {
+            color: #ffffff;
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        
+        x-model {
+            animation: 5s spin linear infinite;
+        }
+        
+        @keyframes spin {
+            to {
+                transform: rotateY(1turn);
+            }
+        }
+        
+        .nav-link {
+            color: #ffffff !important;
+        }
+        
+        .navbar_fixed .nav-link {
+            color: black !important;
+        }
+        
+        .nav-link.active {
+            color: #4458dc !important;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .footer_area {
+            padding: 40px 0;
+        }
+    </style>
+    <style>
+        /*!
+ * Start Bootstrap - Scrolling Nav (https://startbootstrap.com/template/scrolling-nav)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-scrolling-nav/blob/master/LICENSE)
+ */
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Navigation -->
+
+
+
+    <header class="header_area">
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+                <div class="container">
+
+                    <a class="navbar-brand logo_h" href="index.html">
+
+
+                        <p id="icon" class="d-none" style="color: black;
+                                text-shadow: rgb(48, 117, 165) 0px 0px 0px,
+                                rgb(49, 121, 171) 1px 1px 0px, rgb(51, 126, 177)
+                                2px 2px 0px,
+                                rgb(53, 131, 184) 3px 3px 0px,
+                                rgb(55, 135, 190) 4px 4px 0px,
+                                rgb(57, 140, 197) 5px 5px 0px ;
+                                font-size: 45px;
+                                color: #fff;
+
+
+                                border-radius: 0%;
+                                text-align: center;"> Gangawane </p>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle
+                            navigation">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav
+                                justify-content-end">
+
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger" href="#home">Home</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+                            </li>
+
+                            <li class="nav-item  ">
+                                <a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="portfolio-details.html">Portfolio
+                                                Details</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog
+                                                Details</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+
+    <!-- Home Banner -->
+    <section id="home" class="home-banner-01 dark-bg" style="padding: 50px;">
+        <div class="container">
+            <div class="row ht-row align-items-center">
+                <div class="col-lg-6">
+                    <div class="ht-text">
+
+
+                        <h6 style="color: #ffffff;">Hello</h6>
+                        <h1 style="color: #ffffff;">I'm Ravi Gangawane</h1>
+                        <h2 style="color: #ffffff;">I'm <span id="type-it"></span></h2>
+                        <br>
+                        <br>
+
+                        <div class="footer_social home-screen">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-skype"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                        <div class="btn-bar">
+                            <a class="px-btn white-t" href="#"><span>Contact
+                                        Me</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ht-img">
+                        <!-- <img src="https://www.pxdraft.com/wrap/kory/kory/static/img/about-me.png" title="" alt=""> -->
+                        <img class="w-100" src="/test.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-ani svg-color white-color">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 40" preserveAspectRatio="none">
+                    <path d="">
+                        <animate attributeName="d" begin="0s" dur="5s"
+                            repeatCount="indefinite" values="M0,0
+                            C200,7.11236625e-15 200,40 400,40 C600,40 800,0
+                            1000,0 L1000,50 L0,50 L0,0 Z;
+                            M0,40 C200,40 400,0 600,0 C800,0 800,40 1000,40
+                            L1000,50 L0,50 L0,40 Z;
+                            M0,30 C200,30 200,0 400,0 C600,0 800,40 1000,40
+                            L1000,50 L0,50 L0,30 Z;
+                            M0,0 C200,7.11236625e-15 200,40 400,40 C600,40 800,0
+                            1000,0 L1000,50 L0,50 L0,0 Z;"></animate>
+                    </path>
+                </svg>
+        </div>
+    </section>
+
+    <div class="container-xxl">
+
+
+
+        <section class="home_banner_area d-none">
+            <div class="banner_inner">
+                <div class="container-xl">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="banner_content">
+                                <h3 class="text-uppercase">Hell0</h3>
+                                <h1 class="text-uppercase">I am Ravi Gangawane
+                                </h1>
+                                <h5 class="text-uppercase">senior angular developer
+                                </h5>
+                                <br>
+                                <div class="footer_social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-skype"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                                <br>
+                                <div class="d-flex align-items-center">
+                                    <a class="primary_btn" href="#"><span>Hire
+                                                Me</span></a>
+                                    <a class="primary_btn tr-bg" href="#"><span>Get
+                                                CV</span></a>
+                                </div>
+
+
+
+
+
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="home_right_img">
+                                <img class="" src="https://preview.colorlib.com/theme/satner/img/banner/home-right.png" alt="" style="width: 120%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="about_area  " id="about">
+            <div class="container">
+                <div class="row justify-content-start align-items-center">
+                    <h2>let’s Introduce about <br> myself
+                    </h2>
+                    <p>
+
+                        I am a software engineer. I am a professional computer programmer, who can build absolutely anything. I am an extremely trustworthy person and I follow business ethics very strictly. I am a very disciplined, time punctual, and process-loving person. I
+                        love to create processes for increasing the company's overall growth. I am open to adapt any constructive changes and challenges throughout my life. I am very transparent and clear about my opinions. I see myself as a good leader,
+                        for the reason; I create leaders. I am a creative person, who tries to bring creativity to all dimensions of living life.
+                    </p>
+                    <div class="col-lg-4">
+                        <div class="about_im g">
+                            <!-- <img class="w-100" src="https://preview.colorlib.com/theme/satner/img/about-us.png" alt=""> -->
+                            <img class="w- 100" src="img/ravi_2.jpg" alt="" style="width: 70%;">
+
+
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="main_title text-left">
+
+
+
+
+                            <div class="portfolio_details_inner">
+
+
+
+                                <div class="portfolio_right_text mt-30">
+                                    <h4 class="text-uppercase">Entrepreneur, Programmer & Sales Guy</h4>
+                                    <p>
+                                        Expert in programming, sales, negotiation, communication and management. Experienced startup guy who has worked in every dimension of running tech startup.
+                                    </p>
+                                    <div class="d-flex mb-3">
+
+
+                                        <ul class="list">
+                                            <li><span>Birthday</span>: 07 June 1994</li>
+                                            <li><span>Phone</span>: +91 9130451715
+                                            </li>
+                                            <li><span>Email</span>: ravi.d.gangawane@gmail.com
+                                            </li>
+                                            <li><span>Age</span>: 27</li>
+                                        </ul>
+                                        <ul class="list pl-2">
+
+                                            <li><span>Degree</span>: Bachelor
+                                            </li>
+                                            <li><span>Website</span>: https://ravigangawane.github.io
+                                            </li>
+                                            <li><span>City</span>: Pune, Maharashtra, India</li>
+                                            <li><span>Freelance</span>: Available
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <p>
+                                Creativity and Innovation is my passion. I love to code, teach code and sell code. From the colleage itself, I have started to build and sell softwares for local shops. After graduation, I have worked as freelancer for some time. I have started 3 startups
+                                over the period of time.
+                            </p>
+                            <a class="primary_btn float-right" href="#"><span>Download
+                                        CV</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="brand _area section_ga p_bottom">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-6 d-none">
+                                <div class="single-brand-item d-table">
+                                    <div class="d-table-cell text-center">
+                                        <!-- <img src="https://preview.colorlib.com/theme/satner/img/brands/logo1.png " alt=" "> -->
+                                        <img src="https://lh4.googleusercontent.com/-Rl0anWPSOSU/AAAAAAAAAAI/AAAAAAAAAAA/XgQUQ-Vyi6M/s110-p-k-no-ns-nd/photo.jpg" alt="" srcset="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 d-none">
+                                <div class="single-brand-item d-table">
+                                    <div class="d-table-cell text-center">
+                                        <!-- <img src="https://preview.colorlib.com/theme/satner/img/brands/logo2.png " alt=" "> -->
+                                        <img src="https://www.codekul.com/img/images/codekul-logo.webp" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 d-none">
+                                <div class="single-brand-item d-table">
+                                    <div class="d-table-cell text-center">
+                                        <!-- <img src="https://preview.colorlib.com/theme/satner/img/brands/logo3.png " alt=" "> -->
+                                        <img src="https://www.cybage.com/sites/default/files/Cybage-logo-f_0.png" alt="" srcset="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="single-brand-item d-table">
+                                    <div class="d-table-cell text-center">
+                                        <img src="/img/angular.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="single-brand-item d-table">
+                                    <div class="d-table-cell text-center">
+                                        <img src="img/html5-with-wordmark-color.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="single-brand-item d-table">
+                                    <div class="d-table-cell text-center">
+                                        <img src="img/javascript-seeklogo.com.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="single-brand-item d-table">
+                                    <div class="d-table-cell text-center">
+                                        <img src="/img/css3-seeklogo.com.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="single-brand-item d-table">
+                                    <div class="d-table-cell text-center">
+                                        <img src="img/jquery-seeklogo.com.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="single-brand-item d-table">
+                                    <div class="d-table-cell text-center">
+                                        <img src="/img/react-seeklogo.com.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="single-brand-item d-table">
+                                    <div class="d-table-cell text-center">
+                                        <img src="/img/vuejs-seeklogo.com.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="single-brand-item d-table">
+                                    <div class="d-table-cell text-center">
+                                        <img src="/img/nodejs-seeklogo.com.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="single-brand-item d-table">
+                                    <div class="d-table-cell text-center">
+                                        <img src="img/ionic-seeklogo.com.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="single-brand-item d-table">
+                                    <div class="d-table-cell text-center">
+                                        <img src="img/nativescript-seeklogo.com.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="single-brand-item d-table">
+                                    <div class="d-table-cell text-center">
+                                        <img src="img/firebase-seeklogo.com.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="single-brand-item d-table">
+                                    <div class="d-table-cell text-center">
+                                        <img src="img/bootstrap-5-seeklogo.com.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                        </div>
+                    </div>
+                    <div class="offset-lg-2 col-lg-4 col-md-6">
+                        <div class="client-info">
+                            <div class="d-flex mb-50">
+                                <span class="lage">4<sup>+</sup> </span>
+                                <span class="smll">Years Experience in
+                                        Development </span>
+                            </div>
+                            <div class="d-flex mb-50">
+                                <span class="lage">6<sup>+</sup> </span>
+                                <span class="smll">Years of Experience in
+                                        Training </span>
+                            </div>
+                            <div class="call-now d-flex">
+                                <div>
+                                    <span class="fa fa-phone"></span>
+                                </div>
+                                <div class="ml-15">
+                                    <p>call us now</p>
+                                    <h3>(+91) 930451715</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="about_area  " id="skills">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <div class="main_title">
+                            <h2>SKILLS </h2>
+                            <p>
+                                <p> Being an Enterprenure, customers asks for variety of things for their products. So to suffice their needs, I have acquired many skill over the period of time. At the core, I am programmer and I do everything which is needed
+                                    for building <strong> Enterprise grade
+                                            Mobile and Web Apps, IoT and Machine
+                                            Learning </strong> Solutions. I have divided my skills in two broad categories i.e. Technical and Manegerial which are as follows.
+                                </p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row feature_inner">
+
+
+
+                    <div class="col-md-3">
+
+                        <div>
+                            <span class="skill">HTML/CSS <i class="val"style="float:
+                                        right; font-style: normal;">100%</i></span>
+                            <div class="percentage">
+                                <div class="progress">
+                                    <div class="progress-bar color-1" role="progressbar" style="width:
+                                            80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="skill">JAVASCRIPT <i class="val"style="float:
+                                        right; font-style: normal;">100%</i></span>
+                            <div class="percentage">
+                                <div class="progress">
+                                    <div class="progress-bar color-2" role="progressbar" style="width:
+                                            80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="skill">jQuery <i class="val"style="float:
+                                        right; font-style: normal;">100%</i></span>
+                            <div class="percentage">
+                                <div class="progress">
+                                    <div class="progress-bar color-3" role="progressbar" style="width:
+                                            80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="skill">CSS PREPROCESSING <i
+                                        class="val"style="float: right;
+                                        font-style: normal;">100%</i></span>
+                            <div class="percentage">
+                                <div class="progress">
+                                    <div class="progress-bar color-4" role="progressbar" style="width:
+                                            80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="skill">VERSION CONTROL/GIT<i
+                                        class="val"style="float: right;
+                                        font-style: normal;">100%</i></span>
+                            <div class="percentage">
+                                <div class="progress">
+                                    <div class="progress-bar color-5" role="progressbar" style="width:
+                                            80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="skill">RESPONSIVE DESIGN <i
+                                        class="val"style="float: right;
+                                        font-style: normal;">100%</i></span>
+                            <div class="percentage">
+                                <div class="progress">
+                                    <div class="progress-bar color-6" role="progressbar" style="width:
+                                            80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="skill">BROWSER DEVELOPER TOOLS <i
+                                        class="val"style="float: right;
+                                        font-style: normal;">100%</i></span>
+                            <div class="percentage">
+                                <div class="progress">
+                                    <div class="progress-bar color-7" role="progressbar" style="width:
+                                            80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="skill">WEB PERFORMANCE <i
+                                        class="val"style="float: right;
+                                        font-style: normal;">100%</i></span>
+                            <div class="percentage">
+                                <div class="progress">
+                                    <div class="progress-bar color-8" role="progressbar" style="width:
+                                            80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+
+                        <div>
+                            <span class="skill">CSS FRAMEWORKS <i class="val"style="float:
+                                        right; font-style: normal;">100%</i></span>
+                            <div class="percentage">
+                                <div class="progress">
+                                    <div class="progress-bar color-2" role="progressbar" style="width:
+                                            80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="pl-3">
+                                <span class="skill">Bootstrap 3,4,5 <i
+                                            class="val"style="float: right;
+                                            font-style: normal;">100%</i></span>
+                                <div class="percentage">
+                                    <div class="progress">
+                                        <div class="progress-bar color-1" role="progressbar" style="width:
+                                                80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pl-3">
+                                <span class="skill">Foundation <i class="val"style="float:
+                                            right; font-style: normal;">100%</i></span>
+                                <div class="percentage">
+                                    <div class="progress">
+                                        <div class="progress-bar color-1" role="progressbar" style="width:
+                                                80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pl-3">
+                                <span class="skill">Material Design for
+                                        Bootstrap 5 & 4<i class="val"style="float:
+                                            right; font-style: normal;">100%</i></span>
+                                <div class="percentage">
+                                    <div class="progress">
+                                        <div class="progress-bar color-1" role="progressbar" style="width:
+                                                80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pl-3">
+                                <span class="skill">Angular powered
+                                        Bootstrap<i class="val"style="float:
+                                            right; font-style: normal;">100%</i></span>
+                                <div class="percentage">
+                                    <div class="progress">
+                                        <div class="progress-bar color-1" role="progressbar" style="width:
+                                                80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pl-3">
+                                <span class="skill">Materialize<i class="val"style="float:
+                                            right; font-style: normal;">100%</i></span>
+                                <div class="percentage">
+                                    <div class="progress">
+                                        <div class="progress-bar color-1" role="progressbar" style="width:
+                                                80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pl-3">
+                                <span class="skill">Angular Material<i
+                                            class="val"style="float: right;
+                                            font-style: normal;">100%</i></span>
+                                <div class="percentage">
+                                    <div class="progress">
+                                        <div class="progress-bar color-1" role="progressbar" style="width:
+                                                80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="col-md-3">
+                        <div>
+                            <span class="skill">JAVASCRIPT FRAMEWORKS <i
+                                        class="val"style="float: right;
+                                        font-style: normal;">100%</i></span>
+                            <div class="percentage">
+                                <div class="progress">
+                                    <div class="progress-bar color-3" role="progressbar" style="width:
+                                            80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <!-- <div class="pl-3">
+                                <span class="skill ">React <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                                <div class="percentage ">
+                                    <div class="progress ">
+                                        <div class="progress-bar color-1 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <!-- <div class="pl-3">
+                                <span class="skill ">Vue.JS <i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                                <div class="percentage ">
+                                    <div class="progress ">
+                                        <div class="progress-bar color-1 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pl-3">
+                                <span class="skill ">Node.JS<i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                                <div class="percentage ">
+                                    <div class="progress ">
+                                        <div class="progress-bar color-1 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pl-3">
+                                <span class="skill ">Backbone.JS<i class="val " style=" float: right; font-style: normal; ">100%</i></span>
+                                <div class="percentage ">
+                                    <div class="progress ">
+                                        <div class="progress-bar color-1 " role="progressbar " style="width: 80% " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 "></div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div>
+                                <span class="skill">Angular 5,7,8,10<i
+                                            class="val"style="float: right;
+                                            font-style: normal;">100%</i></span>
+                                <div class="percentage">
+                                    <div class="progress">
+                                        <div class="progress-bar color-4" role="progressbar" style="width:
+                                                80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="skill">Ionic <i class="val"style="float:
+                                            right; font-style: normal;">100%</i></span>
+                                <div class="percentage">
+                                    <div class="progress">
+                                        <div class="progress-bar color-5" role="progressbar" style="width:
+                                                80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div>
+                                <span class="skill"> Nativescript <i
+                                            class="val"style="float: right;
+                                            font-style: normal;">100%</i></span>
+                                <div class="percentage">
+                                    <div class="progress">
+                                        <div class="progress-bar color-3" role="progressbar" style="width:
+                                                80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+
+
+
+
+                        <span class="skill">TEAM MANAGEMENT <i class="val"style="float:
+                                    right; font-style: normal;">100%</i></span>
+                        <div class="percentage">
+                            <div class="progress">
+                                <div class="progress-bar color-1" role="progressbar" style="width:
+                                        80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+
+                        <span class="skill">CONSULTATION & TRAINING <i
+                                    class="val"style="float: right; font-style:
+                                    normal;">100%</i></span>
+                        <div class="percentage">
+                            <div class="progress">
+                                <div class="progress-bar color-2" role="progressbar" style="width:
+                                        80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <span class="skill">COMMUNICATION <i class="val"style="float:
+                                    right; font-style: normal;">100%</i></span>
+                        <div class="percentage">
+                            <div class="progress">
+                                <div class="progress-bar color-3" role="progressbar" style="width:
+                                        80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <span class="skill">TEAMWORK <i class="val"style="float:
+                                    right; font-style: normal;">100%</i></span>
+                        <div class="percentage">
+                            <div class="progress">
+                                <div class="progress-bar color-4" role="progressbar" style="width:
+                                        80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <span class="skill">CREATIVITY & WILLINGNESS TO
+                                LEARN <i class="val"style="float: right;
+                                    font-style: normal;">100%</i></span>
+                        <div class="percentage">
+                            <div class="progress">
+                                <div class="progress-bar color-5" role="progressbar" style="width:
+                                        80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <span class="skill">PROBLEM-SOLVEING <i class="val"style="float:
+                                    right; font-style: normal;">100%</i></span>
+                        <div class="percentage">
+                            <div class="progress">
+                                <div class="progress-bar color-6" role="progressbar" style="width:
+                                        80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+        </section>
+
+        <section class="features_area" id="services">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <div class="main_title">
+                            <h2>service offers </h2>
+                            <p>
+                                Is give may shall likeness made yielding spirit a itself togeth created after sea
+                                <br> is in beast beginning signs open god you're gathering ithe
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row feature_inner">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="feature_item">
+                            <img src="https://preview.colorlib.com/theme/satner/img/services/s1.png" alt="">
+                            <h4>Wp developing</h4>
+                            <p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="feature_item">
+                            <img src="https://preview.colorlib.com/theme/satner/img/services/s2.png" alt="">
+                            <h4>UI/ux design</h4>
+                            <p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="feature_item">
+                            <img src="https://preview.colorlib.com/theme/satner/img/services/s3.png" alt="">
+                            <h4>Web design</h4>
+                            <p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="feature_item">
+                            <img src="https://preview.colorlib.com/theme/satner/img/services/s4.png" alt="">
+                            <h4>seo optimize</h4>
+                            <p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="portfolio_area" id="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="main_title text-left">
+                            <h2>quality work <br> Recently done project
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="filters portfolio-filter">
+                    <ul>
+                        <li class="active" data-filter="*">all</li>
+                        <li data-filter=".popular">popular</li>
+                        <li data-filter=".latest"> latest</li>
+                        <li data-filter=".following">following</li>
+                        <li data-filter=".upcoming">upcoming</li>
+                    </ul>
+                </div>
+                <div class="filters-content">
+                    <div class="row portfolio-grid justify-content-center">
+                        <div class="col-lg-3 col-md-6 all latest">
+                            <div class="portfolio_box">
+                                <div class="single_portfolio">
+                                    <img class="img-fluid w-100" src="http://www.codekul.com/img/images/codekul-logo.webp" alt="">
+                                    <div class="overlay"></div>
+                                    <a href="http://www.codekul.com/img/images/codekul-logo.webp" class="img-gal">
+                                        <div class="icon">
+                                            <span class="lnr lnr-cross"></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="short_info">
+                                    <h4><a href="http://www.codekul.com/">Codekul
+                                                website</a></h4>
+                                    <p>Animated, portfolio</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 all popular">
+                            <div class="portfolio_box">
+                                <div class="single_portfolio">
+                                    <img class="img-fluid w-100" src="https://lh5.googleusercontent.com/p/AF1QipOF9xP8Zp-pD_5-swN507VyeqkeP67toT5DWGCS=w355-h160-k-no" alt="">
+                                    <div class="overlay"></div>
+                                    <a href="https://lh5.googleusercontent.com/p/AF1QipOF9xP8Zp-pD_5-swN507VyeqkeP67toT5DWGCS=w355-h160-k-no" class="img-gal">
+                                        <div class="icon">
+                                            <span class="lnr lnr-cross"></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="short_info">
+                                    <h4><a href="portfolio-details.html">Melayer
+                                            </a></h4>
+                                    <p>Animated, portfolio</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 all latest">
+                            <div class="portfolio_box">
+                                <div class="single_portfolio">
+                                    <img class="img-fluid w-100" src="https://preview.colorlib.com/theme/satner/img/portfolio/p3.jpg" alt="">
+                                    <div class="overlay"></div>
+                                    <a href="https://preview.colorlib.com/theme/satner/img/portfolio/p3.jpg" class="img-gal">
+                                        <div class="icon">
+                                            <span class="lnr lnr-cross"></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="short_info">
+                                    <h4><a href="portfolio-details.html">Codekul
+                                                admin panel</a></h4>
+                                    <p>Animated, portfolio</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 all popular">
+                            <div class="portfolio_box">
+                                <div class="single_portfolio">
+                                    <img class="img-fluid w-100" src="https://preview.colorlib.com/theme/satner/img/portfolio/p4.jpg" alt="">
+                                    <div class="overlay"></div>
+                                    <a href="https://preview.colorlib.com/theme/satner/img/portfolio/p4.jpg" class="img-gal">
+                                        <div class="icon">
+                                            <span class="lnr lnr-cross"></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="short_info">
+                                    <h4><a href="portfolio-details.html">Sanskrutik
+                                                Bhawan</a></h4>
+                                    <p>Animated, portfolio</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 all following">
+                            <div class="portfolio_box">
+                                <div class="single_portfolio">
+                                    <img class="img-fluid w-100" src="https://scontent.fpnq2-1.fna.fbcdn.net/v/t1.0-1/22552705_310707062743355_4551867190682414501_n.png?_nc_cat=101&ccb=2&_nc_sid=1eb0c7&_nc_ohc=--uQm_g4YX8AX8x9NYr&_nc_ht=scontent.fpnq2-1.fna&oh=f3af96984d7cf9455ed31bd61e3f3f8d&oe=602A35B3"
+                                        alt="">
+                                    <div class="overlay"></div>
+                                    <a href="https://scontent.fpnq2-1.fna.fbcdn.net/v/t1.0-1/22552705_310707062743355_4551867190682414501_n.png?_nc_cat=101&ccb=2&_nc_sid=1eb0c7&_nc_ohc=--uQm_g4YX8AX8x9NYr&_nc_ht=scontent.fpnq2-1.fna&oh=f3af96984d7cf9455ed31bd61e3f3f8d&oe=602A35B3" class="img-gal">
+                                        <div class="icon">
+                                            <span class="lnr lnr-cross"></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="short_info">
+                                    <h4><a href="portfolio-details.html">Codejobs
+                                                Admin panel</a></h4>
+                                    <p>Animated, portfolio</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 all upcoming">
+                            <div class="portfolio_box">
+                                <div class="single_portfolio">
+                                    <img class="img-fluid w-100" src="https://preview.colorlib.com/theme/satner/img/portfolio/p5.jpg" alt="">
+                                    <div class="overlay"></div>
+                                    <a href="https://preview.colorlib.com/theme/satner/img/portfolio/p6.jpg" class="img-gal">
+                                        <div class="icon">
+                                            <span class="lnr lnr-cross"></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="short_info">
+                                    <h4><a href="portfolio-details.html">Helix
+                                                pro</a></h4>
+                                    <p>Animated, portfolio</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 all upcoming following">
+                            <div class="portfolio_box">
+                                <div class="single_portfolio">
+                                    <img class="img-fluid w-100" src="https://preview.colorlib.com/theme/satner/img/portfolio/p7.jpg" alt="">
+                                    <div class="overlay"></div>
+                                    <a href="https://preview.colorlib.com/theme/satner/img/portfolio/p7.jpg" class="img-gal">
+                                        <div class="icon">
+                                            <span class="lnr lnr-cross"></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="short_info">
+                                    <h4><a href="portfolio-details.html">E-billing</a></h4>
+                                    <p>Animated, portfolio</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 all following">
+                            <div class="portfolio_box">
+                                <div class="single_portfolio">
+                                    <img class="img-fluid w-100" src="https://preview.colorlib.com/theme/satner/img/portfolio/p8.jpg" alt="">
+                                    <div class="overlay"></div>
+                                    <a href="https://preview.colorlib.com/theme/satner/img/portfolio/p8.jpg" class="img-gal">
+                                        <div class="icon">
+                                            <span class="lnr lnr-cross"></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="short_info">
+                                    <h4>Lookout </h4>
+                                    <p>Animated, portfolio</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 all upcoming">
+                            <div class="portfolio_box">
+                                <div class="single_portfolio">
+                                    <img class="img-fluid w-100" src="https://preview.colorlib.com/theme/satner/img/portfolio/p9.jpg" alt="">
+                                    <div class="overlay"></div>
+                                    <a href="https://preview.colorlib.com/theme/satner/img/portfolio/p9.jpg" class="img-gal">
+                                        <div class="icon">
+                                            <span class="lnr lnr-cross"></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="short_info">
+                                    <h4><a href="portfolio-details.html">Trakoba
+                                            </a></h4>
+                                    <p>Animated, portfolio</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact_area" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="contact_info">
+                            <div class="info_item">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                <h6>Gokhale Briz, Pirangut, Pune, </h6>
+                                <p>Maharashtra 412115</p>
+                            </div>
+                            <div class="info_item">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <h6><a href="#">+91 9130451715</a></h6>
+                                <p>Mon to Fri 9am to 6 pm</p>
+                            </div>
+                            <div class="info_item">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <h6><a href="#">ravi.d.gangawane@gmail.com</a></h6>
+                                <p>Send us your query anytime!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-12 text-right">
+                                <button type="submit" value="submit" class="primary_btn">
+                                        <span>Send Message</span>
+                                    </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <iframe style="margin-top: 80px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15133.84259447164!2d73.6687056!3d18.5080743!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf847dc17fcfd6380!2sGokhale%20Briz%2C%20Pirangut!5e0!3m2!1sen!2sin!4v1610800449589!5m2!1sen!2sin"
+                    width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </section>
+
+        <footer class="footer_area">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="footer_top flex-column">
+                            <div class="footer_logo">
+
+                                <h4>Follow Me</h4>
+                            </div>
+                            <div class="footer_social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-skype"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row footer_bottom justify-content-center">
+                    <p class="col-lg-8 col-sm-12 footer-text">
+
+                        <div class="copyright">
+                            © Copyright <strong><span>Ravi Gangawane</span></strong>. All Rights Reserved
+                        </div>
+                        <div class="credits">
+                            Designed by Ravi Gangawane
+                        </div>
+
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+
+
+    <!-- The script itself, loaded AFTER your root element. -->
+    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+    <script>
+        new TypeIt('#type-it', {
+
+            speed: 200,
+            loop: true,
+            strings: [
+                'a Angular Developer',
+                'a UI/UX Designer',
+                'a Professional IT Trainer'
+            ],
+            breakLines: false,
+            waitUntilVisible: true,
+        }).go();
+    </script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js " integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js " integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj " crossorigin="anonymous "></script>
+    -->
+
+
+
+
+
+
+    <script src="https://preview.colorlib.com/theme/satner/js/jquery-3.2.1.min.js"></script>
+    <script src="https://preview.colorlib.com/theme/satner/js/popper.js"></script>
+    <script src="https://preview.colorlib.com/theme/satner/js/bootstrap.min.js"></script>
+    <script src="https://preview.colorlib.com/theme/satner/js/stellar.js"></script>
+    <script src="https://preview.colorlib.com/theme/satner/js/jquery.magnific-popup.min.js"></script>
+    <script src="https://preview.colorlib.com/theme/satner/vendors/nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="https://preview.colorlib.com/theme/satner/vendors/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="https://preview.colorlib.com/theme/satner/vendors/isotope/isotope-min.js"></script>
+    <script src="https://preview.colorlib.com/theme/satner/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="https://preview.colorlib.com/theme/satner/js/jquery.ajaxchimp.min.js"></script>
+    <script src="https://preview.colorlib.com/theme/satner/js/mail-script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+    <script src="https://preview.colorlib.com/theme/satner/js/gmaps.min.js"></script>
+    <script src="https://preview.colorlib.com/theme/satner/js/theme.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+</body>
+
+</html>
