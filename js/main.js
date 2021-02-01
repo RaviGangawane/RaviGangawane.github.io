@@ -39,24 +39,25 @@
         e.preventDefault();
 
         $.ajax({
-
             url: "https://script.google.com/macros/s/AKfycbygA8K_tJiTWVaQA447bqYKc46NF8BvGBrSFExmkuEPaPxv4gmqxo3A4A/exec",
             method: "POST",
             dataType: "json",
             data: $(".contact1-form").serialize(),
             success: function(response) {
+                console.log('response', response)
 
-                if (response.result == "success") {
-                    $('.contact1-form')[0].reset();
-                    alert('Thank you for contacting us.');
-                    return true;
-                } else {
-                    alert("Something went wrong. Please try again.")
-                }
+                // if (response.result == "success") {
+                //     $('.contact1-form')[0].reset();
+                //     alert('Thank you for contacting us.');
+                //     return true;
+                // } else {
+                //     alert("Something went wrong. Please try again.")
+                // }
             },
-            error: function() {
+            error: function(err) {
+                console.log('err', err)
 
-                alert("Something went wrong. Please try again.")
+                // alert("Something went wrong. Please try again.")
             }
         })
     });
