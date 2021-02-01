@@ -269,6 +269,8 @@
  * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-scrolling-nav/blob/master/LICENSE)
  */
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
+
 </head>
 
 <body>
@@ -539,11 +541,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-6 d-none">
+                            <div class="col-lg-4 col-md-4 col-sm-6 d-none ">
                                 <div class="single-brand-item d-table">
                                     <div class="d-table-cell text-center">
                                         <!-- <img src="https://preview.colorlib.com/theme/satner/img/brands/logo2.png " alt=" "> -->
-                                        <img src="https://www.codekul.com/img/images/codekul-logo.webp" alt="">
+                                        <img src="http://www.codekul.com/img/images/codekul-logo.webp" alt="">
+
                                     </div>
                                 </div>
                             </div>
@@ -1264,10 +1267,9 @@
         </section>
         <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScMV1DV3QehbvnWHCfw_QDYO22JolRzZBb6cF_JtNDd3znifQ/viewform?embedded=true" width="640" height="943" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
 
-        <div class="contact1">
+        <!-- <div class="contact1">
             <div class="container-contact1">
                 <div class="contact1-pic js-tilt" data-tilt>
-                    <img src="images/img-01.png" alt="IMG">
                 </div>
 
                 <form class="contact1-form validate-form">
@@ -1276,23 +1278,23 @@
                     </span>
 
                     <div class="wrap-input1 validate-input" data-validate="Name is required">
-                        <input class="input1" type="text" name="name" placeholder="Name" value="ravi">
+                        <input class="input1" type="text" name="name" placeholder="Name">
                         <span class="shadow-input1"></span>
                     </div>
 
                     <div class="wrap-input1 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                        <input class="input1" type="text" name="email" placeholder="Email" value="ravigangawane04@gmail.com">
+                        <input class="input1" type="text" name="email" placeholder="Email">
                         <span class="shadow-input1"></span>
                     </div>
 
                     <div class="wrap-input1 validate-input" data-validate="Subject is required">
-                        <input class="input1" type="text" name="subject" placeholder="Subject" value="test">
+                        <input class="input1" type="text" name="subject" placeholder="Subject">
                         <span class="shadow-input1"></span>
                     </div>
 
                     <div class="wrap-input1 validate-input" data-validate="Message is required">
                         <textarea class="input1" name="message" placeholder="Message">
-                            asd
+                             
                         </textarea>
                         <span class="shadow-input1"></span>
                     </div>
@@ -1307,7 +1309,7 @@
                     </div>
                 </form>
             </div>
-        </div>
+        </div> -->
 
 
         <section class="contact_area" id="contact">
@@ -1333,20 +1335,20 @@
                         </div>
                     </div>
                     <div class="col-lg-9">
-                        <form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                        <form class="row contact_form validate-form">
                             <div class="col-md-6">
-                                <div class="form-group">
+                                <div class="form-group  validate-input">
                                     <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group  validate-input">
                                     <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group  validate-input">
                                     <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject">
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="form-group">
+                                <div class="form-group  validate-input">
                                     <textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message"></textarea>
                                 </div>
                             </div>
@@ -1457,12 +1459,12 @@
     <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js"></script>
 
-    <script src="vendor/tilt/tilt.jquery.min.js"></script>
+    <!-- <script src="vendor/tilt/tilt.jquery.min.js"></script>
     <script>
         $('.js-tilt').tilt({
             scale: 1.1
         })
-    </script>
+    </script> -->
     <!--===============================================================================================-->
     <script src="js/main.js"></script>
 </body>
