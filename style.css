@@ -3549,7 +3549,7 @@ h6 {
     position: absolute;
     top: -25px;
     left: -50px;
-    background: url(../img/client-info-bg.png) no-repeat;
+    background: url(/img/client-info-bg.webp) no-repeat;
     height: 175px;
     width: 175px;
 }
@@ -8097,7 +8097,7 @@ h6 {
     position: absolute;
     top: -25px;
     left: -50px;
-    background: url(../img/client-info-bg.png) no-repeat;
+    background: url(/img/client-info-bg.webp) no-repeat;
     height: 175px;
     width: 175px;
 }
