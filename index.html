@@ -416,6 +416,7 @@
                         </div>
                         <div class="btn-bar">
                             <INPUT class="px-btn white-t" TYPE="button" VALUE="Contact Me" onClick="parent.location='mailto:ravigangawane04@gmail.com?subject=Website contact me page user '">
+                            <input type="button" value="Get Data" onclick="getData()">
                         </div>
                     </div>
                 </div>
@@ -727,7 +728,7 @@
                         <div class="main_title">
                             <h2>SKILLS </h2>
                             <p>
-                                As front end web developer, is a professional responsible for the design and implementation of the interface. The users require this interface so that they can access the application in question. A web designer is a professional who creates a website’s
+                                As a front-end web developer is a professional responsible for the design and implementation of the interface. The users require this interface so that they can access the application in question. A web designer is a professional who creates a website’s
                                 appearance and design. And the front end developer makes sure that the design works online by using coding languages such as
                                 <strong>CSS</strong>, <strong>HTML</strong>, and <strong>JavaScript</strong>. So to suffice their needs, I have acquired many skills over the period of time. At the core, I am a programmer and I do everything which is needed
                                 for building Enterprise-grade Mobile and Web Apps I have divided my skills into three broad categories i.e. <strong>Technical</strong>,
@@ -1212,8 +1213,8 @@
                         <div class="col-lg-3 col-md-6 all following">
                             <div class="portfolio_box">
                                 <div class="single_portfolio">
-                                    <img class="img-fluid w-100" src="https://scontent.fpnq2-1.fna.fbcdn.net/v/t1.0-1/22552705_310707062743355_4551867190682414501_n.png?_nc_cat=101&ccb=2&_nc_sid=1eb0c7&_nc_ohc=--uQm_g4YX8AX8x9NYr&_nc_ht=scontent.fpnq2-1.fna&oh=f3af96984d7cf9455ed31bd61e3f3f8d&oe=602A35B3"
-                                        alt="">
+                                    <!-- <img class="img-fluid w-100" src="https://scontent.fpnq2-1.fna.fbcdn.net/v/t1.0-1/22552705_310707062743355_4551867190682414501_n.png?_nc_cat=101&ccb=2&_nc_sid=1eb0c7&_nc_ohc=--uQm_g4YX8AX8x9NYr&_nc_ht=scontent.fpnq2-1.fna&oh=f3af96984d7cf9455ed31bd61e3f3f8d&oe=602A35B3"
+                                        alt=""> -->
                                     <div class="overlay"></div>
                                     <a href="https://scontent.fpnq2-1.fna.fbcdn.net/v/t1.0-1/22552705_310707062743355_4551867190682414501_n.png?_nc_cat=101&ccb=2&_nc_sid=1eb0c7&_nc_ohc=--uQm_g4YX8AX8x9NYr&_nc_ht=scontent.fpnq2-1.fna&oh=f3af96984d7cf9455ed31bd61e3f3f8d&oe=602A35B3" class="img-gal">
                                         <div class="icon">
@@ -1397,8 +1398,17 @@
                         </form>
                     </div>
                 </div>
-                <iframe style="margin-top: 80px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15133.84259447164!2d73.6687056!3d18.5080743!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf847dc17fcfd6380!2sGokhale%20Briz%2C%20Pirangut!5e0!3m2!1sen!2sin!4v1610800449589!5m2!1sen!2sin"
-                    width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <main>
+                    <div class="information">
+                        This is an example of a frontend for a blog CMS built using Google Sheets, Google Forms and Google Apps Script which was published as a <a href="https://medium.com/p/c2eab3fb0b2b">Medium article</a>. The blog is designed as a single
+                        page application with pagination and category filtering.
+                    </div>
+                    <nav id="filter"></nav>
+                    <div id="container"></div>
+                    <div id="notice"></div>
+                </main>
+                <!-- <iframe style="margin-top: 80px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15133.84259447164!2d73.6687056!3d18.5080743!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf847dc17fcfd6380!2sGokhale%20Briz%2C%20Pirangut!5e0!3m2!1sen!2sin!4v1610800449589!5m2!1sen!2sin"
+                    width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
             </div>
         </section>
 
@@ -1500,6 +1510,28 @@
     </script> -->
     <!--===============================================================================================-->
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', app.init);
+    </script>
+    <script>
+        function getData() {
+            console.log('getData');
+            $.ajax({
+                url: "https://script.google.com/macros/s/AKfycbxcfqyVXQ3UrPAGbSH03cT3tKt95hLT9SH0Oc-Sg1GbSJ8EYxPllel-bQ/exec",
+                method: "GET",
+                dataType: "json",
+
+                success: function(response) {
+                    console.log('response', response);
+
+                },
+                error: function() {
+
+                    alert("Something went wrong. Please try again.")
+                }
+            })
+        }
+    </script>
 </body>
 
 </html>
