@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
+    <link rel="icon" href="img/favicon.png">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
     <title>I'm Ravi Gangawane</title>
@@ -16,7 +18,7 @@
     <link rel="stylesheet" href="https://preview.colorlib.com/theme/satner/vendors/owl-carousel/owl.carousel.min.css">
     <link rel="stylesheet" href="https://preview.colorlib.com/theme/satner/css/magnific-popup.css">
     <link rel="stylesheet" href="https://preview.colorlib.com/theme/satner/vendors/nice-select/css/nice-select.css">
-    <!-- <link rel="stylesheet" href="https://preview.colorlib.com/theme/satner/css/style.css"> -->
+    <link rel="stylesheet" href="https://preview.colorlib.com/theme/satner/css/style.css">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <style>
@@ -300,21 +302,162 @@
             padding: 40px 0;
         }
     </style>
-    <style>
-        /*!
- * Start Bootstrap - Scrolling Nav (https://startbootstrap.com/template/scrolling-nav)
- * Copyright 2013-2020 Start Bootstrap
- * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-scrolling-nav/blob/master/LICENSE)
- */
-    </style>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script>
+        var script_url = "https://script.google.com/macros/s/AKfycbz3fvQr6vgbpZPUhxedmxUa-APKG5t6vpsyWKkMVLzO6ENHDhkmdpkjrg/exec";
+
+        // Make an AJAX call to Google Script
+        function insert_value() {
+
+            $("#re").css("visibility", "hidden");
+            document.getElementById("loader").style.visibility = "visible";
+            $('#mySpinner').addClass('spinner');
+
+            var id1 = $("#id").val();
+            // var name = $("#name").val();
+
+            var name = editor.el.innerHTML;
+
+
+            var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&action=insert";
+
+
+            var request = jQuery.ajax({
+                crossDomain: true,
+                url: url,
+                method: "GET",
+                dataType: "jsonp"
+            });
+
+        }
+
+
+
+
+
+
+
+        function update_value() {
+            $("#re").css("visibility", "hidden");
+            document.getElementById("loader").style.visibility = "visible";
+
+
+            var id1 = $("#id").val();
+            var name = $("#name").val();
+
+
+
+            var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&action=update";
+
+
+            var request = jQuery.ajax({
+                crossDomain: true,
+                url: url,
+                method: "GET",
+                dataType: "jsonp"
+            });
+
+
+        }
+
+
+
+
+
+        function delete_value() {
+            $("#re").css("visibility", "hidden");
+            document.getElementById("loader").style.visibility = "visible";
+            $('#mySpinner').addClass('spinner');
+            var id1 = $("#id").val();
+            var name = $("#name").val();
+
+
+            var url = script_url + "?callback=ctrlq&name=" + name + "&id=" + id1 + "&action=delete";
+
+
+            var request = jQuery.ajax({
+                crossDomain: true,
+                url: url,
+                method: "GET",
+                dataType: "jsonp"
+            });
+
+        }
+
+
+
+
+        // print the returned data
+        function ctrlq(e) {
+
+
+            $("#re").html(e.result);
+            $("#re").css("visibility", "visible");
+            read_value();
+
+        }
+
+
+
+
+        function read_value() {
+
+            $("#re").css("visibility", "hidden");
+
+            document.getElementById("loader").style.visibility = "visible";
+            var url = script_url + "?action=read";
+
+            $.getJSON(url, function(json) {
+
+                // Set the variables from the results array
+
+
+
+
+                // CREATE DYNAMIC TABLE.
+                var table = document.createElement("table");
+
+
+
+                var header = table.createTHead();
+                var row = header.insertRow(0);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+
+                cell1.innerHTML = "<b>ID</b>";
+                cell2.innerHTML = "<b>Name</b>";
+
+                // ADD JSON DATA TO THE TABLE AS ROWS.
+                for (var i = 0; i < json.records.length; i++) {
+
+                    tr = table.insertRow(-1);
+                    var tabCell = tr.insertCell(-1);
+                    tabCell.innerHTML = json.records[i].ID;
+                    tabCell = tr.insertCell(-1);
+                    tabCell.innerHTML = json.records[i].NAME;
+                }
+
+
+                // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+                var divContainer = document.getElementById("showData");
+                divContainer.innerHTML = "";
+                divContainer.appendChild(table);
+                document.getElementById("loader").style.visibility = "hidden";
+                $("#re").css("visibility", "visible");
+            });
+        }
+    </script>
+
+    <!-- Include Editor style. -->
+    <link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
-
-
-    <!-- Navigation -->
 
 
 
@@ -392,7 +535,6 @@
 
 
 
-
     <!-- Home Banner -->
     <section id="home" class="home-banner-01 dark-bg" style="padding: 50px;">
         <div class="container">
@@ -416,7 +558,6 @@
                         </div>
                         <div class="btn-bar">
                             <INPUT class="px-btn white-t" TYPE="button" VALUE="Contact Me" onClick="parent.location='mailto:ravigangawane04@gmail.com?subject=Website contact me page user '">
-                            <input type="button" value="Get Data" onclick="getData()">
                         </div>
                     </div>
                 </div>
@@ -448,9 +589,7 @@
 
     <div class="container-xxl">
 
-
-
-        <section class="home_banner_area d-none">
+        <section class="home_banner_area  ">
             <div class="banner_inner">
                 <div class="container-xl">
                     <div class="row">
@@ -459,6 +598,13 @@
                                 <h3 class="text-uppercase">Hell0</h3>
                                 <h1 class="text-uppercase">I am Ravi Gangawane
                                 </h1>
+
+
+                                <div id="loader"></div>
+
+                                <p id="re"></p>
+                                <div id="showData"></div>
+
                                 <h5 class="text-uppercase">senior angular developer
                                 </h5>
                                 <br>
@@ -482,6 +628,7 @@
 
 
                             </div>
+
                         </div>
                         <div class="col-lg-5">
                             <div class="home_right_img">
@@ -492,7 +639,6 @@
                 </div>
             </div>
         </section>
-
 
         <section class="about_area  " id="about">
             <div class="container">
@@ -563,7 +709,6 @@
                 </div>
             </div>
         </section>
-
 
         <section class="brand _area section_ga p_bottom">
             <div class="container">
@@ -719,7 +864,6 @@
                 </div>
             </div>
         </section>
-
 
         <section class="about_area  " id="skills">
             <div class="container">
@@ -1116,7 +1260,6 @@
             </div>
         </section>
 
-
         <section class="portfolio_area" id="portfolio">
             <div class="container">
                 <div class="row">
@@ -1216,11 +1359,11 @@
                                     <!-- <img class="img-fluid w-100" src="https://scontent.fpnq2-1.fna.fbcdn.net/v/t1.0-1/22552705_310707062743355_4551867190682414501_n.png?_nc_cat=101&ccb=2&_nc_sid=1eb0c7&_nc_ohc=--uQm_g4YX8AX8x9NYr&_nc_ht=scontent.fpnq2-1.fna&oh=f3af96984d7cf9455ed31bd61e3f3f8d&oe=602A35B3"
                                         alt=""> -->
                                     <div class="overlay"></div>
-                                    <a href="https://scontent.fpnq2-1.fna.fbcdn.net/v/t1.0-1/22552705_310707062743355_4551867190682414501_n.png?_nc_cat=101&ccb=2&_nc_sid=1eb0c7&_nc_ohc=--uQm_g4YX8AX8x9NYr&_nc_ht=scontent.fpnq2-1.fna&oh=f3af96984d7cf9455ed31bd61e3f3f8d&oe=602A35B3" class="img-gal">
+                                    <!-- <a href="https://scontent.fpnq2-1.fna.fbcdn.net/v/t1.0-1/22552705_310707062743355_4551867190682414501_n.png?_nc_cat=101&ccb=2&_nc_sid=1eb0c7&_nc_ohc=--uQm_g4YX8AX8x9NYr&_nc_ht=scontent.fpnq2-1.fna&oh=f3af96984d7cf9455ed31bd61e3f3f8d&oe=602A35B3" class="img-gal">
                                         <div class="icon">
                                             <span class="lnr lnr-cross"></span>
                                         </div>
-                                    </a>
+                                    </a> -->
                                 </div>
                                 <div class="short_info">
                                     <h4><a href="portfolio-details.html">Codejobs
@@ -1303,52 +1446,6 @@
                 </div>
             </div>
         </section>
-        <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScMV1DV3QehbvnWHCfw_QDYO22JolRzZBb6cF_JtNDd3znifQ/viewform?embedded=true" width="640" height="943" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
-
-        <!-- <div class="contact1">
-            <div class="container-contact1">
-                <div class="contact1-pic js-tilt" data-tilt>
-                </div>
-
-                <form class="contact1-form validate-form">
-                    <span class="contact1-form-title">
-                        Get in touch
-                    </span>
-
-                    <div class="wrap-input1 validate-input" data-validate="Name is required">
-                        <input class="input1" type="text" name="name" placeholder="Name">
-                        <span class="shadow-input1"></span>
-                    </div>
-
-                    <div class="wrap-input1 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                        <input class="input1" type="text" name="email" placeholder="Email">
-                        <span class="shadow-input1"></span>
-                    </div>
-
-                    <div class="wrap-input1 validate-input" data-validate="Subject is required">
-                        <input class="input1" type="text" name="subject" placeholder="Subject">
-                        <span class="shadow-input1"></span>
-                    </div>
-
-                    <div class="wrap-input1 validate-input" data-validate="Message is required">
-                        <textarea class="input1" name="message" placeholder="Message">
-                             
-                        </textarea>
-                        <span class="shadow-input1"></span>
-                    </div>
-
-                    <div class="container-contact1-form-btn">
-                        <button class="contact1-form-btn">
-                            <span>
-                                Submit
-                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                            </span>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div> -->
-
 
         <section class="contact_area" id="contact">
             <div class="container">
@@ -1398,17 +1495,9 @@
                         </form>
                     </div>
                 </div>
-                <main>
-                    <div class="information">
-                        This is an example of a frontend for a blog CMS built using Google Sheets, Google Forms and Google Apps Script which was published as a <a href="https://medium.com/p/c2eab3fb0b2b">Medium article</a>. The blog is designed as a single
-                        page application with pagination and category filtering.
-                    </div>
-                    <nav id="filter"></nav>
-                    <div id="container"></div>
-                    <div id="notice"></div>
-                </main>
-                <!-- <iframe style="margin-top: 80px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15133.84259447164!2d73.6687056!3d18.5080743!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf847dc17fcfd6380!2sGokhale%20Briz%2C%20Pirangut!5e0!3m2!1sen!2sin!4v1610800449589!5m2!1sen!2sin"
-                    width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
+
+                <iframe style="margin-top: 80px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15133.84259447164!2d73.6687056!3d18.5080743!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf847dc17fcfd6380!2sGokhale%20Briz%2C%20Pirangut!5e0!3m2!1sen!2sin!4v1610800449589!5m2!1sen!2sin"
+                    width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
         </section>
 
@@ -1478,20 +1567,20 @@
 
 
 
-    <script src="https://preview.colorlib.com/theme/satner/js/jquery-3.2.1.min.js"></script>
-    <script src="https://preview.colorlib.com/theme/satner/js/popper.js"></script>
-    <script src="https://preview.colorlib.com/theme/satner/js/bootstrap.min.js"></script>
-    <script src="https://preview.colorlib.com/theme/satner/js/stellar.js"></script>
-    <script src="https://preview.colorlib.com/theme/satner/js/jquery.magnific-popup.min.js"></script>
-    <script src="https://preview.colorlib.com/theme/satner/vendors/nice-select/js/jquery.nice-select.min.js"></script>
-    <script src="https://preview.colorlib.com/theme/satner/vendors/isotope/imagesloaded.pkgd.min.js"></script>
-    <script src="https://preview.colorlib.com/theme/satner/vendors/isotope/isotope-min.js"></script>
-    <script src="https://preview.colorlib.com/theme/satner/vendors/owl-carousel/owl.carousel.min.js"></script>
-    <script src="https://preview.colorlib.com/theme/satner/js/jquery.ajaxchimp.min.js"></script>
-    <script src="https://preview.colorlib.com/theme/satner/js/mail-script.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-    <script src="https://preview.colorlib.com/theme/satner/js/gmaps.min.js"></script>
-    <script src="https://preview.colorlib.com/theme/satner/js/theme.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/stellar.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/isotope-min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- <script src="https://preview.colorlib.com/theme/satner/js/jquery.ajaxchimp.min.js"></script> -->
+    <!-- <script src="https://preview.colorlib.com/theme/satner/js/mail-script.js"></script> -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script> -->
+    <!-- <script src="https://preview.colorlib.com/theme/satner/js/gmaps.min.js"></script> -->
+    <script src="js/theme.js"></script>
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -1510,28 +1599,9 @@
     </script> -->
     <!--===============================================================================================-->
     <script src="js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', app.init);
-    </script>
-    <script>
-        function getData() {
-            console.log('getData');
-            $.ajax({
-                url: "https://script.google.com/macros/s/AKfycbxcfqyVXQ3UrPAGbSH03cT3tKt95hLT9SH0Oc-Sg1GbSJ8EYxPllel-bQ/exec",
-                method: "GET",
-                dataType: "json",
 
-                success: function(response) {
-                    console.log('response', response);
 
-                },
-                error: function() {
 
-                    alert("Something went wrong. Please try again.")
-                }
-            })
-        }
-    </script>
 </body>
 
 </html>
