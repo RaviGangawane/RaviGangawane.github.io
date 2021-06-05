@@ -9076,3 +9076,335 @@ h6 {
 
 
 /*# sourceMappingURL=style.css.map */
+
+.footer_social a {
+    padding: 10px 20px 0px;
+    color: #788489;
+}
+
+.footer_social.home-screen a {
+    padding: 10px 20px 0px;
+    color: #ffffff;
+}
+
+.footer_social a i {
+    font-size: 24px;
+}
+
+.social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #0563bb;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+
+a {
+    color: #0563bb;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.percentage .progress {
+    /* width: 80%; */
+    border-radius: 0px;
+    /* background: transparent; */
+    background: #e9ecef !important;
+    margin: 10px 0px;
+    height: 10px;
+}
+
+.progress {
+    display: -ms-flexbox;
+    display: flex;
+    height: 1rem;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: #e9ecef;
+    border-radius: .25rem;
+}
+
+.percentage .progress .progress-bar {
+    height: 10px;
+    line-height: 5px;
+}
+
+.progress-bar {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #007bff;
+    transition: width .6s ease;
+}
+
+.percentage .progress .progress-bar.color-1 {
+    background-color: #F44336;
+}
+
+.percentage .progress .progress-bar.color-2 {
+    background-color: #E91E63;
+}
+
+.percentage .progress .progress-bar.color-3 {
+    background-color: #9C27B0;
+}
+
+.percentage .progress .progress-bar.color-4 {
+    background-color: #673AB7;
+}
+
+.percentage .progress .progress-bar.color-5 {
+    background-color: #3F51B5;
+}
+
+.percentage .progress .progress-bar.color-6 {
+    background-color: #2196F3;
+}
+
+.percentage .progress .progress-bar.color-7 {
+    background-color: #00BCD4;
+}
+
+.percentage .progress .progress-bar.color-8 {
+    background-color: #009688;
+}
+
+.percentage .progress .progress-bar.color-9 {
+    background-color: #4CAF50;
+}
+
+.percentage .progress .progress-bar.color-10 {
+    background-color: #8BC34A;
+}
+
+.percentage .progress .progress-bar.color-11 {
+    background-color: #FFEB3B;
+}
+
+.percentage .progress .progress-bar.color-12 {
+    background-color: #FFC107;
+}
+
+.percentage .progress .progress-bar.color-13 {
+    background-color: #FF9800;
+}
+
+.percentage .progress .progress-bar.color-14 {
+    background-color: #FF5722;
+}
+
+.percentage .progress .progress-bar.color-15 {
+    background-color: #795548;
+}
+
+.percentage .progress .progress-bar.color-16 {
+    background-color: #9E9E9E;
+}
+
+.home-banner-01 {
+    position: relative;
+}
+
+.dark-bg {
+    background-color: #3a3973;
+}
+
+.home-banner-01 .bottom-ani path {
+    fill: #ffffff;
+}
+
+.home-banner-01 .bottom-ani {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+}
+
+.white-color {
+    color: #ffffff;
+}
+
+.dark-bg {
+    background-color: #3a3973;
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+    display: block;
+}
+
+.home-banner-01 .ht-img {
+    position: relative;
+    top: 60px;
+    z-index: 1;
+    text-align: center;
+}
+
+.home-banner-01 .ht-text {
+    color: #ffffff !important;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.header_area {
+    position: absolute;
+    width: 100%;
+    z-index: 9999;
+    background: transparent;
+}
+
+.home-banner-01 .ht-text h1 {
+    font-weight: 500;
+    font-size: 4.375em;
+    margin-bottom: 15px;
+}
+
+.home-banner-01 .ht-text .btn-bar {
+    padding-top: 30px;
+}
+
+.px-btn.white-t:hover {
+    background: #ffffff;
+    color: #3a3973;
+}
+
+.px-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.px-btn.white-t {
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.px-btn {
+    padding: 0 20px;
+    line-height: 42px;
+    border: 2px solid transparent;
+    position: relative;
+    display: inline-block;
+    background: none;
+    border: none;
+    -moz-transition: ease all 0.35s;
+    -o-transition: ease all 0.35s;
+    -webkit-transition: ease all 0.35s;
+    transition: ease all 0.35s;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.home-banner-01 .ht-text {
+    color: #ffffff;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+x-model {
+    animation: 5s spin linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotateY(1turn);
+    }
+}
+
+.nav-link {
+    color: #ffffff !important;
+}
+
+.navbar_fixed .nav-link {
+    color: black !important;
+}
+
+.nav-link.active {
+    color: #4458dc !important;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.footer_area {
+    padding: 40px 0;
+}
+
+.home-banner-01 {
+    padding: 50px;
+}
+
+
+/* // X-Small devices (portrait phones, less than 576px) */
+
+@media (max-width: 575.98px) {
+    .home-banner-01 {
+        padding: 0px;
+    }
+    .home-banner-01 .ht-text h1 {
+        font-weight: 500;
+        font-size: 3.375em;
+        margin-bottom: 15px;
+    }
+}
+
+
+/* // Small devices (landscape phones, less than 768px) */
+
+@media (max-width: 767.98px) {
+    /* ... */
+}
+
+
+/* // Medium devices (tablets, less than 992px) */
+
+@media (max-width: 991.98px) {
+    /* ... */
+}
+
+
+/* // Large devices (desktops, less than 1200px) */
+
+@media (max-width: 1199.98px) {
+    /* ... */
+}
+
+
+/* // X-Large devices (large desktops, less than 1400px) */
+
+@media (max-width: 1399.98px) {
+    /* ... */
+}
+
+
+/* // XX-Large devices (larger desktops) */
+
+
+/* // No media query since the xxl breakpoint has no upper bound on its width */
