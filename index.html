@@ -203,8 +203,23 @@
         /* // X-Small devices (portrait phones, less than 576px) */
         
         @media (max-width: 575.98px) {
-            .text-uppercase.heading {
-                display: none;
+            .home-banner-01 .ht-text {
+                color: #fff !important;
+                padding-top: 80px;
+                padding-bottom: 80px;
+                color: #fff;
+                padding-top: 80px;
+                padding-bottom: 100px;
+                margin-top: 40px;
+            }
+            .text-uppercase.heading::after {
+                content: '';
+                width: 250px;
+                height: 2px;
+                position: absolute;
+                top: 65%;
+                left: 25%;
+                background: #fff;
             }
             .footer_social.home-screen a {
                 padding: 10px 10px 10px 10px;
