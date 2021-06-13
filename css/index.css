@@ -1,18 +1,13 @@
 @import "https://fonts.googleapis.com/css?family=Roboto:400,500|Rubik:500,700";
 @import "https://fonts.googleapis.com/css?family=Roboto:400,500|Rubik:500,700";
-@keyframes "spin" {
+
+/* @keyframes "spin" {
     to {
         transform: rotateY(1turn);
     }
-}
+} */
 
 body {
-    line-height: 26px;
-    font-size: 15px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    color: #777;
-    background: url(/img/body-bg.webp) no-repeat center;
     line-height: 26px;
     font-size: 15px;
     font-family: "Roboto", sans-serif;
