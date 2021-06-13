@@ -9,6 +9,12 @@
     var subject = $('.validate-input input[name="subject"]');
     var message = $('.validate-input textarea[name="message"]');
 
+    $(document).ajaxStart(function() {
+        $("#loader").css("display", "inline-block");
+    });
+    $(document).ajaxComplete(function() {
+        $("#loader").css("display", "none");
+    });
 
     $('.validate-form').on('submit', function(e) {
         var check = true;
