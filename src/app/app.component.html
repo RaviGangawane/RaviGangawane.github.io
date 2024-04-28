@@ -1,0 +1,102 @@
+<section style="display: none;">
+    <app-header />
+    <app-main />
+</section>
+
+
+<main>
+    <div class="container-fluid ">
+        <div class="row">
+            <!-- <div class="col-2 p-0 " style="display: none;">
+                <div class="header-left-fixed one-page-nav">
+                    <div class="logo">
+                        <a href="javascript:" class="navbar-brand">
+                            <span style="color: #fff;
+                            font-size: 32px;
+                            font-weight: 900;">RaviG.</span>
+
+
+                        </a>
+                    </div>
+                    <ul class="main-menu">
+                        <li><a spyon="home" activeclass="active" class="menu-item " (click)="scrollTo('home')"
+                                [ngClass]="{'active':currentSection === 'home'}"> Home </a> </li>
+                        <li><a spyon="about" activeclass="active" class="menu-item" (click)="scrollTo('about')"
+                                [ngClass]="{'active':currentSection === 'about'}"> About </a> </li>
+                        <li><a spyon="services" activeclass="active" class="menu-item" (click)="scrollTo('services')"
+                                [ngClass]="{'active':currentSection === 'services'}"> Services </a></li>
+                        <li><a spyon="work" activeclass="active" class="menu-item" (click)="scrollTo('work')"
+                                [ngClass]="{'active':currentSection === 'work'}"> Portfolio </a></li>
+                        <li><a spyon="blog" activeclass="active" class="menu-item" (click)="scrollTo('blog')"
+                                [ngClass]="{'active':currentSection === 'blog'}"> Blog </a></li>
+                        <li> <a spyon="contact" activeclass="active" class="menu-item" (click)="scrollTo('contact')"
+                                [ngClass]="{'active':currentSection === 'contact'}"> Contact </a>
+                        </li>
+                    </ul>
+                    <ul class="nav social-link">
+                        <li><a href="javascript:"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="javascript:"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="javascript:"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="javascript:"><i class="fab fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
+            </div> -->
+            <div class="col p-0 ">
+                <div id="parent">
+                    <div id="child" scrollSpy [spiedTags]="['DIV']" (sectionChange)="onSectionChange($event)">
+
+                        <div id="home" class=" home-section bg-color">
+                            <app-home />
+                        </div>
+
+                        <div id="about" class="  section about-section">
+                            <app-about />
+                        </div>
+                        <section class="section experience-section bg-g">
+                            <app-experience />
+                        </section>
+
+                        <section class="  section services-section bg-color">
+                            <app-skills />
+                        </section>
+
+                        <!-- <div id="services" class="  section services-section bg-color">
+                            <app-services />
+                        </div>
+
+                        <div id="work" class="  section work-section">
+                            <app-work />
+                        </div>
+                        <section class="section experience-section bg-g">
+                            <app-testimonials />
+                        </section>
+
+                        <div id="blog" class="  section blog-section bg-color">
+                            <app-blog />
+                        </div> -->
+                        <div id="contact" class="  section contact-section">
+                            <app-contact />
+                        </div>
+
+                        <footer class="footer">
+                            <div class="container">
+                                <div class="footer-info">
+                                    <div class="footer-avatar"><img src="../../assets/images/ravi-removebg.png" title=""
+                                            alt="">
+                                    </div>
+                                    <h6>Ravi Gangawane</h6>
+                                </div>
+                                <p class="copyright">© 2024 copyright all rights reserved Designed by Ravi Gangawane.
+
+                                </p>
+                            </div>
+                        </footer>
+                        <a href="#home" id="return-to-top"><i class="bi-arrow-up-circle-fill"></i></a>
+
+                        <button *ngIf="isShow" (click)="gotoTop()">👆</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,89 @@
+<div class="container">
+    <div class="section-heading text-center text-lg-start">
+        <h6>Nice to meet you!</h6>
+        <h2>Welcome to...</h2>
+    </div>
+    <div class="row  ">
+        <div class="col-lg-5  ">
+            <div class="about-left">
+                <div class="about-avatar">
+                    <!-- <img src="../../assets/images/ravi-removebg.png" title="" class="about-img" alt=""> -->
+                    <div class="image-blurred-edge"></div>
+                    <!-- 
+                    <img src="https://www.uiocean.com/angular/lilon/assets/img/about-banner.png" title="" alt=""
+                        style="filter: drop-shadow(5px 5px 10px #AF2676);"> -->
+                </div>
+                <h3>{{firstName}} {{lastName}}</h3>
+                <p>{{position}} <span>based in</span> {{locationIndia}}</p>
+                <div class="btn-bar">
+                    <a href="/../assets/resume/Ravi Gangawane Feb 2024.pdf" download="Ravi Gangawane -Resume"
+                        class="px-btn">
+                        {{btnName}} <i class="bi-download"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-7 ps-xl-5  ">
+            <div class="about-bio">
+                <p>{{aboutMe}}</p>
+            </div>
+            <div class="about-contact row  ">
+                <div class="col-sm-6">
+                    <p> <a href="{{linkedin}}"><i class="bi-person"></i></a>
+                        <span>{{firstName}} {{lastName}}</span>
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <p><a href="tel:{{mobNo}}"><i class="bi-phone"></i> </a>
+                        <span> {{mobNo}}</span>
+                    </p>
+                </div>
+
+                <div class="col-sm-6">
+                    <p><a href="mailto:{{gmail}}"><i class="bi-envelope"></i></a>
+                        <span> {{gmail}}</span>
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <p> <a href="https://maps.app.goo.gl/VGgw7XdLVGgYDetV8"> <i class="bi-map"></i></a>
+                        <span>{{location}}</span>
+                    </p>
+                </div>
+
+                <div class="col-sm-6">
+                    <p><a href="mailto:{{gmail}}"><i class="bi-mortarboard"></i></a><span> Bachelor </span> </p>
+                </div>
+                <div class="col-sm-6">
+                    <p> <a href="https://ravigangawane.github.io" class="a-link-website" target="_blank">
+                            <i class="bi-globe2"></i> </a>
+                        <span> https://ravigangawane.github.io </span>
+                    </p>
+                </div>
+
+                <div class="col-sm-6">
+                    <p><i class="bi-pc-display"></i><span> Freelance: Available </span></p>
+                </div>
+
+            </div>
+            <div class="about-exp">
+                <div class="row gy-4">
+                    <div class="col-md-6">
+                        <div class="a-number">
+                            <h6>{{devExperience}}</h6> <span> Development <br> experience... </span>
+                        </div>
+                        <p class="lead">{{devExperienceExp}}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="a-number">
+                            <h6>{{trainingExperience}}</h6><span>Training<br>experience...</span>
+                        </div>
+                        <p class="lead"> {{trainingExperienceExp}} </p>
+                    </div>
+                </div>
+                <blockquote><i class="fa-solid fa-quote-left"></i>
+                    <p>{{blockquote}}</p>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</div>

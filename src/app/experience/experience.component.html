@@ -1,0 +1,95 @@
+<div class="container">
+    <div class="row  ">
+        <div class="col-lg-5">
+            <div class="section-heading">
+                <h6>Experience</h6>
+                <h2>My experience</h2>
+                <p> {{aboutExp}} </p>
+                <div class="btn-bar">
+                    <a href="{{resumeLink}}" download="Ravi Gangawane -Resume" class="px-btn dark">
+                        Download my resume <i class="bi-download"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-7 ps-xl-5">
+            <ul class="resume-box">
+                @for (item of experienceList; track item) {
+
+                <li>
+                    <div class="r-meta"><span>-{{item.starDate}} - {{item.endDate}}</span>
+                        <label>
+                            <a href="{{item.coWebsiteLink}}" target="_blank">
+                                <img src="{{item.coLogo}}" alt="" style="height: 1.5rem;">
+                            </a>
+                            - {{item.coName}}</label>
+                    </div>
+                    <h5>{{item.jobRole}}</h5>
+                </li>
+                }
+                @empty {
+                <li>
+                    <div class="r-meta">
+                        <span>-start date - end date</span>
+                        <label>
+                            <a href="https://www.companyname.com/" target="_blank">
+                                <img src="companylogo.png" style="height: 1.5rem;">
+                            </a>
+                            - company name.
+                        </label>
+                    </div>
+                    <h5>job designation </h5>
+                </li>
+                }
+
+            </ul>
+            <ul class="resume-box" style="display: none;">
+                <li>
+                    <div class="r-meta"><span>-2024 - Present</span>
+                        <label>
+                            <a href="https://www.nitorinfotech.com/" target="_blank">
+                                <img src="/../assets/images/company-fav/favicon.webp" alt="" style="height: 1.5rem;">
+                            </a>
+                            - Nitor Infotech</label>
+                    </div>
+                    <h5>Lead Engineer</h5>
+                </li>
+                <li>
+                    <div class="r-meta"><span>-2022 - 2024</span><label>
+                            <a href="https://www.ltimindtree.com/" target="_blank">
+                                <img src="/../assets/images/company-fav/LT-Favicon.svg" alt="" style="height: 1.5rem;">
+                            </a>
+
+                            - LTIMindtree Ltd.</label></div>
+                    <h5>Software Engineer specialist </h5>
+                </li>
+                <li>
+                    <div class="r-meta"><span>-2022 - 2024 </span><label>
+
+                            <a href="https://www.mindtree.com/" target="_blank">
+                                <img src="/../assets/images/company-fav/mindtree.png" alt="" style="height: 1.5rem;">
+                            </a>
+                            - Mindtree Ltd.</label></div>
+                    <h5>Module Lead </h5>
+                </li>
+                <li>
+                    <div class="r-meta"><span>-2019 - 2022</span><label>
+                            <a href="https://www.cybage.com/" target="_blank">
+                                <img src="/../assets/images/company-fav/favicon.ico" alt="" style="height: 1.5rem;">
+                            </a>
+                            - Cybage Software Pvt. Ltd. </label></div>
+                    <h5>Senior Software Engineer</h5>
+                </li>
+                <li>
+                    <div class="r-meta"><span>-2017 - 2019</span><label>
+                            <a href="https://www.melayer.com/" target="_blank">
+                                <img src="/../assets/images/company-fav/melayer.jpeg" alt="" style="height: 1.5rem;">
+                            </a>
+
+                            - Melayer Software Solution LLP.</label></div>
+                    <h5>Software Developer </h5>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

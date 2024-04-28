@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="row  ">
+        <div class="col-lg-5 ">
+            <div class="section-heading">
+                <h6>skills</h6>
+                <h2>my skills</h2>
+
+                <p>
+                    As a front-end web developer, I am responsible for designing and implementing user interfaces,
+                    ensuring accessibility through coding languages like <strong>CSS</strong>, <strong>HTML</strong>,
+                    and <strong>JavaScript</strong>. My skill set, acquired over time, spans across three main
+                    categories: <strong>Technical</strong>, <strong>Framework</strong>, and <strong>Managerial</strong>,
+                    enabling me to build enterprise-grade Mobile and Web Apps.
+                </p>
+
+            </div>
+        </div>
+        <div class="col-lg-7">
+            <div class="res ume-box">
+                <div class="row feature_inner mt-5">
+                    <div class="col-md-4">
+                        <strong>Technical</strong><br> <br>
+                        @for (item of listTechnical; track $index) {
+
+                        <div>
+                            <span class="skill">{{item.skillName}}
+                                <i class="val" style="float: right; font-style: normal;">{{item.skillPer}}</i></span>
+                            <div class="percentage">
+                                <div class="progress">
+                                    <div class="progress-bar " role="progressbar" [style]="item.ngStyle"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        }
+
+
+                    </div>
+                    <div class="col-md-4">
+                        <strong>Framework</strong> <br> <br>
+                        @for (item of listFramework; track $index) {
+
+                        <div>
+                            <span class="skill">{{item.skillName}}
+                                <i class="val" style="float: right; font-style: normal;">{{item.skillPer}}</i></span>
+                            <div class="percentage">
+                                <div class="progress">
+                                    <div class="progress-bar " role="progressbar" [style]="item.ngStyle"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        }
+                    </div>
+                    <div class="col-md-4">
+                        <strong>Managerial</strong> <br> <br>
+                        @for (item of listManagerial; track $index) {
+
+                        <div>
+                            <span class="skill">{{item.skillName}}
+                                <i class="val" style="float: right; font-style: normal;">{{item.skillPer}}</i></span>
+                            <div class="percentage">
+                                <div class="progress">
+                                    <div class="progress-bar " role="progressbar" [style]="item.ngStyle"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
