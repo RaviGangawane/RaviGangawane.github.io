@@ -12,7 +12,9 @@ export class AboutComponent {
 
   lastName = "Gangawane";
   firstName = "Ravi";
-  mobNo = "+91 9518525051";
+  // mobNo = "+91 9518525051";
+  mobNo = "+91 9130451715";
+
   gmail = "ravi.d.gangawane@gmail.com";
   location = "Pune, Maharashtra, India";
   locationIndia = "India";
