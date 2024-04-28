@@ -42,6 +42,10 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-"# ravi.gangawane.com" 
-"# ravigangawane.com" 
-"# ravigangawane.com" 
+"# ravi.gangawane.com"
+"# ravigangawane.com"
+"# ravigangawane.com"
+
+## Command to create build
+
+ng build --configuration production --base-href="<https://ravigangawane.github.io/>"
