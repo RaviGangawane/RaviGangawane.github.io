@@ -31,7 +31,7 @@ export class AboutComponent {
   trainingExperienceExp = `With ${this.trainingExperience} years experience as a professional trainer, 300+ students I trained them and they
   got good jobs in MNC Companies.`;
 
-  aboutMe = `I am a software engineer. I am a professional computer programmer, who can build absolutely anything.
+  aboutMe = `I am a software engineer. who can build absolutely anything.
   I am an extremely trustworthy person and I follow business ethics very strictly. I am a very
   disciplined, time punctual, and process-loving person. I love to create processes for increasing the
   company's overall growth. I am open to adapt any constructive changes and challenges throughout my
