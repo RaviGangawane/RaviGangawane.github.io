@@ -267,4 +267,24 @@ body {
     //     color: inherit;
 
     // }
+    .services-title {
+        flex: 0 0 90% !important;
+        width: 90% !important;
+        font-size: 1rem !important;
+        font-weight: 800;
+        text-transform: uppercase;
+        line-height: 1.2;
+        position: relative;
+        padding-left: 25px;
+    }
+
+    .s-text {
+        font-size: small !important;
+    }
+}
+
+
+img {
+    // filter: grayscale(100%) !important;
+    // filter: hue-rotate(176deg) !important;
 }
