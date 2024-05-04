@@ -2,7 +2,7 @@
     // --px-theme: #AF2676;
     // --px-theme-2: #441B45;
     // --px-white: #fff;
-    // --px-white-rgb: 255, 255, 255;
+    --px-white-rgb: 255, 255, 255;
     // --px-text: #FFFFFF;
     // --px-heading: #FFFFFF;
     // --px-bg: #100E24;
@@ -17,13 +17,13 @@ body {
     // background: linear-gradient(177deg, #100E24 0%, #030211 190%) !important;
     // background-color: var(--px-dark);
 
-    height: 100vh;
-    // color: var(--px-text);
-    // font-family: IBM Plex Sans, sans-serif;
-    --bs-body-font-weight: 400;
-    --bs-body-font-size: 1rem;
-    --bs-body-line-height: 1.6;
-    overflow-x: hidden;
+    // height: 100vh;
+    // // color: var(--px-text);
+    // // font-family: IBM Plex Sans, sans-serif;
+    // // --bs-body-font-weight: 400;
+    // // --bs-body-font-size: 1rem;
+    // // --bs-body-line-height: 1.6;
+    // overflow-x: hidden;
 }
 
 
@@ -196,11 +196,11 @@ body {
     }
 }
 
-.a-link-website {
-    text-decoration: none;
-    color: inherit;
+// .a-link-website {
+//     text-decoration: none;
+//     color: inherit;
 
-}
+// }
 
 
 @media (max-width: 575.98px) {
@@ -262,9 +262,9 @@ body {
     }
 
 
-    .a-link-website {
-        text-decoration: none;
-        color: inherit;
+    // .a-link-website {
+    //     text-decoration: none;
+    //     color: inherit;
 
-    }
+    // }
 }

@@ -23,6 +23,15 @@
      --bs-accordion-active-bg: var(--bs-primary-bg-subtle);
  }
 
+
+ .services-section .accordion .accordion-item {
+     background: none;
+     border: none;
+     padding: 0;
+     margin: 0;
+     color: #adb5bd;
+ }
+
  .accordion .accordion-item {
      background: none;
      border: none;
@@ -61,11 +70,11 @@
      box-shadow: none;
      outline: none !important;
      background: none;
-     padding: 20px 50px 20px 0;
+     padding: 20px 20px;
      position: relative;
      display: flex;
-     color: var(--px-white);
-     border-bottom: 1px solid rgba(var(--px-white-rgb), .1);
+     color: #aaa;
+     border-bottom: 1px solid rgba(13, 110, 253, .25);
  }
 
  .accordion-flush .accordion-item .accordion-button,
@@ -86,7 +95,7 @@
      text-transform: uppercase;
      line-height: 1.2;
      position: relative;
-     padding-left: 30px;
+     padding-left: 25px;
  }
 
  .accordion .accordion-item .accordion-button .services-title:after {
@@ -97,7 +106,8 @@
      bottom: 0;
      margin: auto;
      border-radius: 50%;
-     background: var(--px-white);
+     //  background: #aaa;
+     background: #aaa;
      width: 8px;
      height: 8px;
  }
@@ -128,7 +138,7 @@
      position: absolute;
      inset: 0;
      margin: auto;
-     background: var(--px-white);
+     background: #aaa;
  }
 
  .accordion .accordion-item .accordion-button .accordion-icon:after {
@@ -142,7 +152,7 @@
      position: absolute;
      inset: 0;
      margin: auto;
-     background: var(--px-white);
+     background: #aaa;
  }
 
  .accordion-flush .accordion-collapse {
@@ -151,7 +161,7 @@
 
  .accordion .accordion-item .accordion-body {
      padding: 40px 0;
-     border-bottom: 1px solid rgba(var(--px-white-rgb), .1);
+     border-bottom: 1px solid rgba(13, 110, 253, .25);
  }
 
  .accordion-body h3 {
@@ -166,4 +176,13 @@
  img,
  svg {
      vertical-align: middle;
+ }
+
+ .accordion .accordion-item .accordion-button .accordion-icon:before,
+ .accordion .accordion-item .accordion-button .accordion-icon:after {
+     content: "";
+     position: absolute;
+     inset: 0;
+     margin: auto;
+     background: #aaa;
  }
