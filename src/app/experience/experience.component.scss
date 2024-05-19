@@ -172,6 +172,30 @@
         padding-bottom: 1rem;
     }
 
+    @media (max-width: 575.98px) {
+        .timeline {
+            padding: 0rem 1rem;
+            // padding: 3rem 2rem;
+
+            // // max-width: 460px;
+            // border-radius: 12px;
+
+            // background-color: white;
+            // box-shadow: 0 4px 25px -20px rgba(0, 0, 0.2);
+        }
+
+        .tl-post {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .tl-body {
+            padding-left: 1rem !important;
+        }
+    }
+
     .tl-content:last-child .tl-body {
         border-left: 3px solid transparent;
     }
