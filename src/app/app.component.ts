@@ -6,7 +6,6 @@ import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
 import { ExperienceComponent } from './experience/experience.component';
-import { HomeComponent } from './home/home.component';
 import { ServicesComponent } from './services/services.component';
 import { WorkComponent } from './work/work.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
@@ -15,11 +14,14 @@ import { HeaderComponent } from './header/header.component';
 import { ScrollSpyDirective } from './scroll-spy.directive';
 import { LoremIpsumComponent } from './lorem-ipsum.component';
 import { SkillsComponent } from './skills/skills.component';
+import { HomeComponent } from './home/home.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule,
+  imports: [
+    RouterOutlet,
+    CommonModule,
     CarouselModule,
     MainComponent,
     HomeComponent,

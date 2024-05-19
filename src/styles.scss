@@ -2,7 +2,7 @@
     // --px-theme: #AF2676;
     // --px-theme-2: #441B45;
     // --px-white: #fff;
-    --px-white-rgb: 255, 255, 255;
+    // --px-white-rgb: 255, 255, 255;
     // --px-text: #FFFFFF;
     // --px-heading: #FFFFFF;
     // --px-bg: #100E24;
@@ -169,7 +169,20 @@ body {
     }
 }
 
+// .section-about {
+//     font-size: 1.25rem;
+//     color: black;
+// }
 
+
+// .lead {
+//     font-size: 1.125rem;
+//     font-weight: 300;
+
+//     span {
+//         color: var(--px-theme);
+//     }
+// }
 
 .px-btn {
     border: 1px solid !important;
@@ -196,11 +209,11 @@ body {
     }
 }
 
-// .a-link-website {
-//     text-decoration: none;
-//     color: inherit;
+.a-link-website {
+    text-decoration: none;
+    // color: inherit;
 
-// }
+}
 
 
 @media (max-width: 575.98px) {

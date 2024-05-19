@@ -68,3 +68,225 @@
         border-top: 1px solid rgba(var(--px-white-rgb), .1);
     }
 }
+
+
+.new-timeline {
+
+    *,
+    *::after,
+    *::before {
+        box-sizing: border-box;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    p {
+        line-height: 1.8;
+        font-size: 14px;
+    }
+
+    time {
+        line-height: 1.6;
+    }
+
+    body {
+        min-width: 375px;
+
+        font-family: "Poppins", sans-serif;
+
+        background-color: #f1f1f1;
+        color: #1a1a1a;
+    }
+
+    main {
+        min-height: 100vh;
+
+        display: grid;
+        place-content: center;
+
+        padding: 1rem;
+    }
+
+    /* ===================== */
+    /* ===================== */
+
+    /* Timeline */
+    /* Code Here ↓ */
+
+    .timeline {
+        padding: 0rem 2rem;
+        // padding: 3rem 2rem;
+
+        // // max-width: 460px;
+        // border-radius: 12px;
+
+        // background-color: white;
+        // box-shadow: 0 4px 25px -20px rgba(0, 0, 0.2);
+    }
+
+    .tl-content {
+        // border-bottom: 3px solid gainsboro;
+    }
+
+    .tl-content .tl-header,
+    .tl-content .tl-body {
+        padding-left: 5rem;
+        border-left: 3px solid gainsboro;
+    }
+
+    .tl-img {
+        height: 48px;
+        width: 48px;
+        padding: 1.6px;
+        left: -1.25rem;
+        display: block;
+        position: absolute;
+        border-radius: 50% / 50%;
+        left: 0rem;
+        top: 35%;
+        transform: translate(50%, -50%);
+    }
+
+    .tl-post {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .tl-a-image {
+        border: 1px solid #aaa;
+        border-radius: 8px;
+        margin: 15px 15px 15px 0px
+    }
+
+    .tl-a-img {
+        object-fit: cover;
+        height: 56px;
+        width: 106px;
+        border-radius: 8px;
+    }
+
+    .tl-body {
+        padding-bottom: 1rem;
+    }
+
+    .tl-content:last-child .tl-body {
+        border-left: 3px solid transparent;
+    }
+
+    .tl-header {
+        position: relative;
+        display: grid;
+
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .tl-title {
+        font-weight: 600;
+        font-size: 1em;
+
+        border-bottom: 1px solid gainsboro;
+    }
+
+    .tl-time {
+        font-size: 0.7em;
+    }
+
+    .tl-marker {
+        display: block;
+        position: absolute;
+
+        width: 16px;
+        height: 16px;
+        border-radius: 50% / 50%;
+
+        background: gainsboro;
+
+        left: -1.1rem;
+        top: 35%;
+
+        transform: translate(50%, -50%);
+    }
+
+    .tl-content-active .tl-marker {
+        padding: 1.6px;
+
+        left: -1.25rem;
+
+        width: 18px;
+        height: 18px;
+
+        border: 2px solid #1a1a1a;
+
+        background-color: #1a1a1a;
+        background-clip: content-box;
+
+        box-shadow: 0 0 15px -2px #1a1a1a;
+    }
+
+    .tl-content-active .tl-title {
+        font-weight: 700;
+
+        color: green;
+    }
+
+    /* Code Here ↑ */
+    /* Timeline */
+
+    /* ==================== */
+    .pvs-thumbnail {
+        height: 56px;
+        width: 106px;
+        position: relative;
+        margin-right: .8rem;
+        border-radius: 0.8rem;
+        overflow: hidden;
+        border: 1px solid #8c8c8c33;
+        background-color: #f8fafd;
+        color: #000000bf;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pvs-thumbnail__image {
+        object-fit: cover;
+        height: 56px;
+        width: 106px;
+    }
+
+    pvs-thumbnail__overlay--icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        background-color: var(--color-background-container);
+        border-radius: var(--corner-radius-medium) 0 0;
+    }
+
+    .pvs-thumbnail__overlay {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .inline-show-more-text--is-collapsed-with-line-clamp {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        margin: 0 auto;
+    }
+
+    .inline-show-more-text,
+    .VKmtFMbGcexXxGKFHtDnLrZdQSvxvnk {
+        position: relative;
+    }
+
+}

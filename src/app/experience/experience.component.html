@@ -6,7 +6,7 @@
     <div class="row  ">
         <div class="col-lg-5">
             <div class="section-heading">
-                <p> {{aboutExp}} </p>
+                <p class="section-about"> {{aboutExp}} </p>
                 <div class="btn-bar">
                     <a href="{{resumeLink}}" download="Ravi Gangawane -Resume" class="px-btn">
                         Download my resume <i class="bi-download"></i>
@@ -15,11 +15,19 @@
             </div>
         </div>
         <div class="col-lg-7 ps-xl-5">
-            <ul class="resume-box">
+
+            <ul class="resume-box d-none">
                 @for (item of experienceList; track item) {
 
                 <li>
-                    <div class="r-meta"><span>-{{item.starDate}} - {{item.endDate}}</span>
+                    <div class="r-meta"><span>-{{item.startDate}} - @if(item.endDate == newDate) {
+                            Present
+                            }
+                            @else {
+                            <!-- {{item.endDate}} -->
+                            }
+
+                        </span>
                         <label>
                             <a href="{{item.coWebsiteLink}}" target="_blank">
                                 <img src="{{item.coLogo}}" alt="" style="height: 1.5rem;">
@@ -45,6 +53,63 @@
                 }
 
             </ul>
+            <div class="new-timeline">
+
+
+                <div class="timeline">
+                    @for (item of experienceList; track item;let i = $index) {
+
+                    <div class="tl-content" [ngClass]="{'tl-content-active ': i==0}">
+                        <div class="tl-header">
+                            <span class="tl-marker"></span>
+                            @if (item.coLogo) {
+                            <img class="tl-img" src="{{item.coLogo}}">
+                            }
+                            @else {
+                            <img class="tl-img" src="/../assets/images/logo/no-image-icon-23485.png"
+                                style="border-radius:0px">
+                            }
+                            <p class="tl-title">
+                                <label class="tl-post">{{item.jobRole}} </label> <br>
+                                <label> {{item.coName}} </label>
+                            </p>
+                            <p>
+                                <time class="tl-time" datetime="2023-06-20">
+                                    {{item.startDate | date:"MMM yyyy " }} - @if(i==0) { Present } @else {
+                                    {{item.endDate | date:"MMM yyyy " }} } · {{item.totalPeriod}}
+                                </time>
+                            </p>
+                        </div>
+                        <div class="tl-body">
+                            <p>Pune, Maharashtra, India</p>
+                            <p><strong>Skills : </strong>
+                                @for (skill of item.Skills; track $index) {
+                                {{skill}},
+                                }
+                            </p>
+
+                            @if (item.coWebsiteLink) {
+                            <a target="_self" href="{{item.coWebsiteLink}}" style="text-decoration: none;">
+                                <div class="d-flex">
+                                    <div class="tl-a-image">
+                                        <img src="{{item.coWebsiteLinkImg}}" class="tl-a-img">
+
+                                    </div>
+                                    <div class="d-flex">
+                                        <p style="align-self: center;"> {{item.coWebsiteLinkTitle}} </p>
+                                    </div>
+                                </div>
+                            </a>
+                            }
+                        </div>
+                    </div>
+                    }
+
+
+
+
+                </div>
+            </div>
             <ul class="resume-box" style="display: none;">
                 <li>
                     <div class="r-meta"><span>-2024 - Present</span>

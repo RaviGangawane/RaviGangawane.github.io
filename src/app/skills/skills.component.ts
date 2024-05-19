@@ -18,29 +18,29 @@ export class SkillsComponent {
     },
     {
       skillName: 'JavaScript',
-      skillPer: '95%',
-      ngStyle: `background-color: ${this.getRandomColor()}; width:95%;`
+      skillPer: '75%',
+      ngStyle: `background-color: ${this.getRandomColor()}; width:75%;`
     },
     {
       skillName: 'Less/Sass/Scss',
-      skillPer: '95%',
-      ngStyle: `background-color: ${this.getRandomColor()}; width:95%;`
+      skillPer: '80%',
+      ngStyle: `background-color: ${this.getRandomColor()}; width:80%;`
     }, {
       skillName: 'Version Control / Git',
-      skillPer: '95%',
-      ngStyle: `background-color: ${this.getRandomColor()}; width:95%;`
+      skillPer: '60%',
+      ngStyle: `background-color: ${this.getRandomColor()}; width:60%;`
     }, {
       skillName: 'Responsive Design',
       skillPer: '95%',
       ngStyle: `background-color: ${this.getRandomColor()}; width:95%;`
     }, {
       skillName: 'Bowoser Developer Tool',
-      skillPer: '95%',
-      ngStyle: `background-color: ${this.getRandomColor()}; width:95%;`
+      skillPer: '80%',
+      ngStyle: `background-color: ${this.getRandomColor()}; width:80%;`
     }, {
       skillName: 'Web Performance',
-      skillPer: '95%',
-      ngStyle: `background-color: ${this.getRandomColor()}; width:95%;`
+      skillPer: '80%',
+      ngStyle: `background-color: ${this.getRandomColor()}; width:80%;`
     },
 
   ]
@@ -57,79 +57,82 @@ export class SkillsComponent {
       ngStyle: `background-color: ${this.getRandomColor()}; width:95%;`
     }, {
       skillName: 'Bootstrap 3, 4, 5',
-      skillPer: '95%',
-      ngStyle: `background-color: ${this.getRandomColor()}; width:95%;`
+      skillPer: '80%',
+      ngStyle: `background-color: ${this.getRandomColor()}; width:80%;`
     }, {
       skillName: 'Foundation',
-      skillPer: '95%',
-      ngStyle: `background-color: ${this.getRandomColor()}; width:95%;`
+      skillPer: '40%',
+      ngStyle: `background-color: ${this.getRandomColor()}; width:40%;`
     }, {
       skillName: 'Material Design for Bootstrap 5 & 4',
-      skillPer: '95%',
-      ngStyle: `background-color: ${this.getRandomColor()}; width:95%;`
+      skillPer: '60%',
+      ngStyle: `background-color: ${this.getRandomColor()}; width:60%;`
     }, {
       skillName: 'Angular powered Bootstrap',
       skillPer: '95%',
       ngStyle: `background-color: ${this.getRandomColor()}; width:95%;`
     }, {
       skillName: 'Materialize',
-      skillPer: '95%',
-      ngStyle: `background-color: ${this.getRandomColor()}; width:95%;`
+      skillPer: '60%',
+      ngStyle: `background-color: ${this.getRandomColor()}; width:60%;`
     }, {
       skillName: 'Angular Material',
       skillPer: '95%',
       ngStyle: `background-color: ${this.getRandomColor()}; width:95%;`
-    }, {
-      skillName: ' React',
-      skillPer: '95%',
-      ngStyle: `background-color: ${this.getRandomColor()}; width:95%;`
-    }, {
-      skillName: 'Node.JS',
-      skillPer: '95%',
-      ngStyle: `background-color: ${this.getRandomColor()}; width:95%;`
-    }, {
-      skillName: ' Nativescript',
-      skillPer: '95%',
-      ngStyle: `background-color: ${this.getRandomColor()}; width:95%;`
     },
+    // {
+    //   skillName: ' React',
+    //   skillPer: '20%',
+    //   ngStyle: `background-color: ${this.getRandomColor()}; width:20%;`
+    // },
+    {
+      skillName: 'Node.JS',
+      skillPer: '40%',
+      ngStyle: `background-color: ${this.getRandomColor()}; width:40%;`
+    },
+    //  {
+    //   skillName: ' Nativescript',
+    //   skillPer: '20%',
+    //   ngStyle: `background-color: ${this.getRandomColor()}; width:20%;`
+    // },
   ]
 
   listManagerial = [
     {
       skillName: 'TEAM MANAGEMENT',
-      skillPer: '95%',
-      ngStyle: `background-color: ${this.getRandomColor()}; width:95%;`
+      skillPer: '75%',
+      ngStyle: `background-color: ${this.getRandomColor()}; width:75%;`
     },
     {
       skillName: 'CONSULTATION',
-      skillPer: '95%',
-      ngStyle: `background-color: ${this.getRandomColor()}; width:95%;`
+      skillPer: '80%',
+      ngStyle: `background-color: ${this.getRandomColor()}; width:80%;`
     },
     {
       skillName: 'TRAINING',
       skillPer: '95%',
       ngStyle: `background-color: ${this.getRandomColor()}; width:95%;`
     }, {
-      skillName: 'COMMUNICATION8',
-      skillPer: '95%',
-      ngStyle: `background-color: ${this.getRandomColor()}; width:95%;`
+      skillName: 'COMMUNICATION',
+      skillPer: '75%',
+      ngStyle: `background-color: ${this.getRandomColor()}; width:75%;`
     }, {
-      skillName: 'RTEAMWORK ',
-      skillPer: '95%',
-      ngStyle: `background-color: ${this.getRandomColor()}; width:95%;`
+      skillName: 'TEAMWORK ',
+      skillPer: '80%',
+      ngStyle: `background-color: ${this.getRandomColor()}; width:80%;`
     }, {
       skillName: 'CREATIVITY ',
-      skillPer: '95%',
-      ngStyle: `background-color: ${this.getRandomColor()}; width:95%;`
+      skillPer: '80%',
+      ngStyle: `background-color: ${this.getRandomColor()}; width:80%;`
     }, {
-      skillName: 'WILLINGNESS TO LEARN1 ',
-      skillPer: '95%',
-      ngStyle: `background-color: ${this.getRandomColor()}; width:95%;`
+      skillName: 'WILLINGNESS TO LEARN ',
+      skillPer: '80%',
+      ngStyle: `background-color: ${this.getRandomColor()}; width:80%;`
     },
     {
       skillName: 'PROBLEM-SOLVEING',
-      skillPer: '95%',
-      ngStyle: `background-color: ${this.getRandomColor()}; width:95%;`
+      skillPer: '80%',
+      ngStyle: `background-color: ${this.getRandomColor()}; width:80%;`
     }
 
   ]
