@@ -41,9 +41,11 @@ export class AboutComponent {
 
   btnName = "Download CV";
 
-  blockquote = `“Creativity and Innovation is my passion. I love to code, teach code and sell code. From the
-  college itself, I have started to build and sell software for local shops. After graduation, I
-  have worked as a freelancer for some time.”`
+  blockquote = `“Creativity and Innovation is my passion. I love to code, teach code and sell code.”`
+
+  // blockquote = `“Creativity and Innovation is my passion. I love to code, teach code and sell code. From the
+  // college itself, I have started to build and sell software for local shops. After graduation, I
+  // have worked as a freelancer for some time.”`
 
 
 

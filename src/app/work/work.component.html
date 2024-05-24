@@ -4,7 +4,28 @@
         <h2>Recent project</h2>
     </div>
     <div class="row gy-5 lightbox-gallery">
+        @for (project of projects; track $index) {
         <div class="col-lg-6">
+            <div class="work-box">
+                <div class="work-img">
+                    <a href="https://www.uiocean.com/angular/lilon/assets/img/services-1.jpg" title="View Gallery"
+                        data-title="Caption for image 1" data-lightbox="services">
+                        <img src="/assets/images/project.png" title="" alt="">
+                    </a>
+                </div>
+                <div class="work-text">
+                    <h6>{{project.pDesc}} </h6>
+                    <h4> {{project.pName}} </h4>
+                    <div class="btn-bar">
+                        <a title="Read More" data-bs-toggle="modal" data-bs-target="#work_1" class="gallery-link">
+                            <i class="bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+        <!-- <div class="col-lg-6">
             <div class="work-box">
                 <div class="work-img"><a href="https://www.uiocean.com/angular/lilon/assets/img/services-1.jpg"
                         title="View Gallery" data-title="Caption for image 1" data-lightbox="services"><img
@@ -17,7 +38,7 @@
                             class="gallery-link"><i class="bi-arrow-up-right"></i></a></div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="col-lg-6">
             <div class="work-box">
                 <div class="work-img"><a href="https://www.uiocean.com/angular/lilon/assets/img/services-2.jpg"
