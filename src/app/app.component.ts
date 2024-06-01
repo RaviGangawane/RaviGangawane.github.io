@@ -9,10 +9,10 @@ import { ExperienceComponent } from './experience/experience.component';
 import { ServicesComponent } from './services/services.component';
 import { WorkComponent } from './work/work.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
-import { CarouselModule } from 'ngx-owl-carousel-o';
 import { HeaderComponent } from './header/header.component';
 import { SkillsComponent } from './skills/skills.component';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -20,18 +20,19 @@ import { HomeComponent } from './home/home.component';
   imports: [
     RouterOutlet,
     CommonModule,
-    CarouselModule,
-    MainComponent,
+
+    HeaderComponent,
     HomeComponent,
+    AboutComponent,
+    ExperienceComponent,
+    SkillsComponent,
     ServicesComponent,
     WorkComponent,
-    AboutComponent,
+    TestimonialsComponent,
     BlogComponent,
     ContactComponent,
-    TestimonialsComponent,
-    ExperienceComponent,
-    HeaderComponent,
-    SkillsComponent
+    FooterComponent
+
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

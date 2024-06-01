@@ -47,7 +47,7 @@ export class SkillsComponent {
 
   listFramework = [
     {
-      skillName: 'Angular 5, 7, 8',
+      skillName: 'Angular 5, to 18',
       skillPer: '95%',
       ngStyle: `background-color: ${this.getRandomColor()}; width:95%;`
     },
