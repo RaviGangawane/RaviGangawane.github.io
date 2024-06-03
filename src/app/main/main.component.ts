@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ServicesComponent } from '../services/services.component';
 import { WorkComponent } from '../work/work.component';
 import { AboutComponent } from '../about/about.component';
@@ -14,7 +13,6 @@ import { HomeComponent } from '../home/home.component';
   selector: 'app-main',
   standalone: true,
   imports: [
-    CarouselModule,
     HomeComponent,
     ServicesComponent,
     WorkComponent,

@@ -43,10 +43,10 @@
             return false;
 
         e.preventDefault();
-
+        
         $.ajax({
-
-            url: "https://script.google.com/macros/s/AKfycbxcfqyVXQ3UrPAGbSH03cT3tKt95hLT9SH0Oc-Sg1GbSJ8EYxPllel-bQ/exec",
+            
+            url: "https://script.google.com/macros/s/AKfycbww5l8VTo_WXCXnxpjYnyLouif7S2RZHVpF3NXv0WadkgZmj2ZGEqrx0TkQgtP-BsLT/exec",
             method: "POST",
             dataType: "json",
             data: $(".contact_form").serialize(),
