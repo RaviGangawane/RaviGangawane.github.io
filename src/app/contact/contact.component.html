@@ -60,32 +60,34 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="form-label">First name</label>
-                                <input name="name" id="name" placeholder="Name *" type="text" class="form-control">
+                                <input name="name" id="name" placeholder="Name *" type="text" class="form-control"
+                                    required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="form-label">Your Email</label>
-                                <input name="email" id="email" placeholder="Email *" type="email" class="form-control">
+                                <input name="email" id="email" placeholder="Email *" type="email" class="form-control"
+                                    required>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-group">
                                 <label class="form-label">Subject</label>
                                 <input name="subject" id="subject" placeholder="Subject *" type="text"
-                                    class="form-control">
+                                    class="form-control" required>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label class="form-label">Your message</label>
                                 <textarea name="message" id="message" placeholder="Your message *" rows="6"
-                                    class="form-control"></textarea>
+                                    class="form-control" required></textarea>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="send">
-                                <button type="button" value="Send" class="px-btn w-100" (click)="onSubmit( )">
+                                <button type="submit" value="Send" class="px-btn w-100" (click)="onSubmit()">
                                     Send Message
                                 </button>
                             </div>

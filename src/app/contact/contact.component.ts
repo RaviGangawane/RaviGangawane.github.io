@@ -16,6 +16,13 @@ export class ContactComponent {
 
   constructor(private http: HttpClient) { }
 
+  name = $('.validate-input input[name="name"]');
+  email = $('.validate-input input[name="email"]');
+  subject = $('.validate-input input[name="subject"]');
+  message = $('.validate-input textarea[name="message"]');
+
+
+
   onSubmit() {
     $.ajax({
       url: "https://script.google.com/macros/s/AKfycbx2tepBNsQsxyDEg61sEeyVqIY1G-nHCL8Ufh3gnbaNC_GevDY3LPLcJE8U3d642WLt/exec",
