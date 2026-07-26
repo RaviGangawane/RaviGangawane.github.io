@@ -13,7 +13,7 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     color: #777;
-    background: url(https://ravigangawane.github.io/v-1.0.0/img/body-bg.webp) no-repeat center;
+    background: url(../img/body-bg.webp) no-repeat center;
 }
 
 h1 {
@@ -1353,7 +1353,7 @@ button:focus {
     overflow: hidden;
     width: 100%;
     min-height: 485px;
-    background: url(../img/banner/common-banner.png) no-repeat right bottom;
+    background: url(../img/common-banner.png) no-repeat right bottom;
     background-size: 90% 85%;
     width: 98%;
     z-index: 1;
@@ -1361,7 +1361,7 @@ button:focus {
     overflow: hidden;
     width: 100%;
     min-height: 485px;
-    background: url(../img/banner/common-banner.png) no-repeat right bottom;
+    background: url(../img/common-banner.png) no-repeat right bottom;
     background-size: 90% 85%;
     width: 98%;
     z-index: 1;
@@ -4754,14 +4754,14 @@ del {
     position: absolute;
     top: -25px;
     left: -50px;
-    background: url(https://ravigangawane.github.io/v-1.0.0/img/client-info-bg.webp) no-repeat;
+    background: url(../img/client-info-bg.webp) no-repeat;
     height: 175px;
     width: 175px;
     content: '';
     position: absolute;
     top: -25px;
     left: -50px;
-    background: url(https://ravigangawane.github.io/v-1.0.0/img/client-info-bg.webp) no-repeat;
+    background: url(../img/client-info-bg.webp) no-repeat;
     height: 175px;
     width: 175px;
 }

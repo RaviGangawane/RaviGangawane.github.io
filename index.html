@@ -10,6 +10,12 @@
   <link rel="icon" type="image/png" href="assets/logo/logo.png" />
   <link rel="preload" as="image" href="assets/logo/logo.png" type="image/png" fetchpriority="high" />
   <link rel="stylesheet" href="styles.css" />
+  <script>
+    if (window.location.pathname.endsWith('/index.html')) {
+      const cleanPath = window.location.pathname.slice(0, -'index.html'.length);
+      window.history.replaceState(null, '', cleanPath + window.location.search + window.location.hash);
+    }
+  </script>
 </head>
 
 <body>
@@ -39,7 +45,7 @@
       <a href="#skills">Skills</a>
       <a href="#services">Services</a>
       <a href="#projects">Projects</a>
-      <a href="about.html">Versions</a>
+      <a href="versions/">Versions</a>
       <a href="#contact">Contact</a>
     </nav>
 
@@ -992,7 +998,7 @@
       <b>Quick Links</b>
       <a href="#home">Home</a>
       <a href="#about">About</a>
-      <a href="about.html">Website Versions</a>
+      <a href="versions/">Website Versions</a>
       <a href="#experience">Experience</a>
     </div>
 
