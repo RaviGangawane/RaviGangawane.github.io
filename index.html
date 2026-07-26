@@ -120,8 +120,8 @@
           </figcaption>
         </figure>
         <div class="hero-experience-badge">
-          <strong><span data-experience-text data-experience-start="2017-01-01"
-              data-experience-label="1 Jan 2017">9+</span></strong>
+          <strong><span data-experience-text data-experience-start="2017-01-05"
+              data-experience-label="5 Jan 2017">9.6+</span></strong>
           <span>Years of<br>Engineering</span>
         </div>
       </aside>
@@ -147,8 +147,8 @@
       <div class="stat">
         <span class="stat-icon"><img class="iconify-ui-icon" src="assets/images/iconify-ui/user-cog.svg" alt=""
             decoding="async" loading="lazy"></span>
-        <strong data-count="9.4" data-decimals="1" data-suffix="+" data-experience-start="2017-01-01"
-          data-experience-label="1 Jan 2017">9.4+</strong>
+        <strong data-count="9.6" data-decimals="1" data-suffix="+" data-experience-start="2017-01-05"
+          data-experience-label="5 Jan 2017">9.6+</strong>
         <small>Years Experience</small>
       </div>
       <div class="stat">
@@ -257,8 +257,8 @@
           About Me</p>
         <h2 class="section-title">Passionate About Building Scalable <span>Frontend Systems.</span></h2>
         <p class="section-description">
-          I'm a Lead Software Engineer with <span data-experience-text data-experience-start="2017-01-01"
-            data-experience-label="1 Jan 2017">9.4+</span> years of experience designing and delivering enterprise-grade
+          I'm a Lead Software Engineer with <span data-experience-text data-experience-start="2017-01-05"
+            data-experience-label="5 Jan 2017">9.6+</span> years of experience designing and delivering enterprise-grade
           web
           applications using Angular, TypeScript, and modern web technologies. I specialize in building scalable
           frontend architectures, optimizing application performance, integrating AI-powered solutions, and leading
@@ -458,7 +458,7 @@
         <div class="why-work-grid">
           <article class="why-work-card blue-border"><span class="why-card-icon"><img
                 src="assets/images/iconify-ui/user-cog.svg" alt="" decoding="async" loading="lazy"></span><b><span
-                data-experience-text data-experience-start="2017-01-01" data-experience-label="1 Jan 2017">9.4+</span>
+                data-experience-text data-experience-start="2017-01-05" data-experience-label="5 Jan 2017">9.6+</span>
               Years Experience</b><span>Long-term product delivery across
               enterprise teams.</span></article>
           <article class="why-work-card purple-border"><span class="why-card-icon"><img
@@ -505,8 +505,8 @@
               alt="" decoding="async" loading="lazy"> My Tech Stack</p>
           <h2 class="section-title">Technologies I Use To Build <span>Scalable Digital Products</span></h2>
           <span class="section-divider" aria-hidden="true"></span>
-          <p class="section-description">Over <span data-experience-text data-experience-start="2017-01-01"
-              data-experience-label="1 Jan 2017">9.4+</span> years of experience building enterprise-grade applications,
+          <p class="section-description">Over <span data-experience-text data-experience-start="2017-01-05"
+              data-experience-label="5 Jan 2017">9.6+</span> years of experience building enterprise-grade applications,
             AI-powered solutions, cloud-native systems, and high-performance frontend architectures.</p>
 
           <div class="tech-trust">
@@ -1057,6 +1057,17 @@
       const section = document.querySelector("#experience");
       const button = document.querySelector(".experience-toggle");
       const navLinks = nav ? [...nav.querySelectorAll('a[href^="#"]')] : [];
+      const millisecondsPerYear = 365.2425 * 24 * 60 * 60 * 1000;
+
+      document.querySelectorAll("[data-experience-start]").forEach((element) => {
+        const startDate = new Date(`${element.dataset.experienceStart}T00:00:00Z`);
+        const experienceYears = Math.max(0, (Date.now() - startDate.getTime()) / millisecondsPerYear);
+        const displayValue = experienceYears.toFixed(1);
+
+        element.textContent = `${displayValue}+`;
+        element.dataset.count = displayValue;
+        element.title = `Experience calculated from ${element.dataset.experienceLabel}`;
+      });
 
       document.querySelectorAll("main > section").forEach((pageSection) => {
         pageSection.style.setProperty(

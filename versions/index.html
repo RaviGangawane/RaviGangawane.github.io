@@ -25,7 +25,12 @@
       </span>
     </a>
 
-    <nav class="nav" aria-label="Page navigation">
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false"
+      aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav" aria-label="Page navigation">
       <a href="../">Home</a>
       <a href="../#about">About</a>
       <a href="../#experience">Experience</a>
@@ -68,7 +73,9 @@
             <p class="version-side">Previous Website · Left Edition</p>
             <h2>The Foundation</h2>
             <p>An early portfolio focused on introducing my profile, frontend skills, projects and professional journey.</p>
-            <a class="version-link" href="../docs/1.0.0/index.html">View Version 1.0.0 <span aria-hidden="true">→</span></a>
+            <a class="version-link" href="../docs/1.0.0/index.html">View Version 1.0.0
+              <img class="iconify-ui-icon" src="../assets/images/iconify-ui/arrow-up-right.svg" alt=""
+                decoding="async" loading="lazy"></a>
           </div>
         </article>
 
@@ -85,7 +92,9 @@
             <p class="version-side">Previous Website · Right Edition</p>
             <h2>The Evolution</h2>
             <p>A richer Angular portfolio presenting expanded experience, services, work history and technical expertise.</p>
-            <a class="version-link" href="../docs/2.0.0/index.html">View Version 2.0.0 <span aria-hidden="true">→</span></a>
+            <a class="version-link" href="../docs/2.0.0/index.html">View Version 2.0.0
+              <img class="iconify-ui-icon" src="../assets/images/iconify-ui/arrow-up-right.svg" alt=""
+                decoding="async" loading="lazy"></a>
           </div>
         </article>
       </div>
@@ -106,6 +115,24 @@
   <script>
     (() => {
       const desktopWidth = 1920;
+      const menuToggle = document.getElementById('menuToggle');
+      const nav = document.getElementById('nav');
+
+      if (menuToggle && nav) {
+        const closeMenu = () => {
+          nav.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.setAttribute('aria-label', 'Open menu');
+        };
+
+        menuToggle.addEventListener('click', () => {
+          const isOpen = nav.classList.toggle('open');
+          menuToggle.setAttribute('aria-expanded', String(isOpen));
+          menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+        });
+
+        nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+      }
 
       const fitDesktopPreviews = () => {
         document.querySelectorAll('.version-preview').forEach((preview) => {

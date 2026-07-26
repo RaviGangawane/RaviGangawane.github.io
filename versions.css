@@ -309,3 +309,158 @@
     text-align: center;
   }
 }
+
+/* Keep the archive page aligned with the current portfolio theme. */
+.versions-page .versions-main {
+  width: min(var(--page-max-width, 1840px), calc(100% - 64px));
+  padding: clamp(56px, 6vw, 92px) 0 clamp(64px, 7vw, 104px);
+}
+
+.versions-page .versions-hero {
+  margin: 0;
+  padding: clamp(42px, 4vw, 64px);
+  border: 0;
+  border-radius: 0;
+  background:
+    linear-gradient(rgba(46, 103, 170, .045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(46, 103, 170, .045) 1px, transparent 1px),
+    radial-gradient(circle at 12% 18%, rgba(0, 153, 255, .14), transparent 30%),
+    radial-gradient(circle at 88% 20%, rgba(255, 139, 31, .12), transparent 28%),
+    linear-gradient(100deg, rgba(1, 11, 24, .9), rgba(18, 13, 15, .82));
+  background-size: 42px 42px, 42px 42px, auto, auto, auto;
+  box-shadow: inset 0 0 42px rgba(0, 153, 255, .06), inset -18px 0 42px rgba(255, 139, 31, .06);
+}
+
+.versions-page .versions-hero .section-label {
+  gap: 10px;
+  color: var(--color-cyan);
+  font-family: var(--font-ui);
+  font-size: var(--type-12, 14px);
+  font-weight: 800;
+  letter-spacing: var(--letter-spacing-ui, .08em);
+}
+
+.versions-page .versions-hero .section-label-icon {
+  width: var(--icon-sm, 20px);
+  height: var(--icon-sm, 20px);
+}
+
+.versions-page .versions-hero h1 {
+  margin: 14px 0 22px;
+  color: var(--text);
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  font-size: var(--page-heading-size, clamp(42px, 3.7vw, 54px));
+  font-weight: 900;
+  line-height: var(--page-heading-line, 1.06);
+  letter-spacing: var(--page-heading-letter, -.025em);
+  text-transform: none;
+}
+
+.versions-page .versions-hero .section-description {
+  max-width: 1120px;
+  color: var(--professional-muted, var(--muted));
+  font-family: var(--font-body);
+  font-size: var(--type-16, 16px);
+  font-weight: 500;
+  line-height: 1.72;
+}
+
+.versions-page .version-grid {
+  margin-top: clamp(38px, 4vw, 58px);
+  gap: clamp(20px, 2vw, 32px);
+}
+
+.versions-page .version-card {
+  border-radius: 0;
+  background: linear-gradient(145deg, rgba(5, 18, 36, .96), rgba(2, 6, 18, .98));
+  box-shadow: inset 0 0 28px rgba(0, 153, 255, .045);
+}
+
+.versions-page .version-content h2 {
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  font-weight: 900;
+  letter-spacing: -.015em;
+}
+
+.versions-page .version-content > p:not(.version-side) {
+  color: var(--professional-muted, var(--muted));
+  font-family: var(--font-body);
+  font-size: var(--type-16, 16px);
+  font-weight: 500;
+  line-height: 1.72;
+}
+
+.versions-page .version-link {
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(100deg, #6490ff 0%, #315dff 38%, #ff9c28 72%, #ffd36c 100%);
+  box-shadow: inset 0 0 16px rgba(255, 255, 255, .16), 0 0 12px rgba(84, 116, 255, .34), 0 0 12px rgba(255, 170, 48, .28);
+  transition: transform .2s ease, filter .2s ease, box-shadow .2s ease;
+}
+
+.versions-page .version-link:hover,
+.versions-page .version-link:focus-visible {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .22), 0 0 20px rgba(84, 116, 255, .52), 0 0 20px rgba(255, 170, 48, .44);
+  outline: none;
+}
+
+.versions-page .version-link .iconify-ui-icon {
+  width: 24px !important;
+  height: 24px !important;
+  min-width: 24px !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: brightness(0) saturate(100%) invert(91%) sepia(97%) saturate(1874%) hue-rotate(353deg) brightness(108%) contrast(106%) drop-shadow(0 0 6px rgba(255, 235, 30, .85)) !important;
+}
+
+.versions-page .current-version {
+  margin-top: clamp(34px, 4vw, 52px);
+  min-height: 72px;
+  border-radius: 0;
+  background: linear-gradient(90deg, rgba(4, 15, 32, .96), rgba(1, 7, 18, .98) 56%, rgba(31, 18, 8, .94));
+}
+
+.versions-page .versions-footer {
+  width: min(var(--page-max-width, 1840px), calc(100% - 64px));
+  margin-inline: auto;
+  padding-inline: 0;
+  font-family: var(--font-body);
+  font-size: var(--type-16, 16px) !important;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.versions-page .versions-footer p,
+.versions-page .versions-footer a {
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
+
+@media (max-width: 760px) {
+  .versions-page .versions-main,
+  .versions-page .versions-footer {
+    width: calc(100% - 24px);
+  }
+
+  .versions-page .versions-main {
+    padding-top: 32px;
+  }
+
+  .versions-page .versions-hero {
+    padding: 30px 18px 36px;
+  }
+
+  .versions-page .versions-hero h1 {
+    font-size: var(--type-32, 32px);
+  }
+
+  .versions-page .version-link {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
