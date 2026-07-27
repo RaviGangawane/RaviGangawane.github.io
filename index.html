@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,25 +7,70 @@
   <title>Ravi Gangawane | Lead Software Engineer</title>
   <meta name="description"
     content="Ravi Gangawane - Lead Software Engineer, Frontend Engineering specialist, Angular architect, developer and mentor." />
-  <link rel="icon" type="image/png" href="assets/logo/logo.png" />
-  <link rel="preload" as="image" href="assets/logo/logo.png" type="image/png" fetchpriority="high" />
+  <meta name="theme-color" content="#02050b" />
+  <link rel="canonical" href="https://ravi.gangawane.com/" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="Ravi Gangawane Portfolio" />
+  <meta property="og:title" content="Ravi Gangawane | Lead Software Engineer" />
+  <meta property="og:description"
+    content="Lead Software Engineer specializing in Angular, scalable frontend architecture, AI integration and technical leadership." />
+  <meta property="og:url" content="https://ravi.gangawane.com/" />
+  <meta property="og:image" content="https://ravi.gangawane.com/assets/previews/og-home.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ravi Gangawane | Lead Software Engineer" />
+  <meta name="twitter:description"
+    content="Angular, scalable frontend architecture, AI integration and technical leadership." />
+  <meta name="twitter:image" content="https://ravi.gangawane.com/assets/previews/og-home.jpg" />
+  <link rel="icon" type="image/png" href="assets/logo/favicon.png" />
+  <link rel="preload" as="image" href="assets/logo/logo.webp" type="image/webp" fetchpriority="high" />
   <link rel="stylesheet" href="styles.css" />
-  <script>
-    if (window.location.pathname.endsWith('/index.html')) {
-      const cleanPath = window.location.pathname.slice(0, -'index.html'.length);
-      window.history.replaceState(null, '', cleanPath + window.location.search + window.location.hash);
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ravi Gangawane",
+      "url": "https://ravi.gangawane.com/",
+      "image": "https://ravi.gangawane.com/assets/profile-photo.jpg",
+      "jobTitle": "Lead Software Engineer",
+      "email": "mailto:ravi.d.gangawane@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pune",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/ravi-d-gangawane/",
+        "https://github.com/ravigangawane",
+        "https://x.com/ravi_d_gangawan"
+      ],
+      "knowsAbout": [
+        "Angular",
+        "TypeScript",
+        "Frontend Architecture",
+        "Micro Frontends",
+        "Artificial Intelligence",
+        "Technical Leadership"
+      ]
     }
   </script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/experience.js" defer></script>
+  <script src="scripts/contact.js" defer></script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <div class="cyber-bg"></div>
   <div class="scanline"></div>
 
 
   <header class="header">
     <a href="#home" class="brand">
-      <img src="assets/logo/logo.png" alt="Ravi Gangawane logo" width="42" height="42" decoding="async"
+      <img src="assets/logo/logo.webp" alt="Ravi Gangawane logo" width="42" height="42" decoding="async"
         fetchpriority="high">
       <span>
         <strong>Ravi Gangawane</strong>
@@ -38,8 +83,8 @@
       <span></span><span></span><span></span>
     </button>
 
-    <nav class="nav" id="nav">
-      <a class="active" href="#home">Home</a>
+    <nav class="nav" id="nav" aria-label="Primary navigation">
+      <a class="active" href="#home" aria-current="page">Home</a>
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
@@ -54,7 +99,7 @@
   </header>
 
 
-  <main>
+  <main id="main-content">
 
     <section id="home" class="hero border-frame">
       <div class="hero-left">
@@ -63,32 +108,40 @@
             decoding="async">
           Hello, I'm <span>Ravi Gangawane</span>
         </p>
-        <h2 class="section-title">Engineering Digital <span>Experiences</span> That Perform Beautifully.</h2>
-        <p class="hero-role">Lead Software Engineer <em>/</em> Frontend Engineering Specialist <em>/</em> Angular Architect</p>
+        <h1 class="section-title">I Build <span>Scalable Frontend</span> Experiences.</h1>
+        <p class="hero-role">Lead Software Engineer <em>•</em> Angular Architect <em>•</em> Frontend Engineering
+          Specialist</p>
         <p class="hero-copy section-description">
-          I transform complex business requirements into fast, accessible and maintainable digital products with a strong
-          focus on <b>Angular</b>, <b>Micro Frontends</b> and scalable frontend architecture.
+          I transform complex business requirements into fast, accessible and maintainable digital products.
         </p>
         <span class="section-divider" aria-hidden="true"></span>
+        <div class="hero-technologies" aria-label="Core technologies">
+          <span><img src="assets/images/angular.svg" alt="" decoding="async">Angular</span>
+          <span><img src="assets/images/iconify-tech/micro-frontends.svg" alt="" decoding="async">Micro Frontends</span>
+          <span><img src="assets/images/openai.svg" alt="" decoding="async">AI Integration</span>
+        </div>
         <div class="actions">
-          <a href="#services" class="hud-button btn blue">View Services <img class="iconify-ui-icon"
+          <a href="#projects" class="hud-button btn blue">View Projects <img class="iconify-ui-icon"
               src="assets/images/iconify-ui/arrow-right.svg" alt="" decoding="async" loading="lazy"></a>
-          <a href="mailto:ravi.d.gangawane@gmail.com" class="hud-button btn orange">Hire Me <img class="iconify-ui-icon"
-              src="assets/images/iconify-ui/arrow-up-right.svg" alt="" decoding="async" loading="lazy"></a>
+          <a href="docs/2.0.0/assets/resume/Ravi%20Gangawane%20Feb%202024.pdf" class="hero-resume-button"
+            download>Download Résumé <img class="iconify-ui-icon"
+              src="assets/images/iconify-ui/arrow-down.svg" alt="" decoding="async" loading="lazy">
+          </a>
         </div>
 
         <div class="socials">
-          <a href="https://www.linkedin.com/in/ravi-d-gangawane/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/ravi-d-gangawane/" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn">
             <img class="iconify-ui-icon" src="assets/images/iconify-ui/linkedin.svg" alt="" decoding="async"
               loading="lazy">
           </a>
-          <a href="https://github.com/ravigangawane" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <a href="https://github.com/ravigangawane" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <img class="iconify-ui-icon" src="assets/images/github.svg" alt="" decoding="async" loading="lazy">
           </a>
-          <a href="https://x.com/ravi_d_gangawan" target="_blank" rel="noreferrer" aria-label="X">
+          <a href="https://x.com/ravi_d_gangawan" target="_blank" rel="noopener noreferrer" aria-label="X">
             <img class="iconify-ui-icon" src="assets/images/iconify-ui/x.svg" alt="" decoding="async" loading="lazy">
           </a>
-          <a href="https://ravi.gangawane.com/" target="_blank" rel="noreferrer" aria-label="Website">
+          <a href="https://ravi.gangawane.com/" target="_blank" rel="noopener noreferrer" aria-label="Website">
             <img class="iconify-ui-icon" src="assets/images/iconify-ui/globe.svg" alt="" decoding="async"
               loading="lazy">
           </a>
@@ -97,20 +150,11 @@
               loading="lazy">
           </a>
         </div>
+
       </div>
 
       <aside class="hero-profile" aria-label="Ravi Gangawane profile">
-        <div class="hero-profile-orbit" aria-hidden="true"></div>
-        <span class="hero-tech-chip hero-tech-chip-angular"><img src="assets/images/angular.svg" alt="" decoding="async">
-          Angular Architect</span>
-        <span class="hero-tech-chip hero-tech-chip-ai"><img src="assets/images/openai.svg" alt="" decoding="async">
-          AI Integration</span>
-        <span class="hero-tech-chip hero-tech-chip-mfe"><img src="assets/images/iconify-tech/micro-frontends.svg" alt=""
-            decoding="async"> Micro Frontends</span>
         <figure class="hero-profile-card">
-          <span class="hero-logo-badge">
-            <img src="assets/logo/logo.png" alt="" width="64" height="64" decoding="async">
-          </span>
           <img class="hero-profile-photo" src="assets/profile-photo.jpg" alt="Ravi Gangawane" width="400" height="400"
             decoding="async" fetchpriority="high">
           <figcaption>
@@ -119,11 +163,6 @@
             <small><i aria-hidden="true"></i> Available for opportunities</small>
           </figcaption>
         </figure>
-        <div class="hero-experience-badge">
-          <strong><span data-experience-text data-experience-start="2017-01-05"
-              data-experience-label="5 Jan 2017">9.6+</span></strong>
-          <span>Years of<br>Engineering</span>
-        </div>
       </aside>
 
       <div class="scroll-down" aria-label="Scroll down">
@@ -142,32 +181,30 @@
       </div>
     </section>
 
-
-    <section class="stats">
+    <section class="stats" id="professional-highlights" aria-label="Professional highlights">
       <div class="stat">
         <span class="stat-icon"><img class="iconify-ui-icon" src="assets/images/iconify-ui/user-cog.svg" alt=""
             decoding="async" loading="lazy"></span>
-        <strong data-count="9.6" data-decimals="1" data-suffix="+" data-experience-start="2017-01-05"
-          data-experience-label="5 Jan 2017">9.6+</strong>
+        <strong data-count="9.5" data-decimals="1" data-suffix="+">9.5+</strong>
         <small>Years Experience</small>
       </div>
       <div class="stat">
         <span class="stat-icon blue-icon"><img class="iconify-ui-icon" src="assets/images/iconify-ui/circuit-board.svg"
             alt="" decoding="async" loading="lazy"></span>
-        <strong>Teams</strong>
-        <small>Teams Mentored</small>
+        <strong data-count="11" data-suffix="+">11+</strong>
+        <small>Training &amp; Mentoring</small>
       </div>
       <div class="stat">
         <span class="stat-icon orange-icon"><img class="iconify-ui-icon" src="assets/images/iconify-ui/building.svg"
             alt="" decoding="async" loading="lazy"></span>
-        <strong data-count="5" data-suffix="+">5+</strong>
+        <strong data-count="4">4</strong>
         <small>Organizations</small>
       </div>
       <div class="stat">
         <span class="stat-icon orange-icon"><img class="iconify-ui-icon" src="assets/images/iconify-ui/crosshair.svg"
             alt="" decoding="async" loading="lazy"></span>
-        <strong>UX + Perf</strong>
-        <small>Improvements Led</small>
+        <strong data-count="50" data-suffix="+">50+</strong>
+        <small>Projects Delivered</small>
       </div>
     </section>
 
@@ -552,7 +589,8 @@
             </article>
 
             <article class="tech-category purple" data-tech-count="14 Technologies">
-              <h3><img src="assets/images/iconify-ui/brain.svg" alt="" decoding="async" loading="lazy"> AI, Backend &amp;
+              <h3><img src="assets/images/iconify-ui/brain.svg" alt="" decoding="async" loading="lazy"> AI, Backend
+                &amp;
                 Cloud</h3>
               <div class="tech-list two-col">
                 <span><img src="assets/images/openai.svg" alt="" decoding="async" loading="lazy">OpenAI API</span>
@@ -695,11 +733,13 @@
             decoding="async" loading="lazy"> What I Do</p>
         <h2 class="section-title">My <span>Services</span></h2>
         <span class="section-divider" aria-hidden="true"></span>
-        <p class="section-description">Focused frontend engineering support for teams building scalable, responsive and maintainable digital products.</p>
+        <p class="section-description">Focused frontend engineering support for teams building scalable, responsive and
+          maintainable digital products.</p>
         <div class="service-trust">
           <img class="service-trust-icon" src="assets/images/iconify-ui/rocket.svg" alt="" decoding="async"
             loading="lazy">
-          <span><b>Practical. Scalable. Reliable.</b>Services shaped by enterprise Angular delivery and product-focused execution.</span>
+          <span><b>Practical. Scalable. Reliable.</b>Services shaped by enterprise Angular delivery and product-focused
+            execution.</span>
         </div>
       </div>
       <div class="services-stage">
@@ -710,7 +750,8 @@
                 loading="lazy"></span>
             <h3>Frontend Architecture</h3>
             <p>Angular structure, reusable components, modular boundaries and maintainable frontend foundations.</p>
-            <div class="service-flow"><span><b>Problem</b>Hard-to-scale UI systems</span><span><b>Solution</b>Reusable Angular architecture</span><span><b>Outcome</b>Cleaner delivery</span></div>
+            <div class="service-flow"><span><b>Problem</b>Hard-to-scale UI systems</span><span><b>Solution</b>Reusable
+                Angular architecture</span><span><b>Outcome</b>Cleaner delivery</span></div>
             <a href="#contact">Learn More <img class="iconify-ui-icon" src="assets/images/iconify-ui/arrow-right.svg"
                 alt="" decoding="async" loading="lazy"></a>
           </article>
@@ -719,8 +760,10 @@
             <span><img class="iconify-ui-icon" src="assets/images/iconify-ui/layers.svg" alt="" decoding="async"
                 loading="lazy"></span>
             <h3>Angular Enterprise Development</h3>
-            <p>Production-ready Angular features, forms, APIs, shared UI workflows and enterprise application screens.</p>
-            <div class="service-flow"><span><b>Problem</b>Complex product workflows</span><span><b>Solution</b>Typed Angular delivery</span><span><b>Outcome</b>Maintainable features</span></div>
+            <p>Production-ready Angular features, forms, APIs, shared UI workflows and enterprise application screens.
+            </p>
+            <div class="service-flow"><span><b>Problem</b>Complex product workflows</span><span><b>Solution</b>Typed
+                Angular delivery</span><span><b>Outcome</b>Maintainable features</span></div>
             <a href="#contact">Learn More <img class="iconify-ui-icon" src="assets/images/iconify-ui/arrow-right.svg"
                 alt="" decoding="async" loading="lazy"></a>
           </article>
@@ -730,7 +773,8 @@
                 loading="lazy"></span>
             <h3>Micro Frontends</h3>
             <p>Frontend composition patterns that support team autonomy, shared contracts and independent delivery.</p>
-            <div class="service-flow"><span><b>Problem</b>Large frontend ownership</span><span><b>Solution</b>Modular app boundaries</span><span><b>Outcome</b>Better release control</span></div>
+            <div class="service-flow"><span><b>Problem</b>Large frontend ownership</span><span><b>Solution</b>Modular
+                app boundaries</span><span><b>Outcome</b>Better release control</span></div>
             <a href="#contact">Learn More <img class="iconify-ui-icon" src="assets/images/iconify-ui/arrow-right.svg"
                 alt="" decoding="async" loading="lazy"></a>
           </article>
@@ -740,7 +784,8 @@
                 loading="lazy"></span>
             <h3>Performance Optimization</h3>
             <p>Core Web Vitals awareness, lazy loading, rendering improvements and practical bundle tuning.</p>
-            <div class="service-flow"><span><b>Problem</b>Slow pages and heavy UI</span><span><b>Solution</b>Profiling and tuning</span><span><b>Outcome</b>Smoother experience</span></div>
+            <div class="service-flow"><span><b>Problem</b>Slow pages and heavy UI</span><span><b>Solution</b>Profiling
+                and tuning</span><span><b>Outcome</b>Smoother experience</span></div>
             <a href="#contact">Learn More <img class="iconify-ui-icon" src="assets/images/iconify-ui/arrow-right.svg"
                 alt="" decoding="async" loading="lazy"></a>
           </article>
@@ -749,8 +794,10 @@
             <span><img class="iconify-ui-icon" src="assets/images/iconify-ui/brain.svg" alt="" decoding="async"
                 loading="lazy"></span>
             <h3>AI Integration</h3>
-            <p>OpenAI-assisted frontend experiences, AI workflow exploration and lightweight backend integration patterns.</p>
-            <div class="service-flow"><span><b>Problem</b>Manual knowledge flows</span><span><b>Solution</b>AI-assisted UX</span><span><b>Outcome</b>Smarter products</span></div>
+            <p>OpenAI-assisted frontend experiences, AI workflow exploration and lightweight backend integration
+              patterns.</p>
+            <div class="service-flow"><span><b>Problem</b>Manual knowledge flows</span><span><b>Solution</b>AI-assisted
+                UX</span><span><b>Outcome</b>Smarter products</span></div>
             <a href="#contact">Learn More <img class="iconify-ui-icon" src="assets/images/iconify-ui/arrow-right.svg"
                 alt="" decoding="async" loading="lazy"></a>
           </article>
@@ -760,7 +807,8 @@
                 loading="lazy"></span>
             <h3>Technical Leadership</h3>
             <p>Code reviews, mentoring, architecture guidance, delivery planning and stakeholder clarity.</p>
-            <div class="service-flow"><span><b>Problem</b>Unclear technical direction</span><span><b>Solution</b>Calm engineering leadership</span><span><b>Outcome</b>Stronger team delivery</span></div>
+            <div class="service-flow"><span><b>Problem</b>Unclear technical direction</span><span><b>Solution</b>Calm
+                engineering leadership</span><span><b>Outcome</b>Stronger team delivery</span></div>
             <a href="#contact">Learn More <img class="iconify-ui-icon" src="assets/images/iconify-ui/arrow-right.svg"
                 alt="" decoding="async" loading="lazy"></a>
           </article>
@@ -774,11 +822,13 @@
             decoding="async" loading="lazy"> Featured Projects</p>
         <h2 class="section-title">Project Case Studies With <span>Engineering Context</span></h2>
         <span class="section-divider" aria-hidden="true"></span>
-        <p class="section-description">A focused collection of Angular, AI and frontend architecture work presented by challenge, role, approach and impact.</p>
+        <p class="section-description">A focused collection of Angular, AI and frontend architecture work presented by
+          challenge, role, approach and impact.</p>
         <div class="projects-trust">
           <img class="projects-trust-icon" src="assets/images/iconify-ui/rocket.svg" alt="" decoding="async"
             loading="lazy">
-          <span><b>Proven. Practical. Reliable.</b>Focused delivery from architecture decisions to production-ready execution.</span>
+          <span><b>Proven. Practical. Reliable.</b>Focused delivery from architecture decisions to production-ready
+            execution.</span>
         </div>
       </div>
       <div class="projects-stage">
@@ -788,24 +838,37 @@
             <h3>Angular State Management</h3>
             <p>State management case study for scalable Angular applications using modern typed patterns.</p>
             <div class="tags"><span>Angular</span><span>NgRx</span><span>TypeScript</span><span>RxJS</span></div>
-            <div class="project-proof"><b>Challenge</b><span>Keep complex UI state predictable.</span><b>Role</b><span>Frontend architecture and implementation guidance.</span><b>Approach</b><span>Reusable store slices and typed actions.</span><b>Impact</b><span>Cleaner state ownership and easier maintenance.</span></div>
-            <div class="project-actions"><a href="#contact">Case Study</a><a href="https://github.com/ravigangawane" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+            <div class="project-proof"><b>Challenge</b><span>Keep complex UI state
+                predictable.</span><b>Role</b><span>Frontend architecture and implementation
+                guidance.</span><b>Approach</b><span>Reusable store slices and typed
+                actions.</span><b>Impact</b><span>Cleaner state ownership and easier maintenance.</span></div>
+            <div class="project-actions"><a href="#contact">Case Study</a><a href="https://github.com/ravigangawane"
+                target="_blank" rel="noopener noreferrer">GitHub</a></div>
           </article>
           <article class="project-card purple-border">
             <div class="project-image mfe-project"><span>Micro Frontend</span></div>
             <h3>Angular Micro Frontend</h3>
             <p>Architecture case study for modular enterprise frontends and independent deployments.</p>
-            <div class="tags"><span>Angular</span><span>Module Federation</span><span>Architecture</span><span>CI/CD</span></div>
-            <div class="project-proof"><b>Challenge</b><span>Scale frontend delivery across teams.</span><b>Role</b><span>Architecture planning and integration guidance.</span><b>Approach</b><span>Shell app, remote modules and shared contracts.</span><b>Impact</b><span>Improved team autonomy and release ownership.</span></div>
-            <div class="project-actions"><a href="#contact">Case Study</a><a href="https://github.com/ravigangawane" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+            <div class="tags"><span>Angular</span><span>Module
+                Federation</span><span>Architecture</span><span>CI/CD</span></div>
+            <div class="project-proof"><b>Challenge</b><span>Scale frontend delivery across
+                teams.</span><b>Role</b><span>Architecture planning and integration
+                guidance.</span><b>Approach</b><span>Shell app, remote modules and shared
+                contracts.</span><b>Impact</b><span>Improved team autonomy and release ownership.</span></div>
+            <div class="project-actions"><a href="#contact">Case Study</a><a href="https://github.com/ravigangawane"
+                target="_blank" rel="noopener noreferrer">GitHub</a></div>
           </article>
           <article class="project-card orange-border">
             <div class="project-image ng17-project"><span>AI Product Lab</span></div>
             <h3>AI Frontend Assistant</h3>
             <p>Angular interface concept for AI-powered document discovery and workflow support.</p>
             <div class="tags"><span>Angular</span><span>OpenAI</span><span>Node.js</span><span>FastAPI</span></div>
-            <div class="project-proof"><b>Challenge</b><span>Help users find relevant information faster.</span><b>Role</b><span>Frontend UX and AI integration exploration.</span><b>Approach</b><span>RAG flow, semantic search and secure API patterns.</span><b>Impact</b><span>Clearer AI-assisted user workflows.</span></div>
-            <div class="project-actions"><a href="#contact">Case Study</a><a href="https://github.com/ravigangawane" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+            <div class="project-proof"><b>Challenge</b><span>Help users find relevant information
+                faster.</span><b>Role</b><span>Frontend UX and AI integration
+                exploration.</span><b>Approach</b><span>RAG flow, semantic search and secure API
+                patterns.</span><b>Impact</b><span>Clearer AI-assisted user workflows.</span></div>
+            <div class="project-actions"><a href="#contact">Case Study</a><a href="https://github.com/ravigangawane"
+                target="_blank" rel="noopener noreferrer">GitHub</a></div>
           </article>
         </div>
         <a href="https://github.com/ravigangawane" class="hud-button header-match-btn project-view-all" target="_blank"
@@ -820,18 +883,42 @@
             decoding="async" loading="lazy"> Collaboration Strengths</p>
         <h2 class="section-title">Trusted Delivery, <span>Clear Collaboration</span></h2>
         <span class="section-divider" aria-hidden="true"></span>
-        <p class="section-description">How I work with engineering managers, product stakeholders and frontend teams.</p>
+        <p class="section-description">How I work with engineering managers, product stakeholders and frontend teams.
+        </p>
         <div class="testimonial-trust">
           <img class="testimonial-trust-icon" src="assets/images/iconify-ui/journey.svg" alt="" decoding="async"
             loading="lazy">
-          <span><b>Proven. Practical. Collaborative.</b>Reliable delivery habits built through enterprise product work.</span>
+          <span><b>Proven. Practical. Collaborative.</b>Reliable delivery habits built through enterprise product
+            work.</span>
         </div>
       </div>
       <div class="testimonial-stage">
         <div class="testimonial-grid">
-          <article class="testimonial-card blue-border"><div class="testimonial-top"><span class="testimonial-icon"><img src="assets/images/iconify-ui/user-cog.svg" alt="" decoding="async" loading="lazy"></span><span><b>Ownership</b><small>Engineering Leadership</small></span></div><p>Clear ownership from architecture decisions through delivery, review and release readiness.</p><div class="testimonial-proof"><span>Consistent delivery</span><strong>Reliable execution</strong></div><div class="testimonial-meta"><span>Ownership</span><span>Delivery</span><span>Mentorship</span></div></article>
-          <article class="testimonial-card orange-border"><div class="testimonial-top"><span class="testimonial-icon"><img src="assets/images/iconify-ui/crosshair.svg" alt="" decoding="async" loading="lazy"></span><span><b>Product Clarity</b><small>Enterprise Product Delivery</small></span></div><p>Practical technical decisions shaped around business workflows, usability and maintainability.</p><div class="testimonial-proof"><span>Outcome focused</span><strong>Product clarity</strong></div><div class="testimonial-meta"><span>Architecture</span><span>Impact</span><span>Clarity</span></div></article>
-          <article class="testimonial-card purple-border"><div class="testimonial-top"><span class="testimonial-icon"><img src="assets/images/iconify-ui/brain.svg" alt="" decoding="async" loading="lazy"></span><span><b>Mentorship</b><small>Frontend Engineering Team</small></span></div><p>Supportive guidance for Angular patterns, code quality, reviews and shared team standards.</p><div class="testimonial-proof"><span>Team enablement</span><strong>Clear guidance</strong></div><div class="testimonial-meta"><span>Angular</span><span>Coaching</span><span>Teamwork</span></div></article>
+          <article class="testimonial-card blue-border">
+            <div class="testimonial-top"><span class="testimonial-icon"><img src="assets/images/iconify-ui/user-cog.svg"
+                  alt="" decoding="async" loading="lazy"></span><span><b>Ownership</b><small>Engineering
+                  Leadership</small></span></div>
+            <p>Clear ownership from architecture decisions through delivery, review and release readiness.</p>
+            <div class="testimonial-proof"><span>Consistent delivery</span><strong>Reliable execution</strong></div>
+            <div class="testimonial-meta"><span>Ownership</span><span>Delivery</span><span>Mentorship</span></div>
+          </article>
+          <article class="testimonial-card orange-border">
+            <div class="testimonial-top"><span class="testimonial-icon"><img
+                  src="assets/images/iconify-ui/crosshair.svg" alt="" decoding="async"
+                  loading="lazy"></span><span><b>Product Clarity</b><small>Enterprise Product Delivery</small></span>
+            </div>
+            <p>Practical technical decisions shaped around business workflows, usability and maintainability.</p>
+            <div class="testimonial-proof"><span>Outcome focused</span><strong>Product clarity</strong></div>
+            <div class="testimonial-meta"><span>Architecture</span><span>Impact</span><span>Clarity</span></div>
+          </article>
+          <article class="testimonial-card purple-border">
+            <div class="testimonial-top"><span class="testimonial-icon"><img src="assets/images/iconify-ui/brain.svg"
+                  alt="" decoding="async" loading="lazy"></span><span><b>Mentorship</b><small>Frontend Engineering
+                  Team</small></span></div>
+            <p>Supportive guidance for Angular patterns, code quality, reviews and shared team standards.</p>
+            <div class="testimonial-proof"><span>Team enablement</span><strong>Clear guidance</strong></div>
+            <div class="testimonial-meta"><span>Angular</span><span>Coaching</span><span>Teamwork</span></div>
+          </article>
         </div>
       </div>
     </section>
@@ -842,7 +929,8 @@
             decoding="async" loading="lazy"> Learning Path</p>
         <h2 class="section-title"><span>Learning and Credentials</span></h2>
         <span class="section-divider" aria-hidden="true"></span>
-        <p class="section-description">Continuous learning across frontend architecture, Angular, AI engineering and modern product delivery.</p>
+        <p class="section-description">Continuous learning across frontend architecture, Angular, AI engineering and
+          modern product delivery.</p>
         <div class="cert-trust">
           <img class="cert-trust-icon" src="assets/images/certificate-outline.svg" alt="" decoding="async"
             loading="lazy">
@@ -851,12 +939,64 @@
       </div>
       <div class="cert-stage">
         <div class="cert-grid">
-          <article class="cert-card blue-border"><time>2024</time><span class="cert-icon cert-icon-img"><img src="assets/images/angular.svg" alt="" decoding="async" loading="lazy"></span><h3>Angular Advanced Learning</h3><p>Framework depth, architecture patterns and scalable component systems.</p><small>Ongoing</small><div class="cert-meta"><span>Learning</span><span>Angular</span></div><a href="https://www.linkedin.com/in/ravi-d-gangawane/" target="_blank" rel="noopener noreferrer">Profile <img class="iconify-ui-icon" src="assets/images/iconify-ui/external-link.svg" alt="" decoding="async" loading="lazy"></a></article>
-          <article class="cert-card purple-border"><time>2024</time><span class="cert-icon cert-icon-img"><img src="assets/images/typescript.svg" alt="" decoding="async" loading="lazy"></span><h3>TypeScript Engineering</h3><p>Typed frontend systems, API contracts and maintainable application code.</p><small>Ongoing</small><div class="cert-meta"><span>Learning</span><span>TypeScript</span></div><a href="https://www.linkedin.com/in/ravi-d-gangawane/" target="_blank" rel="noopener noreferrer">Profile <img class="iconify-ui-icon" src="assets/images/iconify-ui/external-link.svg" alt="" decoding="async" loading="lazy"></a></article>
-          <article class="cert-card teal-border"><time>2024</time><span class="cert-icon cert-icon-img"><img src="assets/images/openai.svg" alt="" decoding="async" loading="lazy"></span><h3>AI Engineering Exploration</h3><p>OpenAI integrations, AI-assisted frontend workflows and retrieval patterns.</p><small>Currently Exploring</small><div class="cert-meta"><span>Learning</span><span>OpenAI</span></div><a href="https://www.linkedin.com/in/ravi-d-gangawane/" target="_blank" rel="noopener noreferrer">Profile <img class="iconify-ui-icon" src="assets/images/iconify-ui/external-link.svg" alt="" decoding="async" loading="lazy"></a></article>
-          <article class="cert-card orange-border"><time>2023</time><span class="cert-icon cert-icon-img"><img src="assets/images/ngrx.svg" alt="" decoding="async" loading="lazy"></span><h3>NgRx State Management</h3><p>Reactive state patterns, effects, selectors and maintainable data flow for Angular products.</p><small>Practice Track</small><div class="cert-meta"><span>Learning</span><span>NgRx</span></div><a href="https://www.linkedin.com/in/ravi-d-gangawane/" target="_blank" rel="noopener noreferrer">Profile <img class="iconify-ui-icon" src="assets/images/iconify-ui/external-link.svg" alt="" decoding="async" loading="lazy"></a></article>
-          <article class="cert-card blue-border"><time>2023</time><span class="cert-icon cert-icon-img"><img src="assets/images/rxjs.svg" alt="" decoding="async" loading="lazy"></span><h3>RxJS Reactive Patterns</h3><p>Observable streams, async orchestration and practical reactive UI patterns.</p><small>Practice Track</small><div class="cert-meta"><span>Learning</span><span>RxJS</span></div><a href="https://www.linkedin.com/in/ravi-d-gangawane/" target="_blank" rel="noopener noreferrer">Profile <img class="iconify-ui-icon" src="assets/images/iconify-ui/external-link.svg" alt="" decoding="async" loading="lazy"></a></article>
-          <article class="cert-card purple-border"><time>2022</time><span class="cert-icon cert-icon-img"><img src="assets/images/aws.svg" alt="" decoding="async" loading="lazy"></span><h3>Cloud Fundamentals</h3><p>Deployment awareness, cloud basics and frontend integration patterns for production systems.</p><small>Foundation</small><div class="cert-meta"><span>Learning</span><span>AWS</span></div><a href="https://www.linkedin.com/in/ravi-d-gangawane/" target="_blank" rel="noopener noreferrer">Profile <img class="iconify-ui-icon" src="assets/images/iconify-ui/external-link.svg" alt="" decoding="async" loading="lazy"></a></article>
+          <article class="cert-card blue-border"><time>2024</time><span class="cert-icon cert-icon-img"><img
+                src="assets/images/angular.svg" alt="" decoding="async" loading="lazy"></span>
+            <h3>Angular Advanced Learning</h3>
+            <p>Framework depth, architecture patterns and scalable component systems.</p><small>Ongoing</small>
+            <div class="cert-meta"><span>Learning</span><span>Angular</span></div><a
+              href="https://www.linkedin.com/in/ravi-d-gangawane/" target="_blank" rel="noopener noreferrer">Profile
+              <img class="iconify-ui-icon" src="assets/images/iconify-ui/external-link.svg" alt="" decoding="async"
+                loading="lazy"></a>
+          </article>
+          <article class="cert-card purple-border"><time>2024</time><span class="cert-icon cert-icon-img"><img
+                src="assets/images/typescript.svg" alt="" decoding="async" loading="lazy"></span>
+            <h3>TypeScript Engineering</h3>
+            <p>Typed frontend systems, API contracts and maintainable application code.</p><small>Ongoing</small>
+            <div class="cert-meta"><span>Learning</span><span>TypeScript</span></div><a
+              href="https://www.linkedin.com/in/ravi-d-gangawane/" target="_blank" rel="noopener noreferrer">Profile
+              <img class="iconify-ui-icon" src="assets/images/iconify-ui/external-link.svg" alt="" decoding="async"
+                loading="lazy"></a>
+          </article>
+          <article class="cert-card teal-border"><time>2024</time><span class="cert-icon cert-icon-img"><img
+                src="assets/images/openai.svg" alt="" decoding="async" loading="lazy"></span>
+            <h3>AI Engineering Exploration</h3>
+            <p>OpenAI integrations, AI-assisted frontend workflows and retrieval patterns.</p><small>Currently
+              Exploring</small>
+            <div class="cert-meta"><span>Learning</span><span>OpenAI</span></div><a
+              href="https://www.linkedin.com/in/ravi-d-gangawane/" target="_blank" rel="noopener noreferrer">Profile
+              <img class="iconify-ui-icon" src="assets/images/iconify-ui/external-link.svg" alt="" decoding="async"
+                loading="lazy"></a>
+          </article>
+          <article class="cert-card orange-border"><time>2023</time><span class="cert-icon cert-icon-img"><img
+                src="assets/images/ngrx.svg" alt="" decoding="async" loading="lazy"></span>
+            <h3>NgRx State Management</h3>
+            <p>Reactive state patterns, effects, selectors and maintainable data flow for Angular products.</p>
+            <small>Practice Track</small>
+            <div class="cert-meta"><span>Learning</span><span>NgRx</span></div><a
+              href="https://www.linkedin.com/in/ravi-d-gangawane/" target="_blank" rel="noopener noreferrer">Profile
+              <img class="iconify-ui-icon" src="assets/images/iconify-ui/external-link.svg" alt="" decoding="async"
+                loading="lazy"></a>
+          </article>
+          <article class="cert-card blue-border"><time>2023</time><span class="cert-icon cert-icon-img"><img
+                src="assets/images/rxjs.svg" alt="" decoding="async" loading="lazy"></span>
+            <h3>RxJS Reactive Patterns</h3>
+            <p>Observable streams, async orchestration and practical reactive UI patterns.</p><small>Practice
+              Track</small>
+            <div class="cert-meta"><span>Learning</span><span>RxJS</span></div><a
+              href="https://www.linkedin.com/in/ravi-d-gangawane/" target="_blank" rel="noopener noreferrer">Profile
+              <img class="iconify-ui-icon" src="assets/images/iconify-ui/external-link.svg" alt="" decoding="async"
+                loading="lazy"></a>
+          </article>
+          <article class="cert-card purple-border"><time>2022</time><span class="cert-icon cert-icon-img"><img
+                src="assets/images/aws.svg" alt="" decoding="async" loading="lazy"></span>
+            <h3>Cloud Fundamentals</h3>
+            <p>Deployment awareness, cloud basics and frontend integration patterns for production systems.</p>
+            <small>Foundation</small>
+            <div class="cert-meta"><span>Learning</span><span>AWS</span></div><a
+              href="https://www.linkedin.com/in/ravi-d-gangawane/" target="_blank" rel="noopener noreferrer">Profile
+              <img class="iconify-ui-icon" src="assets/images/iconify-ui/external-link.svg" alt="" decoding="async"
+                loading="lazy"></a>
+          </article>
         </div>
       </div>
     </section>
@@ -929,8 +1069,24 @@
           high-performance digital experience.</p>
         <span class="section-divider" aria-hidden="true"></span>
         <div class="contact-availability">
-          <span><b>Available For</b>Full-Time - Freelance - Consulting - Contract</span>
-          <span><b>Response Time</b>&lt; 24 Hours</span>
+          <span class="availability-card">
+            <span class="availability-icon" aria-hidden="true"><img src="assets/images/iconify-ui/building.svg" alt=""
+                decoding="async" loading="lazy"></span>
+            <span class="availability-copy">
+              <b>Available For</b>
+              <strong>Full-Time · Freelance</strong>
+              <small>Consulting · Contract</small>
+            </span>
+          </span>
+          <span class="availability-card response-card">
+            <span class="availability-icon" aria-hidden="true"><img src="assets/images/iconify-ui/gauge.svg" alt=""
+                decoding="async" loading="lazy"></span>
+            <span class="availability-copy">
+              <b>Response Time</b>
+              <strong>Within 24 Hours</strong>
+              <small>For new project enquiries</small>
+            </span>
+          </span>
         </div>
         <p class="contact-detail"><span class="contact-detail-icon"><img class="iconify-ui-icon"
               src="assets/images/iconify-ui/map-pin.svg" alt="" decoding="async" loading="lazy"></span><span>Pune,
@@ -943,28 +1099,43 @@
             9138451715</span></p>
       </div>
 
-      <div class="contact-hud radar hud-portrait" aria-hidden="true">
-        <div class="hud-frame">
-          <div class="hud-ring hud-ring-1"></div>
-          <div class="hud-ring hud-ring-2"></div>
-          <div class="hud-ring hud-ring-3"></div>
-          <div class="hud-ring hud-ring-4"></div>
-          <img class="animation-hud-icon animation-hud-icon-a" src="assets/images/iconify-ui/code.svg" alt=""
-            decoding="async" loading="lazy">
-          <img class="animation-hud-icon animation-hud-icon-b" src="assets/images/iconify-ui/layers.svg" alt=""
-            decoding="async" loading="lazy">
-          <div class="avatar-box"></div>
+      <form class="contact-form" id="contactForm"
+        action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <div class="form-intro wide">
+          <span>Start a conversation</span>
+          <h3>Tell me about your project.</h3>
         </div>
-      </div>
-
-      <form class="contact-form" novalidate>
-        <input type="text" placeholder="Your Name" aria-label="Your name" autocomplete="name" required />
-        <input type="email" placeholder="Your Email" aria-label="Your email" autocomplete="email" required />
-        <input class="wide" type="text" placeholder="Subject" aria-label="Message subject" required />
-        <textarea class="wide" placeholder="Your Message" aria-label="Your message" required></textarea>
+        <input type="hidden" name="access_key" value="7ee2c437-4dc0-4b4f-a704-f6c1c1d6bc0e">
+        <input type="hidden" name="from_name" value="Ravi Gangawane Portfolio">
+        <div class="form-field">
+          <label for="contactName">Your Name</label>
+          <input id="contactName" name="name" type="text" placeholder="Your Name" autocomplete="name"
+            minlength="2" maxlength="80" aria-describedby="contactNameError" required>
+          <small class="field-error" id="contactNameError"></small>
+        </div>
+        <div class="form-field">
+          <label for="contactEmail">Your Email</label>
+          <input id="contactEmail" name="email" type="email" placeholder="Your Email" autocomplete="email"
+            maxlength="254" inputmode="email" aria-describedby="contactEmailError" required>
+          <small class="field-error" id="contactEmailError"></small>
+        </div>
+        <div class="form-field wide">
+          <label for="contactSubject">Subject</label>
+          <input id="contactSubject" name="subject" type="text" placeholder="Subject" minlength="3" maxlength="120"
+            aria-describedby="contactSubjectError" required>
+          <small class="field-error" id="contactSubjectError"></small>
+        </div>
+        <div class="form-field wide">
+          <label for="contactMessage">Your Message</label>
+          <textarea id="contactMessage" name="message" placeholder="Your Message" minlength="20" maxlength="2000"
+            rows="7" aria-describedby="contactMessageError" required></textarea>
+          <small class="field-error" id="contactMessageError"></small>
+        </div>
+        <input class="form-honeypot" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"
+          aria-hidden="true">
         <button class="hud-button hud-action" type="submit">Send Message <img class="iconify-ui-icon"
             src="assets/images/iconify-ui/arrow-up-right.svg" alt="" decoding="async" loading="lazy"></button>
-        <p class="form-status wide" id="contactFormStatus" role="status" aria-live="polite"></p>
+        <p class="form-status wide" id="contactFormStatus" role="status" aria-live="polite" tabindex="-1"></p>
       </form>
     </section>
 
@@ -976,8 +1147,9 @@
       </p>
       <h2 class="section-title">Ready To Build <span>Your Next Product?</span></h2>
       <p class="section-description">Bring the architecture, execution and product thinking together from day one.</p>
-      <a href="mailto:ravi.d.gangawane@gmail.com" class="hud-button hud-action">Schedule Call <img class="iconify-ui-icon"
-          src="assets/images/iconify-ui/arrow-up-right.svg" alt="" decoding="async" loading="lazy"></a>
+      <a href="mailto:ravi.d.gangawane@gmail.com" class="hud-button hud-action">Schedule Call <img
+          class="iconify-ui-icon" src="assets/images/iconify-ui/arrow-up-right.svg" alt="" decoding="async"
+          loading="lazy"></a>
     </section>
   </main>
 
@@ -985,7 +1157,7 @@
   <footer class="footer border-frame">
     <div class="footer-brand">
       <div class="footer-brand-head">
-        <img src="assets/logo/logo.png" alt="" decoding="async" loading="lazy">
+        <img src="assets/logo/logo.webp" alt="" width="88" height="88" decoding="async" loading="lazy">
         <span>
           <strong>Ravi Gangawane</strong>
           <small>Lead Engineer</small>
@@ -1050,126 +1222,7 @@
       <p>Designed &amp; Engineered by Ravi Gangawane</p>
     </div>
   </footer>
-  <script>
-    (() => {
-      const menuToggle = document.querySelector("#menuToggle");
-      const nav = document.querySelector("#nav");
-      const section = document.querySelector("#experience");
-      const button = document.querySelector(".experience-toggle");
-      const navLinks = nav ? [...nav.querySelectorAll('a[href^="#"]')] : [];
-      const millisecondsPerYear = 365.2425 * 24 * 60 * 60 * 1000;
 
-      document.querySelectorAll("[data-experience-start]").forEach((element) => {
-        const startDate = new Date(`${element.dataset.experienceStart}T00:00:00Z`);
-        const experienceYears = Math.max(0, (Date.now() - startDate.getTime()) / millisecondsPerYear);
-        const displayValue = experienceYears.toFixed(1);
-
-        element.textContent = `${displayValue}+`;
-        element.dataset.count = displayValue;
-        element.title = `Experience calculated from ${element.dataset.experienceLabel}`;
-      });
-
-      document.querySelectorAll("main > section").forEach((pageSection) => {
-        pageSection.style.setProperty(
-          "width",
-          "min(var(--page-max-width, 1840px), calc(100% - clamp(24px, 5vw, 96px)))",
-          "important"
-        );
-        pageSection.style.setProperty("max-width", "none", "important");
-        pageSection.style.setProperty("margin-left", "auto", "important");
-        pageSection.style.setProperty("margin-right", "auto", "important");
-        pageSection.style.setProperty("box-sizing", "border-box", "important");
-
-      });
-
-      if (menuToggle && nav) {
-        const closeMenu = () => {
-          nav.classList.remove("open");
-          menuToggle.setAttribute("aria-expanded", "false");
-          menuToggle.setAttribute("aria-label", "Open menu");
-        };
-
-        menuToggle.addEventListener("click", () => {
-          const isOpen = nav.classList.toggle("open");
-          menuToggle.setAttribute("aria-expanded", String(isOpen));
-          menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
-        });
-
-        nav.addEventListener("click", (event) => {
-          if (event.target.closest("a")) closeMenu();
-        });
-
-        document.addEventListener("keydown", (event) => {
-          if (event.key === "Escape") closeMenu();
-        });
-      }
-
-      if (navLinks.length) {
-        const trackedSections = navLinks
-          .map((link) => {
-            const target = document.querySelector(link.getAttribute("href"));
-            return target ? { link, target } : null;
-          })
-          .filter(Boolean);
-
-        const setActiveLink = (activeLink) => {
-          navLinks.forEach((link) => {
-            const isActive = link === activeLink;
-            link.classList.toggle("active", isActive);
-            if (isActive) {
-              link.setAttribute("aria-current", "page");
-            } else {
-              link.removeAttribute("aria-current");
-            }
-          });
-        };
-
-        let scrollFrame;
-        const updateActiveLink = () => {
-          scrollFrame = null;
-          const headerHeight = document.querySelector(".header")?.offsetHeight || 0;
-          const marker = window.scrollY + headerHeight + Math.min(window.innerHeight * .28, 220);
-          let current = trackedSections[0];
-
-          trackedSections.forEach((item) => {
-            if (item.target.offsetTop <= marker) current = item;
-          });
-
-          if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
-            current = trackedSections[trackedSections.length - 1];
-          }
-
-          if (current) setActiveLink(current.link);
-        };
-
-        const requestActiveLinkUpdate = () => {
-          if (!scrollFrame) scrollFrame = window.requestAnimationFrame(updateActiveLink);
-        };
-
-        navLinks.forEach((link) => {
-          link.addEventListener("click", () => setActiveLink(link));
-        });
-
-        window.addEventListener("scroll", requestActiveLinkUpdate, { passive: true });
-        window.addEventListener("resize", requestActiveLinkUpdate);
-        window.addEventListener("load", updateActiveLink);
-        updateActiveLink();
-      }
-
-      if (section && button) {
-        const iconMarkup = '<img class="iconify-ui-icon" src="assets/images/iconify-ui/arrow-up-right.svg" alt="" decoding="async" loading="lazy">';
-
-        button.addEventListener("click", () => {
-          const isExpanded = !section.classList.contains("is-expanded");
-          section.classList.toggle("is-expanded", isExpanded);
-          section.classList.toggle("is-collapsed", !isExpanded);
-          button.setAttribute("aria-expanded", String(isExpanded));
-          button.innerHTML = `${isExpanded ? "Show Less" : "View All Experience"} ${iconMarkup}`;
-        });
-      }
-    })();
-  </script>
 </body>
 
 </html>
-

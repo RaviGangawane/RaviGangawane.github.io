@@ -1,0 +1,22 @@
+{
+  "name": "Ravi Gangawane Portfolio",
+  "short_name": "Ravi Gangawane",
+  "description": "Lead Software Engineer portfolio focused on Angular, scalable frontend architecture and AI integration.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#02050b",
+  "theme_color": "#02050b",
+  "icons": [
+    {
+      "src": "/assets/logo/favicon.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/logo/logo.webp",
+      "sizes": "256x256",
+      "type": "image/webp"
+    }
+  ]
+}

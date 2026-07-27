@@ -7,18 +7,33 @@
   <title>Website Versions | Ravi Gangawane</title>
   <meta name="description"
     content="Explore the evolution of Ravi Gangawane's portfolio through previous website versions.">
-  <link rel="icon" type="image/png" href="../assets/logo/logo.png">
+  <meta name="theme-color" content="#02050b">
+  <link rel="canonical" href="https://ravi.gangawane.com/versions/">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ravi Gangawane Portfolio">
+  <meta property="og:title" content="Website Versions | Ravi Gangawane">
+  <meta property="og:description"
+    content="Explore the evolution of Ravi Gangawane's portfolio through previous website versions.">
+  <meta property="og:url" content="https://ravi.gangawane.com/versions/">
+  <meta property="og:image" content="https://ravi.gangawane.com/assets/previews/og-home.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Website Versions | Ravi Gangawane">
+  <meta name="twitter:description" content="Explore the evolution of Ravi Gangawane's portfolio.">
+  <meta name="twitter:image" content="https://ravi.gangawane.com/assets/previews/og-home.jpg">
+  <link rel="icon" type="image/png" href="../assets/logo/favicon.png">
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../versions.css">
 </head>
 
 <body class="versions-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <div class="cyber-bg"></div>
   <div class="scanline"></div>
 
   <header class="header">
     <a href="../" class="brand">
-      <img src="../assets/logo/logo.png" alt="Ravi Gangawane logo" width="42" height="42">
+      <img src="../assets/logo/logo.webp" alt="Ravi Gangawane logo" width="42" height="42" decoding="async">
       <span>
         <strong>Ravi Gangawane</strong>
         <small>Lead Software Engineer</small>
@@ -46,7 +61,7 @@
     </a>
   </header>
 
-  <main class="versions-main">
+  <main class="versions-main" id="main-content">
     <section class="versions-hero">
       <p class="section-label">
         <img class="section-label-icon" src="../assets/images/iconify-ui/user-cog.svg" alt="">
@@ -66,8 +81,8 @@
             <time datetime="2021">2021</time>
           </div>
           <div class="version-preview">
-            <iframe src="../docs/1.0.0/index.html" title="Preview of portfolio website version 1.0.0"
-              loading="lazy"></iframe>
+            <img src="../assets/previews/version-1.webp" width="1440" height="810"
+              alt="Desktop preview of portfolio website version 1.0.0" decoding="async" loading="lazy">
           </div>
           <div class="version-content">
             <p class="version-side">Previous Website · Left Edition</p>
@@ -85,8 +100,8 @@
             <time datetime="2024">2024</time>
           </div>
           <div class="version-preview">
-            <iframe src="../docs/2.0.0/index.html" title="Preview of portfolio website version 2.0.0"
-              loading="lazy"></iframe>
+            <img src="../assets/previews/version-2.webp" width="1440" height="810"
+              alt="Desktop preview of portfolio website version 2.0.0" decoding="async" loading="lazy">
           </div>
           <div class="version-content">
             <p class="version-side">Previous Website · Right Edition</p>
@@ -112,44 +127,7 @@
     <a href="../">Return to current portfolio</a>
   </footer>
 
-  <script>
-    (() => {
-      const desktopWidth = 1920;
-      const menuToggle = document.getElementById('menuToggle');
-      const nav = document.getElementById('nav');
-
-      if (menuToggle && nav) {
-        const closeMenu = () => {
-          nav.classList.remove('open');
-          menuToggle.setAttribute('aria-expanded', 'false');
-          menuToggle.setAttribute('aria-label', 'Open menu');
-        };
-
-        menuToggle.addEventListener('click', () => {
-          const isOpen = nav.classList.toggle('open');
-          menuToggle.setAttribute('aria-expanded', String(isOpen));
-          menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-        });
-
-        nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
-      }
-
-      const fitDesktopPreviews = () => {
-        document.querySelectorAll('.version-preview').forEach((preview) => {
-          const frame = preview.querySelector('iframe');
-          const scale = preview.clientWidth / desktopWidth;
-
-          frame.style.width = `${desktopWidth}px`;
-          frame.style.height = `${Math.ceil(preview.clientHeight / scale)}px`;
-          frame.style.transform = `scale(${scale})`;
-        });
-      };
-
-      const previewObserver = new ResizeObserver(fitDesktopPreviews);
-      document.querySelectorAll('.version-preview').forEach((preview) => previewObserver.observe(preview));
-      window.addEventListener('load', fitDesktopPreviews);
-    })();
-  </script>
+  <script src="../scripts/navigation.js" defer></script>
 </body>
 
 </html>

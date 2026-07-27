@@ -1,0 +1,10 @@
+{
+  "name": "ravi-gangawane-portfolio",
+  "version": "3.0.0",
+  "private": true,
+  "scripts": {
+    "validate": "node tools/validate-site.mjs",
+    "serve": "npx --yes serve . -l 4173",
+    "audit": "npx --yes @lhci/cli autorun"
+  }
+}
