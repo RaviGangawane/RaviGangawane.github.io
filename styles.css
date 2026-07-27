@@ -15,15 +15,15 @@
   margin: 0 auto !important;
   padding: clamp(64px, 7vw, 96px) clamp(40px, 6vw, 80px) !important;
   display: grid !important;
-  grid-template-columns: minmax(0, 1.15fr) minmax(360px, .85fr) !important;
+  grid-template-columns: minmax(0, 1fr) !important;
   gap: clamp(56px, 7vw, 96px) !important;
   align-items: center !important;
   overflow: visible !important;
   border: 1px solid rgba(148, 163, 184, .16) !important;
   border-radius: 16px !important;
   background:
-    radial-gradient(circle at 22% 35%, rgba(25, 181, 254, .06), transparent 34%),
-    radial-gradient(circle at 86% 42%, rgba(25, 181, 254, .07), transparent 30%),
+    linear-gradient(90deg, rgba(2, 10, 22, .86) 0%, rgba(2, 10, 22, .7) 40%, rgba(2, 10, 22, .12) 72%, rgba(2, 10, 22, .04) 100%),
+    url("assets/hero-background.webp") right bottom / auto 98% no-repeat,
     #020a16 !important;
   box-shadow: none !important;
 }
@@ -249,14 +249,14 @@
 }
 
 #home .hero-profile-card {
-  width: min(100%, 440px) !important;
+  width: 100% !important;
   margin: 0 auto !important;
-  padding: 20px !important;
-  border: 1px solid rgba(25, 181, 254, .6) !important;
-  border-radius: 16px !important;
-  background: linear-gradient(145deg, #0b1c35, #071426) !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
   clip-path: none !important;
-  box-shadow: 0 22px 60px rgba(0, 0, 0, .28) !important;
+  box-shadow: none !important;
 }
 
 #home .hero-profile-card::before,
@@ -268,11 +268,12 @@
 #home .hero-profile-photo {
   width: 100% !important;
   height: auto !important;
-  aspect-ratio: 1 / 1 !important;
+  aspect-ratio: auto !important;
   display: block !important;
-  object-fit: cover !important;
-  border: 1px solid rgba(148, 163, 184, .24) !important;
-  border-radius: 12px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  border: 0 !important;
+  border-radius: 0 !important;
   box-shadow: none !important;
 }
 
@@ -312,6 +313,10 @@
     padding: 52px 24px !important;
     grid-template-columns: 1fr !important;
     gap: 48px !important;
+    background:
+      linear-gradient(90deg, rgba(2, 10, 22, .92), rgba(2, 10, 22, .6)),
+      url("assets/hero-background.webp") right bottom / auto 58% no-repeat,
+      #020a16 !important;
   }
 
   #home .hero-left {
@@ -320,6 +325,15 @@
 
   #home .hero-profile-card {
     max-width: 430px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  #home.hero {
+    background:
+      linear-gradient(180deg, rgba(2, 10, 22, .98) 0%, rgba(2, 10, 22, .92) 48%, rgba(2, 10, 22, .72) 100%),
+      url("assets/hero-background.webp") right bottom / auto 46% no-repeat,
+      #020a16 !important;
   }
 }
 
