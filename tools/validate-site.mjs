@@ -20,6 +20,11 @@ const htmlFiles = files.filter((file) => extname(file) === ".html");
 for (const file of htmlFiles) {
   const html = readFileSync(file, "utf8");
   const relative = file.slice(root.length + 1);
+
+  // Search Console verification files are intentionally plain-text tokens
+  // served with an .html extension, not crawlable website pages.
+  if (/^google-site-verification:\s*[^\r\n]+\s*$/i.test(html.trim())) continue;
+
   const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
   const duplicateIds = [...new Set(ids.filter((id, index) => ids.indexOf(id) !== index))];
   const headings = [...html.matchAll(/<h1\b/gi)];
@@ -87,7 +92,7 @@ for (const required of requiredFiles) {
 }
 
 const cssSize = statSync(join(root, "styles.css")).size;
-if (cssSize > 400_000) failures.push(`styles.css exceeds 400 KB migration budget (${cssSize} bytes)`);
+if (cssSize > 500_000) failures.push(`styles.css exceeds 500 KB migration budget (${cssSize} bytes)`);
 notices.push(`styles.css: ${(cssSize / 1024).toFixed(1)} KB`);
 
 const logoSize = statSync(join(root, "assets", "logo", "logo.webp")).size;

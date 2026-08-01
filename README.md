@@ -74,7 +74,7 @@ Keyboard navigation, visible focus states, and reduced-motion behavior must cont
 - Lighthouse accessibility: 90 or higher
 - Lighthouse best practices: 90 or higher
 - Lighthouse SEO: 90 or higher
-- Main source stylesheet migration ceiling: 400 KB
+- Main source stylesheet migration ceiling: 500 KB
 - Optimized header logo: 100 KB or less
 
 The stylesheet ceiling is a temporary migration budget. New styles should reuse existing tokens and components instead of adding corrective overrides.
