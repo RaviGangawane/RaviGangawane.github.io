@@ -3,9 +3,14 @@
     if (typeof window.gtag === "function") window.gtag("event", name, parameters);
   };
 
-  if (/^\/projects\/.+/.test(window.location.pathname)) {
+  let projectPageTracked = false;
+  const trackProjectPage = () => {
+    if (projectPageTracked || !/^\/projects\/.+/.test(window.location.pathname) || typeof window.gtag !== "function") return;
+    projectPageTracked = true;
     sendEvent("project_view", { project_path: window.location.pathname, page_title: document.title });
-  }
+  };
+  trackProjectPage();
+  window.addEventListener("analytics-consent-granted", trackProjectPage, { once: true });
 
   document.addEventListener("click", (event) => {
     const link = event.target.closest("a[href]");
