@@ -3,6 +3,10 @@
     if (typeof window.gtag === "function") window.gtag("event", name, parameters);
   };
 
+  if (/^\/projects\/.+/.test(window.location.pathname)) {
+    sendEvent("project_view", { project_path: window.location.pathname, page_title: document.title });
+  }
+
   document.addEventListener("click", (event) => {
     const link = event.target.closest("a[href]");
     if (!link) return;
@@ -11,15 +15,30 @@
     const label = (link.getAttribute("aria-label") || link.textContent || "link").trim().replace(/\s+/g, " ").slice(0, 100);
 
     if (/\.pdf(?:$|[?#])/i.test(href)) {
-      sendEvent("resume_download", { link_url: link.href, link_text: label });
-    } else if (/^(?:mailto|tel):/i.test(href)) {
-      sendEvent("contact_click", { contact_method: href.split(":", 1)[0].toLowerCase(), link_text: label });
+      const fileName = decodeURIComponent(new URL(link.href).pathname.split("/").pop() || "resume.pdf");
+      sendEvent("resume_download", { file_name: fileName, link_url: link.href, link_text: label });
+    } else if (/^mailto:/i.test(href)) {
+      const parameters = { contact_method: "email", link_text: label };
+      sendEvent("email_click", parameters);
+      sendEvent("contact_click", parameters);
+    } else if (/^tel:/i.test(href)) {
+      sendEvent("contact_click", { contact_method: "phone", link_text: label });
     } else if (link.matches(".hud-button, .project-actions a")) {
       sendEvent("cta_click", { link_url: link.href, link_text: label });
     }
 
+    if (/linkedin\.com/i.test(link.hostname)) {
+      sendEvent("linkedin_click", { link_url: link.href, link_text: label });
+    } else if (/github\.com/i.test(link.hostname)) {
+      sendEvent("github_click", { link_url: link.href, link_text: label });
+    }
+
     if (/linkedin\.com|github\.com|x\.com/i.test(link.hostname)) {
       sendEvent("professional_profile_click", { link_domain: link.hostname, link_url: link.href, link_text: label });
+    }
+
+    if (link.matches(".project-actions a") || /\/projects\//.test(link.pathname)) {
+      sendEvent("project_view", { project_path: link.pathname, link_url: link.href, link_text: label });
     }
   });
 

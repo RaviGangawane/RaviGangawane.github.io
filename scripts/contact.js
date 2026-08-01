@@ -90,6 +90,9 @@
         if (error) error.textContent = "";
       });
       showStatus("Success! Your message has been sent. I’ll get back to you soon.", "success");
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "contact_click", { contact_method: "contact_form" });
+      }
       status.focus({ preventScroll: true });
     } catch (error) {
       const message = error.name === "AbortError"
