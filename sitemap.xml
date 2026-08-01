@@ -21,6 +21,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ravi.gangawane.com/projects/frontend-performance/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ravi.gangawane.com/projects/ai-enabled-frontend/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
