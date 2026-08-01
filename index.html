@@ -26,8 +26,8 @@
     content="Lead Software Engineer in Pune specializing in Angular, TypeScript, micro frontends, frontend architecture and AI-enabled applications." />
   <meta name="twitter:image" content="https://ravi.gangawane.com/assets/previews/og-home.jpg" />
   <link rel="icon" type="image/png" href="assets/logo/favicon.png" />
-  <link rel="preload" as="image" href="assets/logo/logo.webp" type="image/webp" fetchpriority="high" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="preload" as="image" href="assets/logo/brand_logo.png" type="image/png" fetchpriority="high" />
+  <link rel="stylesheet" href="styles.css?v=20260802-mobile-brand" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -72,12 +72,9 @@
 
   <header class="header">
     <a href="#home" class="brand">
-      <img src="assets/logo/logo.webp" alt="Ravi Gangawane logo" width="42" height="42" decoding="async"
+      <img class="brand-logo" src="assets/logo/brand_logo.png"
+        alt="Ravi Gangawane, Lead Software Engineer" width="1983" height="793" decoding="async"
         fetchpriority="high">
-      <span>
-        <strong>Ravi Gangawane</strong>
-        <small>Lead Software Engineer</small>
-      </span>
     </a>
 
     <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false"
@@ -277,58 +274,52 @@
     </section>
 
 
-    <section id="about" class="about section border-frame about-profile-layout">
-      <div class="portrait-panel static-portrait-panel">
-        <figure class="static-about-portrait" aria-label="Ravi Gangawane portrait">
-          <img src="assets/profile-photo.jpg" alt="Ravi Gangawane, Lead Angular and Frontend Engineer in Pune"
-            decoding="async" loading="lazy">
-          <figcaption>
-            <strong>Ravi Gangawane</strong>
-            <span>Lead Engineer | Angular | AI</span>
-          </figcaption>
+    <section id="about" class="about section border-frame about-reference-layout">
+      <div class="about-chevrons" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="about-identity">
+        <figure class="about-portrait" style="width:min(100%, 320px)">
+          <span class="portrait-orbit" aria-hidden="true"></span>
+          <img src="assets/ravi_gangawane_profile.png" width="320" height="320"
+            alt="Ravi Gangawane, Lead Angular and Frontend Engineer in Pune" decoding="async" loading="lazy">
         </figure>
+        <div class="identity-card">
+          <strong>Ravi Gangawane</strong>
+          <span class="section-divider" aria-hidden="true"></span>
+          <p>Lead Engineer <i>|</i> Angular <i>|</i> AI</p>
+        </div>
       </div>
 
       <div class="about-text">
         <p class="section-label"><img class="section-label-icon" src="assets/images/iconify-ui/user-cog.svg" alt=""
-            decoding="async" loading="lazy">
-          About Me</p>
-        <h2 class="section-title">Passionate About Building Scalable <span>Frontend Systems.</span></h2>
-        <p class="section-description">
-          I’m Ravi Gangawane, a Lead Software Engineer and Angular Architect with 9.5+ years of experience building
-          enterprise web platforms. I specialize in Angular, micro frontends, performance optimization, and frontend
-          architecture.
-        </p>
-        <p class="section-description">
-          I help engineering teams modernize complex applications, establish scalable development standards, and
-          deliver accessible, maintainable products that create measurable business value.
-        </p>
-        <p class="section-description">
-          I combine architecture-level decision-making with hands-on Angular delivery, helping teams modernize complex
-          products without disrupting ongoing development.
-        </p>
-        <span class="section-divider" aria-hidden="true"></span>
-        <div class="info-grid">
-          <article>
-            <b><img class="info-icon" src="assets/images/iconify-ui/map-pin.svg" alt="" decoding="async"
-                loading="lazy">Location</b>
-            <small>Pune, India</small>
-          </article>
-          <article>
-            <b><img class="info-icon" src="assets/images/iconify-ui/linkedin.svg" alt="" decoding="async"
-                loading="lazy">LinkedIn</b>
-            <small><a href="https://www.linkedin.com/in/ravi-d-gangawane/">linkedin.com/in/ravi-d-gangawane</a></small>
-          </article>
-          <article>
-            <b><img class="info-icon" src="assets/images/iconify-ui/mail.svg" alt="" decoding="async"
-                loading="lazy">Email</b>
-            <small>ravi.d.gangawane@gmail.com</small>
-          </article>
-          <article>
-            <b><img class="info-icon" src="assets/images/iconify-ui/gauge.svg" alt="" decoding="async"
-                loading="lazy">Availability</b>
-            <small>Open to selected opportunities</small>
-          </article>
+            decoding="async" loading="lazy">About Me</p>
+        <span class="about-heading-rule"
+          style="background:linear-gradient(90deg,var(--color-blue) 0 78%,var(--color-text) 78% 100%)"
+          aria-hidden="true"></span>
+        <h2 class="section-title">Passionate About Building<br>Scalable <span class="blue-word">Frontend</span>
+          <span class="orange-word">Systems.</span></h2>
+        <span class="about-title-dash" aria-hidden="true"></span>
+        <p class="section-description about-intro">I’m Ravi Gangawane, a Lead Software Engineer and Angular Architect
+          with <strong>9.5+ years</strong> of experience building enterprise web platforms. I specialize in
+          <strong>Angular</strong>, micro frontends, performance optimization, and frontend architecture.</p>
+        <div class="about-points">
+          <p><span class="point-check orange" aria-hidden="true">✓</span>I help engineering teams modernize complex
+            applications, establish scalable development standards, and deliver accessible, maintainable products that
+            create measurable business value.</p>
+          <p><span class="point-check blue" aria-hidden="true">✓</span>I combine architecture-level decision-making
+            with hands-on <strong>Angular</strong> delivery, helping teams modernize complex products without disrupting
+            ongoing development.</p>
+        </div>
+        <div class="info-grid about-contact-grid">
+          <article><span class="contact-icon blue"><img src="assets/images/iconify-ui/map-pin.svg" alt="" width="28"
+                height="28"></span><div><b>Location</b><small>Pune, India</small></div></article>
+          <article><span class="contact-icon orange"><img src="assets/images/iconify-ui/linkedin.svg" alt="" width="28"
+                height="28"></span><div><b>LinkedIn</b><small><a href="https://www.linkedin.com/in/ravi-d-gangawane/"
+                  target="_blank" rel="noopener noreferrer">linkedin.com/in/ravi-d-gangawane</a></small></div></article>
+          <article><span class="contact-icon blue"><img src="assets/images/iconify-ui/mail.svg" alt="" width="28"
+                height="28"></span><div><b>Email</b><small><a
+                  href="mailto:ravi.d.gangawane@gmail.com">ravi.d.gangawane@gmail.com</a></small></div></article>
+          <article><span class="contact-icon orange"><img src="assets/images/iconify-ui/gauge.svg" alt="" width="28"
+                height="28"></span><div><b>Availability</b><small>Open to selected opportunities</small></div></article>
         </div>
       </div>
     </section>
@@ -1215,11 +1206,8 @@
   <footer class="footer border-frame">
     <div class="footer-brand">
       <div class="footer-brand-head">
-        <img src="assets/logo/logo.webp" alt="" width="88" height="88" decoding="async" loading="lazy">
-        <span>
-          <strong>Ravi Gangawane</strong>
-          <small>Lead Engineer</small>
-        </span>
+        <img class="footer-brand-logo" src="assets/logo/brand_logo.png"
+          alt="Ravi Gangawane, Lead Software Engineer" width="1983" height="793" decoding="async" loading="lazy">
       </div>
       <p>Building premium digital experiences that people remember.</p>
     </div>
