@@ -2711,6 +2711,66 @@ html body canvas{
   }
 }
 
+/* Keep the mobile portrait below the Hero controls instead of behind them. */
+@media (max-width:767px){
+  html body #home.hero{
+    padding-bottom:300px!important;
+    background:
+      linear-gradient(180deg,rgba(2,10,22,.98) 0%,rgba(2,10,22,.96) 62%,rgba(2,10,22,.58) 80%,rgba(2,10,22,.16) 100%),
+      url("assets/hero-background.webp") right bottom / auto 280px no-repeat,
+      #020a16!important;
+  }
+
+  html body #home .hero-left{
+    position:relative!important;
+    z-index:2!important;
+  }
+
+  html body #home .actions,
+  html body #home .actions>a{
+    position:relative!important;
+    z-index:3!important;
+  }
+
+  html body #home>.scroll-down{
+    bottom:18px!important;
+    z-index:4!important;
+  }
+}
+
+@media (max-width:480px){
+  html body #home.hero{
+    padding-bottom:260px!important;
+    background:
+      linear-gradient(180deg,rgba(2,10,22,.98) 0%,rgba(2,10,22,.96) 64%,rgba(2,10,22,.56) 82%,rgba(2,10,22,.14) 100%),
+      url("assets/hero-background.webp") right bottom / auto 240px no-repeat,
+      #020a16!important;
+  }
+}
+
+/* Align Hero action icons consistently beside their labels. */
+html body #home .actions>a{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:20px!important;
+  text-align:center!important;
+}
+
+html body #home .actions>a>.iconify-ui-icon{
+  position:static!important;
+  inset:auto!important;
+  margin:0!important;
+  transform:none!important;
+  flex:0 0 28px!important;
+}
+
+@media (max-width:480px){
+  html body #home .actions>a{
+    gap:14px!important;
+  }
+}
+
 /* Keep both marquees moving on touch devices. */
 @media (max-width:760px){
   html body .trusted-company-marquee,
