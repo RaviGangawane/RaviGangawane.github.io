@@ -11,6 +11,34 @@
     element.title = `Experience calculated from ${element.dataset.experienceLabel}`;
   });
 
+  document.querySelectorAll("[data-duration-start]").forEach((element) => {
+    const startDate = new Date(`${element.dataset.durationStart}T00:00:00`);
+    const today = new Date();
+
+    let totalMonths =
+      (today.getFullYear() - startDate.getFullYear()) * 12 +
+      today.getMonth() -
+      startDate.getMonth();
+
+    if (today.getDate() < startDate.getDate()) totalMonths -= 1;
+    totalMonths = Math.max(0, totalMonths);
+
+    const years = Math.floor(totalMonths / 12);
+    const months = totalMonths % 12;
+    const parts = [];
+
+    if (years) parts.push(`${years} ${years === 1 ? "year" : "years"}`);
+    if (months) parts.push(`${months} ${months === 1 ? "month" : "months"}`);
+    if (!parts.length) parts.push("Less than 1 month");
+
+    element.textContent = `${element.dataset.durationPrefix || ""}${parts.join(" ")}`;
+    element.title = `Duration calculated through ${today.toLocaleDateString(undefined, {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    })}`;
+  });
+
   const section = document.querySelector("#experience");
   const button = document.querySelector(".experience-toggle");
 
