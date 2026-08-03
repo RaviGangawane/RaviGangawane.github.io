@@ -14,11 +14,22 @@
 
   const hero = document.querySelector("#home.hero");
   if (hero && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const secondaryHeroImage = hero.querySelector(".hero-background-secondary");
+
     const startHeroSlideshow = () => {
       hero.classList.add("hero-slideshow-active");
       window.removeEventListener("pointerdown", startHeroSlideshow);
       window.removeEventListener("keydown", startHeroSlideshow);
       window.removeEventListener("touchstart", startHeroSlideshow);
+    };
+
+    const scheduleHeroSlideshow = async () => {
+      try {
+        await secondaryHeroImage?.decode();
+      } catch {
+        /* The loaded image can still be displayed if decoding rejects. */
+      }
+      startHeroSlideshow();
     };
 
     window.addEventListener("pointerdown", startHeroSlideshow, {
@@ -30,6 +41,12 @@
       passive: true,
       once: true,
     });
+
+    if (document.readyState === "complete") {
+      scheduleHeroSlideshow();
+    } else {
+      window.addEventListener("load", scheduleHeroSlideshow, { once: true });
+    }
   }
 
   if (menuToggle && nav) {
