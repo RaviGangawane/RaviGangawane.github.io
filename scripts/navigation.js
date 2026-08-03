@@ -17,7 +17,12 @@
     const secondaryHeroImage = hero.querySelector(".hero-background-secondary");
 
     const startHeroSlideshow = () => {
+      if (hero.dataset.slideshowStarted === "true") return;
+      hero.dataset.slideshowStarted = "true";
       hero.classList.add("hero-slideshow-active");
+      window.setInterval(() => {
+        hero.classList.toggle("hero-show-secondary");
+      }, 20000);
       window.removeEventListener("pointerdown", startHeroSlideshow);
       window.removeEventListener("keydown", startHeroSlideshow);
       window.removeEventListener("touchstart", startHeroSlideshow);
