@@ -12,48 +12,6 @@
   const nav = document.querySelector("#nav");
   const navLinks = nav ? [...nav.querySelectorAll('a[href^="#"]')] : [];
 
-  const hero = document.querySelector("#home.hero");
-  if (hero) {
-    const secondaryHeroImage = hero.querySelector(".hero-background-secondary");
-
-    const startHeroSlideshow = () => {
-      if (hero.dataset.slideshowStarted === "true") return;
-      hero.dataset.slideshowStarted = "true";
-      hero.classList.add("hero-slideshow-active");
-      window.setInterval(() => {
-        hero.classList.toggle("hero-show-secondary");
-      }, 20000);
-      window.removeEventListener("pointerdown", startHeroSlideshow);
-      window.removeEventListener("keydown", startHeroSlideshow);
-      window.removeEventListener("touchstart", startHeroSlideshow);
-    };
-
-    const scheduleHeroSlideshow = async () => {
-      try {
-        await secondaryHeroImage?.decode();
-      } catch {
-        /* The loaded image can still be displayed if decoding rejects. */
-      }
-      startHeroSlideshow();
-    };
-
-    window.addEventListener("pointerdown", startHeroSlideshow, {
-      passive: true,
-      once: true,
-    });
-    window.addEventListener("keydown", startHeroSlideshow, { once: true });
-    window.addEventListener("touchstart", startHeroSlideshow, {
-      passive: true,
-      once: true,
-    });
-
-    if (document.readyState === "complete") {
-      scheduleHeroSlideshow();
-    } else {
-      window.addEventListener("load", scheduleHeroSlideshow, { once: true });
-    }
-  }
-
   if (menuToggle && nav) {
     const focusableSelector =
       'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';

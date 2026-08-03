@@ -5,7 +5,7 @@
   "scripts": {
     "validate": "node tools/validate-site.mjs",
     "validate:html": "html-validate \"index.html\" \"404.html\" \"privacy.html\" \"versions/**/*.html\" \"projects/**/*.html\"",
-    "format:check": "prettier --check \"index.html\" \"404.html\" \"privacy.html\" \"versions/**/*.{html,css}\" \"projects/**/*.html\" \"scripts/**/*.js\" \"tools/**/*.mjs\" \"assets/project-case-study.css\"",
+    "format:check": "prettier --check \"index.html\" \"404.html\" \"privacy.html\" \"hero-slideshow.css\" \"versions/**/*.{html,css}\" \"projects/**/*.html\" \"scripts/**/*.js\" \"tools/**/*.mjs\" \"assets/project-case-study.css\"",
     "check": "npm run validate && npm run validate:html && npm run format:check",
     "serve": "npx --yes serve . -l 4173",
     "audit": "npx --yes @lhci/cli autorun"
