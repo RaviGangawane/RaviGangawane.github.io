@@ -1,18 +1,22 @@
 (() => {
   const form = document.querySelector("#contactForm");
   const status = document.querySelector("#contactFormStatus");
+  const submitButton = form?.querySelector("button[type='submit']");
 
-  if (!form || !status) return;
+  if (!form || !status || !submitButton) return;
 
-  const fields = [...form.querySelectorAll("input:not([type='hidden']):not(.form-honeypot), textarea")];
-  const submitButton = form.querySelector("button[type='submit']");
+  const fields = [
+    ...form.querySelectorAll(
+      "input:not([type='hidden']):not(.form-honeypot), textarea",
+    ),
+  ];
   const endpoint = "https://api.web3forms.com/submit";
   let statusTimer;
   const messages = {
     contactName: "Enter your name using at least 2 characters.",
     contactEmail: "Enter a valid email address.",
     contactSubject: "Enter a subject using at least 3 characters.",
-    contactMessage: "Enter a message using at least 20 characters."
+    contactMessage: "Enter a message using at least 20 characters.",
   };
 
   const showStatus = (message, type = "") => {
@@ -35,7 +39,8 @@
     const isValid = field.checkValidity();
     field.setAttribute("aria-invalid", String(!isValid));
     field.closest(".form-field")?.classList.toggle("has-error", !isValid);
-    if (error) error.textContent = !isValid && showError ? messages[field.id] : "";
+    if (error)
+      error.textContent = !isValid && showError ? messages[field.id] : "";
     return isValid;
   };
 
@@ -58,12 +63,13 @@
       return;
     }
 
-    if (form.elements.botcheck.checked) return;
+    if (form.elements.botcheck?.checked) return;
 
-    const originalLabel = submitButton.childNodes[0].textContent;
+    const labelNode = submitButton.firstChild;
+    const originalLabel = labelNode?.textContent || "Send Message ";
     submitButton.disabled = true;
     submitButton.setAttribute("aria-busy", "true");
-    submitButton.childNodes[0].textContent = "Sending… ";
+    if (labelNode) labelNode.textContent = "Sending… ";
     showStatus("Sending your message…");
 
     const controller = new AbortController();
@@ -74,7 +80,7 @@
         method: "POST",
         body: new FormData(form),
         headers: { Accept: "application/json" },
-        signal: controller.signal
+        signal: controller.signal,
       });
       const result = await response.json().catch(() => ({}));
 
@@ -89,22 +95,28 @@
         const error = document.querySelector(`#${field.id}Error`);
         if (error) error.textContent = "";
       });
-      showStatus("Success! Your message has been sent. I’ll get back to you soon.", "success");
+      showStatus(
+        "Success! Your message has been sent. I’ll get back to you soon.",
+        "success",
+      );
       if (typeof window.gtag === "function") {
-        window.gtag("event", "contact_click", { contact_method: "contact_form" });
+        window.gtag("event", "contact_click", {
+          contact_method: "contact_form",
+        });
       }
       status.focus({ preventScroll: true });
     } catch (error) {
-      const message = error.name === "AbortError"
-        ? "The request timed out. Please check your connection and try again."
-        : `Message not sent: ${error.message || "Please try again shortly."}`;
+      const message =
+        error.name === "AbortError"
+          ? "The request timed out. Please check your connection and try again."
+          : `Message not sent: ${error.message || "Please try again shortly."}`;
       showStatus(message, "error");
       status.focus({ preventScroll: true });
     } finally {
       window.clearTimeout(timeout);
       submitButton.disabled = false;
       submitButton.removeAttribute("aria-busy");
-      submitButton.childNodes[0].textContent = originalLabel;
+      if (labelNode) labelNode.textContent = originalLabel;
     }
   });
 })();

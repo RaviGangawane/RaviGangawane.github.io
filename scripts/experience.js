@@ -3,7 +3,12 @@
 
   document.querySelectorAll("[data-experience-start]").forEach((element) => {
     const startDate = new Date(`${element.dataset.experienceStart}T00:00:00Z`);
-    const experienceYears = Math.max(0, (Date.now() - startDate.getTime()) / millisecondsPerYear);
+    if (Number.isNaN(startDate.getTime())) return;
+
+    const experienceYears = Math.max(
+      0,
+      (Date.now() - startDate.getTime()) / millisecondsPerYear,
+    );
     const displayValue = experienceYears.toFixed(1);
 
     element.textContent = `${displayValue}+`;
@@ -13,6 +18,8 @@
 
   document.querySelectorAll("[data-duration-start]").forEach((element) => {
     const startDate = new Date(`${element.dataset.durationStart}T00:00:00`);
+    if (Number.isNaN(startDate.getTime())) return;
+
     const today = new Date();
 
     let totalMonths =
@@ -32,11 +39,14 @@
     if (!parts.length) parts.push("Less than 1 month");
 
     element.textContent = `${element.dataset.durationPrefix || ""}${parts.join(" ")}`;
-    element.title = `Duration calculated through ${today.toLocaleDateString(undefined, {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    })}`;
+    element.title = `Duration calculated through ${today.toLocaleDateString(
+      undefined,
+      {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      },
+    )}`;
   });
 
   const section = document.querySelector("#experience");

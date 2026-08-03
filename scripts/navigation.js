@@ -1,15 +1,40 @@
 (() => {
   if (window.location.pathname.endsWith("/index.html")) {
     const cleanPath = window.location.pathname.slice(0, -"index.html".length);
-    window.history.replaceState(null, "", cleanPath + window.location.search + window.location.hash);
+    window.history.replaceState(
+      null,
+      "",
+      cleanPath + window.location.search + window.location.hash,
+    );
   }
 
   const menuToggle = document.querySelector("#menuToggle");
   const nav = document.querySelector("#nav");
   const navLinks = nav ? [...nav.querySelectorAll('a[href^="#"]')] : [];
 
+  const hero = document.querySelector("#home.hero");
+  if (hero && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const startHeroSlideshow = () => {
+      hero.classList.add("hero-slideshow-active");
+      window.removeEventListener("pointerdown", startHeroSlideshow);
+      window.removeEventListener("keydown", startHeroSlideshow);
+      window.removeEventListener("touchstart", startHeroSlideshow);
+    };
+
+    window.addEventListener("pointerdown", startHeroSlideshow, {
+      passive: true,
+      once: true,
+    });
+    window.addEventListener("keydown", startHeroSlideshow, { once: true });
+    window.addEventListener("touchstart", startHeroSlideshow, {
+      passive: true,
+      once: true,
+    });
+  }
+
   if (menuToggle && nav) {
-    const focusableSelector = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+    const focusableSelector =
+      'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
     const closeMenu = (restoreFocus = false) => {
       const wasOpen = nav.classList.contains("open");
@@ -22,7 +47,10 @@
     menuToggle.addEventListener("click", () => {
       const isOpen = nav.classList.toggle("open");
       menuToggle.setAttribute("aria-expanded", String(isOpen));
-      menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close menu" : "Open menu",
+      );
       if (isOpen) nav.querySelector(focusableSelector)?.focus();
     });
 
@@ -34,7 +62,10 @@
       if (event.key === "Escape") closeMenu(true);
       if (event.key !== "Tab" || !nav.classList.contains("open")) return;
 
-      const focusableElements = [menuToggle, ...nav.querySelectorAll(focusableSelector)];
+      const focusableElements = [
+        menuToggle,
+        ...nav.querySelectorAll(focusableSelector),
+      ];
       const firstElement = focusableElements[0];
       const lastElement = focusableElements[focusableElements.length - 1];
 
@@ -77,14 +108,18 @@
   const updateActiveLink = () => {
     scrollFrame = null;
     const headerHeight = document.querySelector(".header")?.offsetHeight || 0;
-    const marker = window.scrollY + headerHeight + Math.min(window.innerHeight * 0.28, 220);
+    const marker =
+      window.scrollY + headerHeight + Math.min(window.innerHeight * 0.28, 220);
     let current = trackedSections[0];
 
     trackedSections.forEach((item) => {
       if (item.target.offsetTop <= marker) current = item;
     });
 
-    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+    if (
+      window.innerHeight + window.scrollY >=
+      document.documentElement.scrollHeight - 4
+    ) {
       current = trackedSections[trackedSections.length - 1];
     }
 
@@ -92,7 +127,8 @@
   };
 
   const requestActiveLinkUpdate = () => {
-    if (!scrollFrame) scrollFrame = window.requestAnimationFrame(updateActiveLink);
+    if (!scrollFrame)
+      scrollFrame = window.requestAnimationFrame(updateActiveLink);
   };
 
   navLinks.forEach((link) => {

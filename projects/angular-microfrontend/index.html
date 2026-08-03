@@ -1,31 +1,302 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <script src="../../scripts/analytics-consent.js" data-measurement-id="G-F78H0L26EJ" data-privacy-url="/privacy.html" defer></script>
-  <title>Angular Micro Frontend Architect Case Study | Ravi Gangawane</title>
-  <meta name="description" content="Angular Micro Frontend Architect case study by Ravi Gangawane covering scalable frontend design, independent deployments and enterprise integration.">
-  <link rel="canonical" href="https://ravi.gangawane.com/projects/angular-microfrontend/">
-  <meta property="og:type" content="article"><meta property="og:title" content="Angular Micro Frontend Architect Case Study | Ravi Gangawane"><meta property="og:description" content="A practical architecture for independently delivered Angular product domains."><meta property="og:url" content="https://ravi.gangawane.com/projects/angular-microfrontend/"><meta property="og:image" content="https://ravi.gangawane.com/assets/projects/angular-microfrontend-overview.svg">
-  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Angular Micro Frontend Case Study"><meta name="twitter:description" content="Shell design, federated modules, shared contracts and independent delivery."><meta name="twitter:image" content="https://ravi.gangawane.com/assets/projects/angular-microfrontend-overview.svg">
-  <link rel="icon" href="../../assets/logo/favicon.png"><link rel="stylesheet" href="../../assets/project-case-study.css"><script src="../../scripts/analytics.js" defer></script>
-</head>
-<body>
-<header><a class="brand" href="../../">Ravi Gangawane</a><a class="back" href="../../#projects">← All projects</a></header>
-<main>
-  <section class="hero"><p class="eyebrow">Frontend architecture case study</p><h1>Angular Micro Frontend Architect for Independent Enterprise Delivery</h1><p class="lede">An Angular Micro Frontend Architect's platform approach for decomposing a tightly coupled application into product-aligned modules that teams can build, test and release independently.</p><div class="tags"><span>Angular</span><span>TypeScript</span><span>Module Federation</span><span>NgRx</span><span>RxJS</span><span>CI/CD</span></div></section>
-  <aside class="notice"><strong>Confidentiality note:</strong> This case study describes generalized architecture patterns. The diagram uses fictional labels and no client code, company names, production screens or confidential metrics.</aside>
-  <figure class="case-visual"><img src="../../assets/projects/angular-microfrontend-overview.svg" width="1200" height="675" alt="Conceptual Angular micro frontend dashboard showing a shell loading independently deployed catalog, orders and analytics modules"><figcaption>Conceptual architecture screen created for this case study; not a client product screenshot.</figcaption></figure>
-  <nav class="toc" aria-label="Case study sections"><strong>On this page</strong><a href="#overview">Overview</a><a href="#problem">Business problem</a><a href="#responsibilities">Responsibilities</a><a href="#architecture">Architecture</a><a href="#challenges">Challenges</a><a href="#results">Results</a></nav>
-  <section id="overview" class="prose"><h2>Project overview</h2><p>The target platform served several business capabilities through one Angular codebase. As features and teams increased, the release process became a shared bottleneck. The proposed micro frontend model retained a coherent customer experience while giving each product domain an explicit technical and delivery boundary.</p><p>The work focused on architecture and enablement: identifying boundaries, defining integration contracts, protecting runtime stability and creating a migration path that did not require a high-risk rewrite.</p></section>
-  <section id="problem" class="prose"><h2>Business problem</h2><p>Every frontend change passed through the same repository and coordinated release. Teams could not deploy a low-risk feature without waiting for unrelated work, and changes to shared dependencies could create broad regression risk. Ownership was blurred because technical folders did not map cleanly to business capabilities.</p><p>The business needed faster, safer delivery without fragmenting navigation, accessibility, authentication or visual standards.</p></section>
-  <section id="responsibilities" class="prose"><h2>My responsibilities</h2><ul><li>Facilitated domain-boundary workshops with product and engineering stakeholders.</li><li>Defined the host shell, remote-module contract and shared dependency policy.</li><li>Designed routing, authentication, telemetry and error-isolation patterns.</li><li>Created a strangler-style migration sequence for moving features incrementally.</li><li>Established reference implementation guidance, review checklists and team enablement sessions.</li><li>Added performance and compatibility gates to the delivery workflow.</li></ul></section>
-  <section class="split"><article><h2>Technologies used</h2><ul><li>Angular and TypeScript</li><li>Webpack Module Federation</li><li>RxJS and NgRx</li><li>Design tokens and shared UI primitives</li><li>REST APIs and OAuth/OIDC</li><li>CI/CD pipelines and automated quality gates</li></ul></article><article><h2>Architecture principles</h2><ul><li>Business domains own vertical slices.</li><li>The shell stays deliberately thin.</li><li>Contracts are versioned and observable.</li><li>Shared libraries have explicit owners.</li><li>Remote failure cannot take down the host.</li><li>Accessibility and performance remain platform concerns.</li></ul></article></section>
-  <section id="architecture" class="prose"><h2>Architecture and implementation</h2><h3>Shell and domain remotes</h3><p>The Angular shell owned top-level navigation, authentication context, route orchestration, error boundaries and global observability. Product-aligned remotes owned their internal screens, local state and deployment cadence. This kept platform responsibilities centralized without rebuilding a monolith inside the shell.</p><h3>Stable contracts instead of shared implementation</h3><p>Remotes communicated through typed navigation events, versioned API models and a small platform SDK. They did not read another remote’s store. Angular and other runtime-critical dependencies were configured as compatible singletons, while shared UI foundations followed a documented release policy.</p><h3>Incremental migration</h3><p>Existing routes moved one capability at a time. Each migration introduced a remote entry, contract tests, a fallback experience and an independent pipeline. Feature flags allowed controlled rollout and fast rollback while the original route remained available during validation.</p></section>
-  <section id="challenges" class="prose"><h2>Challenges and solutions</h2><div class="challenge-list"><article><h3>Dependency drift</h3><p><strong>Challenge:</strong> Independently deployed modules could load incompatible framework or shared-library versions.</p><p><strong>Solution:</strong> A compatibility matrix, singleton rules, automated contract checks and a planned upgrade window made version changes visible before release.</p></article><article><h3>Cross-domain state</h3><p><strong>Challenge:</strong> A global store would silently couple teams and release cycles.</p><p><strong>Solution:</strong> Each remote owned its state. Durable cross-domain data flowed through APIs; short-lived UI coordination used typed platform events.</p></article><article><h3>Consistent experience</h3><p><strong>Challenge:</strong> Team autonomy could produce visual and accessibility drift.</p><p><strong>Solution:</strong> Shared tokens, tested primitives, automated accessibility checks and platform-level performance budgets provided guardrails without centralizing feature delivery.</p></article></div></section>
-  <section id="results" class="result-block"><h2>Measurable results</h2><p>The architecture created measurable delivery indicators without exposing confidential business data:</p><ul><li>Product domains could be built and deployed through separate pipelines.</li><li>Release dependency was reduced from a whole-application coordination problem to explicit shared-contract changes.</li><li>Migration progress could be tracked by independently owned routes and successful contract-test runs.</li><li>Performance, error rate and remote-load success became observable per domain.</li></ul><p>Exact employer metrics are intentionally omitted. In a production rollout, the primary measures would be deployment frequency, lead time, rollback rate, remote-load failures and Core Web Vitals by route.</p></section>
-  <section class="related"><h2>Related case studies</h2><p><a href="../knowledge-graph-ui/">Knowledge Graph UI Architecture</a> <a href="../frontend-performance/">Frontend Performance Optimization</a></p></section>
-  <section class="cta"><h2>Planning an Angular platform?</h2><p><a href="mailto:ravi.d.gangawane@gmail.com">Discuss frontend architecture with Ravi</a></p></section>
-</main><footer>© Ravi Gangawane · Lead Angular and Frontend Engineer in Pune</footer>
-</body></html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script
+      src="../../scripts/analytics-consent.js"
+      data-measurement-id="G-F78H0L26EJ"
+      data-privacy-url="/privacy.html"
+      defer
+    ></script>
+    <title>Angular Micro Frontend Architect Case Study | Ravi Gangawane</title>
+    <meta
+      name="description"
+      content="Angular Micro Frontend Architect case study by Ravi Gangawane covering scalable frontend design, independent deployments and enterprise integration."
+    />
+    <link
+      rel="canonical"
+      href="https://ravi.gangawane.com/projects/angular-microfrontend/"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="Angular Micro Frontend Architect Case Study | Ravi Gangawane"
+    />
+    <meta
+      property="og:description"
+      content="A practical architecture for independently delivered Angular product domains."
+    />
+    <meta
+      property="og:url"
+      content="https://ravi.gangawane.com/projects/angular-microfrontend/"
+    />
+    <meta
+      property="og:image"
+      content="https://ravi.gangawane.com/assets/projects/angular-microfrontend-overview.svg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Angular Micro Frontend Case Study" />
+    <meta
+      name="twitter:description"
+      content="Shell design, federated modules, shared contracts and independent delivery."
+    />
+    <meta
+      name="twitter:image"
+      content="https://ravi.gangawane.com/assets/projects/angular-microfrontend-overview.svg"
+    />
+    <link rel="icon" href="../../assets/logo/favicon.png" />
+    <link rel="stylesheet" href="../../assets/project-case-study.css" />
+    <script src="../../scripts/analytics.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="../../">Ravi Gangawane</a
+      ><a class="back" href="../../#projects">← All projects</a>
+    </header>
+    <main>
+      <section class="hero">
+        <p class="eyebrow">Frontend architecture case study</p>
+        <h1>
+          Angular Micro Frontend Architect for Independent Enterprise Delivery
+        </h1>
+        <p class="lede">
+          An Angular Micro Frontend Architect's platform approach for
+          decomposing a tightly coupled application into product-aligned modules
+          that teams can build, test and release independently.
+        </p>
+        <div class="tags">
+          <span>Angular</span><span>TypeScript</span
+          ><span>Module Federation</span><span>NgRx</span><span>RxJS</span
+          ><span>CI/CD</span>
+        </div>
+      </section>
+      <aside class="notice">
+        <strong>Confidentiality note:</strong> This case study describes
+        generalized architecture patterns. The diagram uses fictional labels and
+        no client code, company names, production screens or confidential
+        metrics.
+      </aside>
+      <figure class="case-visual">
+        <img
+          src="../../assets/projects/angular-microfrontend-overview.svg"
+          width="1200"
+          height="675"
+          alt="Conceptual Angular micro frontend dashboard showing a shell loading independently deployed catalog, orders and analytics modules"
+        />
+        <figcaption>
+          Conceptual architecture screen created for this case study; not a
+          client product screenshot.
+        </figcaption>
+      </figure>
+      <nav class="toc" aria-label="Case study sections">
+        <strong>On this page</strong><a href="#overview">Overview</a
+        ><a href="#problem">Business problem</a
+        ><a href="#responsibilities">Responsibilities</a
+        ><a href="#architecture">Architecture</a
+        ><a href="#challenges">Challenges</a><a href="#results">Results</a>
+      </nav>
+      <section id="overview" class="prose">
+        <h2>Project overview</h2>
+        <p>
+          The target platform served several business capabilities through one
+          Angular codebase. As features and teams increased, the release process
+          became a shared bottleneck. The proposed micro frontend model retained
+          a coherent customer experience while giving each product domain an
+          explicit technical and delivery boundary.
+        </p>
+        <p>
+          The work focused on architecture and enablement: identifying
+          boundaries, defining integration contracts, protecting runtime
+          stability and creating a migration path that did not require a
+          high-risk rewrite.
+        </p>
+      </section>
+      <section id="problem" class="prose">
+        <h2>Business problem</h2>
+        <p>
+          Every frontend change passed through the same repository and
+          coordinated release. Teams could not deploy a low-risk feature without
+          waiting for unrelated work, and changes to shared dependencies could
+          create broad regression risk. Ownership was blurred because technical
+          folders did not map cleanly to business capabilities.
+        </p>
+        <p>
+          The business needed faster, safer delivery without fragmenting
+          navigation, accessibility, authentication or visual standards.
+        </p>
+      </section>
+      <section id="responsibilities" class="prose">
+        <h2>My responsibilities</h2>
+        <ul>
+          <li>
+            Facilitated domain-boundary workshops with product and engineering
+            stakeholders.
+          </li>
+          <li>
+            Defined the host shell, remote-module contract and shared dependency
+            policy.
+          </li>
+          <li>
+            Designed routing, authentication, telemetry and error-isolation
+            patterns.
+          </li>
+          <li>
+            Created a strangler-style migration sequence for moving features
+            incrementally.
+          </li>
+          <li>
+            Established reference implementation guidance, review checklists and
+            team enablement sessions.
+          </li>
+          <li>
+            Added performance and compatibility gates to the delivery workflow.
+          </li>
+        </ul>
+      </section>
+      <section class="split">
+        <article>
+          <h2>Technologies used</h2>
+          <ul>
+            <li>Angular and TypeScript</li>
+            <li>Webpack Module Federation</li>
+            <li>RxJS and NgRx</li>
+            <li>Design tokens and shared UI primitives</li>
+            <li>REST APIs and OAuth/OIDC</li>
+            <li>CI/CD pipelines and automated quality gates</li>
+          </ul>
+        </article>
+        <article>
+          <h2>Architecture principles</h2>
+          <ul>
+            <li>Business domains own vertical slices.</li>
+            <li>The shell stays deliberately thin.</li>
+            <li>Contracts are versioned and observable.</li>
+            <li>Shared libraries have explicit owners.</li>
+            <li>Remote failure cannot take down the host.</li>
+            <li>Accessibility and performance remain platform concerns.</li>
+          </ul>
+        </article>
+      </section>
+      <section id="architecture" class="prose">
+        <h2>Architecture and implementation</h2>
+        <h3>Shell and domain remotes</h3>
+        <p>
+          The Angular shell owned top-level navigation, authentication context,
+          route orchestration, error boundaries and global observability.
+          Product-aligned remotes owned their internal screens, local state and
+          deployment cadence. This kept platform responsibilities centralized
+          without rebuilding a monolith inside the shell.
+        </p>
+        <h3>Stable contracts instead of shared implementation</h3>
+        <p>
+          Remotes communicated through typed navigation events, versioned API
+          models and a small platform SDK. They did not read another remote’s
+          store. Angular and other runtime-critical dependencies were configured
+          as compatible singletons, while shared UI foundations followed a
+          documented release policy.
+        </p>
+        <h3>Incremental migration</h3>
+        <p>
+          Existing routes moved one capability at a time. Each migration
+          introduced a remote entry, contract tests, a fallback experience and
+          an independent pipeline. Feature flags allowed controlled rollout and
+          fast rollback while the original route remained available during
+          validation.
+        </p>
+      </section>
+      <section id="challenges" class="prose">
+        <h2>Challenges and solutions</h2>
+        <div class="challenge-list">
+          <article>
+            <h3>Dependency drift</h3>
+            <p>
+              <strong>Challenge:</strong> Independently deployed modules could
+              load incompatible framework or shared-library versions.
+            </p>
+            <p>
+              <strong>Solution:</strong> A compatibility matrix, singleton
+              rules, automated contract checks and a planned upgrade window made
+              version changes visible before release.
+            </p>
+          </article>
+          <article>
+            <h3>Cross-domain state</h3>
+            <p>
+              <strong>Challenge:</strong> A global store would silently couple
+              teams and release cycles.
+            </p>
+            <p>
+              <strong>Solution:</strong> Each remote owned its state. Durable
+              cross-domain data flowed through APIs; short-lived UI coordination
+              used typed platform events.
+            </p>
+          </article>
+          <article>
+            <h3>Consistent experience</h3>
+            <p>
+              <strong>Challenge:</strong> Team autonomy could produce visual and
+              accessibility drift.
+            </p>
+            <p>
+              <strong>Solution:</strong> Shared tokens, tested primitives,
+              automated accessibility checks and platform-level performance
+              budgets provided guardrails without centralizing feature delivery.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section id="results" class="result-block">
+        <h2>Measurable results</h2>
+        <p>
+          The architecture created measurable delivery indicators without
+          exposing confidential business data:
+        </p>
+        <ul>
+          <li>
+            Product domains could be built and deployed through separate
+            pipelines.
+          </li>
+          <li>
+            Release dependency was reduced from a whole-application coordination
+            problem to explicit shared-contract changes.
+          </li>
+          <li>
+            Migration progress could be tracked by independently owned routes
+            and successful contract-test runs.
+          </li>
+          <li>
+            Performance, error rate and remote-load success became observable
+            per domain.
+          </li>
+        </ul>
+        <p>
+          Exact employer metrics are intentionally omitted. In a production
+          rollout, the primary measures would be deployment frequency, lead
+          time, rollback rate, remote-load failures and Core Web Vitals by
+          route.
+        </p>
+      </section>
+      <section class="related">
+        <h2>Related case studies</h2>
+        <p>
+          <a href="../knowledge-graph-ui/">Knowledge Graph UI Architecture</a>
+          <a href="../frontend-performance/"
+            >Frontend Performance Optimization</a
+          >
+        </p>
+      </section>
+      <section class="cta">
+        <h2>Planning an Angular platform?</h2>
+        <p>
+          <a href="mailto:ravi.d.gangawane@gmail.com"
+            >Discuss frontend architecture with Ravi</a
+          >
+        </p>
+      </section>
+    </main>
+    <footer>
+      © Ravi Gangawane · Lead Angular and Frontend Engineer in Pune
+    </footer>
+  </body>
+</html>

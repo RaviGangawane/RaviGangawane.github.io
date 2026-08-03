@@ -1,13 +1,141 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<script src="../../scripts/analytics-consent.js" data-measurement-id="G-F78H0L26EJ" data-privacy-url="/privacy.html" defer></script>
-<title>AI-Enabled Angular Frontend Case Study | Ravi Gangawane</title>
-<meta name="description" content="AI-enabled Angular frontend case study covering retrieval-augmented search, cited responses, secure APIs and human-centered interaction design.">
-<link rel="canonical" href="https://ravi.gangawane.com/projects/ai-enabled-frontend/">
-<meta property="og:type" content="article"><meta property="og:title" content="AI-Enabled Angular Frontend Case Study"><meta property="og:description" content="A focused Angular interface for contextual document discovery with cited AI responses."><meta property="og:url" content="https://ravi.gangawane.com/projects/ai-enabled-frontend/"><meta property="og:image" content="https://ravi.gangawane.com/assets/previews/og-home.jpg">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="AI-Enabled Angular Frontend Case Study"><meta name="twitter:description" content="Retrieval, citations and secure API boundaries for an AI-enabled frontend."><meta name="twitter:image" content="https://ravi.gangawane.com/assets/previews/og-home.jpg">
-<link rel="icon" href="../../assets/logo/favicon.png"><link rel="stylesheet" href="../../assets/project-case-study.css"><script src="../../scripts/analytics.js" defer></script></head><body>
-<header><a class="brand" href="../../">Ravi Gangawane</a><a class="back" href="../../#projects">← All projects</a></header><main>
-<section class="hero"><p class="eyebrow">AI product case study</p><h1>AI-Enabled Angular Frontend for Document Discovery</h1><p class="lede">A retrieval-augmented interface concept that helps users find relevant information across document-heavy workflows and verify answers through clear citations.</p><div class="tags"><span>Angular</span><span>OpenAI API</span><span>Node.js</span><span>FastAPI</span><span>Semantic Search</span></div></section>
-<figure class="visual"><div><div class="flow"><span>Angular Experience</span><i>→</i><span>Secure API</span><i>→</i><span>Semantic Retrieval</span><i>→</i><span>Cited Response</span></div><figcaption class="caption">Retrieval workflow illustration—not a customer-data screenshot.</figcaption></div></figure>
-<section class="grid"><article><h2>Business problem</h2><p>Users needed a clearer way to discover relevant information across document-heavy workflows without manually opening and comparing many sources.</p></article><article><h2>My contribution</h2><p>Owned frontend UX exploration and AI integration design, including response states, source presentation, error recovery and secure service boundaries.</p></article><article><h2>Architecture decisions</h2><ul><li>Retrieval before generation to ground responses in source content.</li><li>Citations displayed with answers to support verification.</li><li>Server-side AI credentials and controlled API boundaries.</li><li>Explicit loading, empty, partial and failure states.</li></ul></article><article><h2>Technology</h2><p>Angular, TypeScript, OpenAI API, Node.js, FastAPI, semantic search and a vector-store-compatible retrieval layer.</p></article><article class="result"><h2>Result</h2><p>The exploration validated a focused interaction model for context-aware document discovery and workflow assistance. Exact production metrics are not published because the work is presented as a product exploration.</p></article></section>
-<section class="cta"><h2>Exploring AI for a frontend product?</h2><p><a href="mailto:ravi.d.gangawane@gmail.com">Discuss an AI-enabled experience</a></p></section></main><footer>© Ravi Gangawane · Lead Angular and Frontend Engineer in Pune</footer></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script
+      src="../../scripts/analytics-consent.js"
+      data-measurement-id="G-F78H0L26EJ"
+      data-privacy-url="/privacy.html"
+      defer
+    ></script>
+    <title>AI-Enabled Angular Frontend Case Study | Ravi Gangawane</title>
+    <meta
+      name="description"
+      content="AI-enabled Angular frontend case study covering retrieval-augmented search, cited responses, secure APIs and human-centered interaction design."
+    />
+    <link
+      rel="canonical"
+      href="https://ravi.gangawane.com/projects/ai-enabled-frontend/"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="AI-Enabled Angular Frontend Case Study"
+    />
+    <meta
+      property="og:description"
+      content="A focused Angular interface for contextual document discovery with cited AI responses."
+    />
+    <meta
+      property="og:url"
+      content="https://ravi.gangawane.com/projects/ai-enabled-frontend/"
+    />
+    <meta
+      property="og:image"
+      content="https://ravi.gangawane.com/assets/previews/og-home.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="AI-Enabled Angular Frontend Case Study"
+    />
+    <meta
+      name="twitter:description"
+      content="Retrieval, citations and secure API boundaries for an AI-enabled frontend."
+    />
+    <meta
+      name="twitter:image"
+      content="https://ravi.gangawane.com/assets/previews/og-home.jpg"
+    />
+    <link rel="icon" href="../../assets/logo/favicon.png" />
+    <link rel="stylesheet" href="../../assets/project-case-study.css" />
+    <script src="../../scripts/analytics.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="../../">Ravi Gangawane</a
+      ><a class="back" href="../../#projects">← All projects</a>
+    </header>
+    <main>
+      <section class="hero">
+        <p class="eyebrow">AI product case study</p>
+        <h1>AI-Enabled Angular Frontend for Document Discovery</h1>
+        <p class="lede">
+          A retrieval-augmented interface concept that helps users find relevant
+          information across document-heavy workflows and verify answers through
+          clear citations.
+        </p>
+        <div class="tags">
+          <span>Angular</span><span>OpenAI API</span><span>Node.js</span
+          ><span>FastAPI</span><span>Semantic Search</span>
+        </div>
+      </section>
+      <figure class="visual">
+        <div class="flow">
+          <span>Angular Experience</span><i>→</i><span>Secure API</span><i>→</i
+          ><span>Semantic Retrieval</span><i>→</i><span>Cited Response</span>
+        </div>
+        <figcaption class="caption">
+          Retrieval workflow illustration—not a customer-data screenshot.
+        </figcaption>
+      </figure>
+      <section class="grid">
+        <article>
+          <h2>Business problem</h2>
+          <p>
+            Users needed a clearer way to discover relevant information across
+            document-heavy workflows without manually opening and comparing many
+            sources.
+          </p>
+        </article>
+        <article>
+          <h2>My contribution</h2>
+          <p>
+            Owned frontend UX exploration and AI integration design, including
+            response states, source presentation, error recovery and secure
+            service boundaries.
+          </p>
+        </article>
+        <article>
+          <h2>Architecture decisions</h2>
+          <ul>
+            <li>
+              Retrieval before generation to ground responses in source content.
+            </li>
+            <li>Citations displayed with answers to support verification.</li>
+            <li>Server-side AI credentials and controlled API boundaries.</li>
+            <li>Explicit loading, empty, partial and failure states.</li>
+          </ul>
+        </article>
+        <article>
+          <h2>Technology</h2>
+          <p>
+            Angular, TypeScript, OpenAI API, Node.js, FastAPI, semantic search
+            and a vector-store-compatible retrieval layer.
+          </p>
+        </article>
+        <article class="result">
+          <h2>Result</h2>
+          <p>
+            The exploration validated a focused interaction model for
+            context-aware document discovery and workflow assistance. Exact
+            production metrics are not published because the work is presented
+            as a product exploration.
+          </p>
+        </article>
+      </section>
+      <section class="cta">
+        <h2>Exploring AI for a frontend product?</h2>
+        <p>
+          <a href="mailto:ravi.d.gangawane@gmail.com"
+            >Discuss an AI-enabled experience</a
+          >
+        </p>
+      </section>
+    </main>
+    <footer>
+      © Ravi Gangawane · Lead Angular and Frontend Engineer in Pune
+    </footer>
+  </body>
+</html>
