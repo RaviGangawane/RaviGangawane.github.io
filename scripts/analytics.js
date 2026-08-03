@@ -39,9 +39,9 @@
       .replace(/\s+/g, " ")
       .slice(0, 100);
 
-    if (/\.pdf(?:$|[?#])/i.test(href)) {
+    if (/\.(?:pdf|docx?)(?:$|[?#])/i.test(href)) {
       const fileName = decodeURIComponent(
-        new URL(link.href).pathname.split("/").pop() || "resume.pdf",
+        new URL(link.href).pathname.split("/").pop() || "resume",
       );
       sendEvent("resume_download", {
         file_name: fileName,
