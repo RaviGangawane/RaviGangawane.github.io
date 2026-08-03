@@ -13,7 +13,7 @@
   const navLinks = nav ? [...nav.querySelectorAll('a[href^="#"]')] : [];
 
   const hero = document.querySelector("#home.hero");
-  if (hero && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  if (hero) {
     const secondaryHeroImage = hero.querySelector(".hero-background-secondary");
 
     const startHeroSlideshow = () => {
